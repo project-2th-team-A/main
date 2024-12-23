@@ -1,4 +1,13 @@
 /* 1. 폰트 */
+/* 기본 폰트 */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+
+* {
+  font-family: "Noto Sans KR", serif;
+  font-style: normal;
+  color: #292929;
+}
+
 /* 로고 폰트 (변경될 가능성 있음) */
 @font-face {
   font-family: "CWDangamAsac-Bold";
@@ -8,18 +17,14 @@
   font-style: normal;
 }
 
-/* 기본 폰트 */
-* {
-  font-family: "Noto Sans KR", serif;
-  font-style: normal;
-  font-weight: 400;
-}
-
 /* 2. 폰트 굵기 */
 .bold {
   font-weight: 800;
 }
 
+.semi-bold {
+  font-weight: 600;
+}
 .light {
   font-weight: 350;
 }
@@ -109,4 +114,53 @@
 }
 .secondary300 {
   color: #4779ff;
+}
+
+/* 5. 버튼 */
+/* 버튼 기본 설정 */
+button {
+  padding: 4px 8px;
+  border: none;
+  border-radius: 9px;
+}
+
+/* 버튼 사이즈 */
+.btn-l {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.btn-m {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.btn-s {
+  font-size: 8px;
+  line-height: 12px;
+}
+
+/* 버튼 색상 */
+.btn-point {
+  background-color: #b33ffc;
+  color: #ffffff;
+}
+.btn-clicked {
+  background-color: #001652;
+  color: #ffffff;
+}
+
+.btn-disable {
+  background-color: #f5f5f5;
+  color: #909090;
+}
+
+.btn-secondary {
+  background-color: #dee7ff;
+  color: #4779ff;
+}
+
+.btn-primary {
+  background-color: #f1dbff;
+  color: #c66efe;
 }

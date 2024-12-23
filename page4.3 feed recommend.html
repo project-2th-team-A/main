@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>page4.3 feed recommend</title>
+    <title>page4.5 feed single</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css"
@@ -19,19 +19,19 @@
           <ul>
             <li class="home">
               <i class="bi bi-house-door-fill"></i>
-              <span>홈</span>
+              <span class="font-14px">홈</span>
             </li>
             <li class="calendar">
               <i class="bi bi-calendar3"></i>
-              <span>캘린더</span>
+              <span class="font-14px">캘린더</span>
             </li>
             <li class="feed">
               <i class="bi bi-stickies-fill"></i>
-              <span>피드</span>
+              <span class="font-14px"> 피드</span>
             </li>
             <li class="mypage">
               <i class="bi bi-person-fill"></i>
-              <span>마이페이지</span>
+              <span class="font-14px">마이페이지</span>
             </li>
           </ul>
         </nav>
@@ -39,81 +39,183 @@
           <ul>
             <li class="search">
               <i class="bi bi-search"></i>
-              <span>검색</span>
+              <span class="font-14px">검색</span>
             </li>
             <li class="calendar">
               <i class="bi bi-bell"></i>
-              <span>알림</span>
+              <span class="font-14px">알림</span>
             </li>
             <li class="feed">
               <i class="bi bi-gear"></i>
-              <span>설정</span>
+              <span class="font-14px">설정</span>
             </li>
           </ul>
         </nav>
       </div>
     </header>
-    <header class="sub-nav font-24px">
-      <nav class="sub-nav-menu">
-        <ul>
-          <li class="web text-align-center">
-            <span>내 피드</span>
-          </li>
-          <li class="web text-align-center bold">
-            <span>전체</span>
-          </li>
-          <li class="web text-align-center">
-            <span>추천</span>
-          </li>
-          <li class="web text-align-center">
-            <span>커뮤니티</span>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <section>
-        <div>
-          <button class="category btn-L btn-clicked" type="button">
-            <span># 모든 주제</span>
-          </button>
-          <button class="category btn-L btn-disable" type="button">
-            <span># 운동</span>
-          </button>
-          <button class="category btn-L btn-disable" type="button">
-            <span># 식단</span>
-          </button>
-          <button class="category btn-L btn-disable" type="button">
-            <span># 크로스핏</span>
-          </button>
-          <button class="category btn-L btn-disable" type="button">
-            <span># 러닝</span>
-          </button>
-          <button class="category btn-L btn-disable" type="button">
-            <span># 레시피</span>
-          </button>
-        </div>
-      </section>
-      <section>
-        <article class="feed-all padding-118px">
-          <div class="photo-align-type1 margin-bottom-8px">
-            <div id="photos" class="photo-align-type1-1 photo-large"></div>
-            <div class="photo-align-type2">
-              <div id="photos" class="photo-medium"></div>
-              <div id="photos" class="photo-medium"></div>
+    <nav class="sub-nav">
+      <ul class="sub-nav-menu font-24px">
+        <li class="web text-align-center">내 피드</li>
+        <li class="web text-align-center">전체</li>
+        <li class="web text-align-center bold">추천</li>
+        <li class="web text-align-center">커뮤니티</li>
+      </ul>
+    </nav>
+    <main class="gap-24px">
+      <section class="rcmd gap-48px">
+        <article>
+          <div class="rcmd-swipe gap-16px">
+            <div class="category text-align-center">
+              <span class="font-24px bold">튼튼 인플루언서</span
+              ><button class="btn-more btn-l">더보기</button>
+            </div>
+            <div class="rcmd-cards gap-24px">
+              <div class="card-circle gap-16px">
+                <div class="photo-circle-160px"></div>
+                <div class="font-20px">닉네임</div>
+                <button class="btn-L btn-disable" type="button">
+                  # 해시태그
+                </button>
+              </div>
+              <div class="card-circle gap-16px">
+                <div class="photo-circle-160px"></div>
+                <div class="font-20px">닉네임</div>
+                <button class="btn-L btn-disable" type="button">
+                  # 해시태그
+                </button>
+              </div>
             </div>
           </div>
-          <div class="photo-align-type3 margin-bottom-8px">
-            <div id="photos" class="photo-medium"></div>
-            <div id="photos" class="photo-medium"></div>
-            <div id="photos" class="photo-medium"></div>
-          </div>
-          <div class="photo-align-type1 margin-bottom-8px">
-            <div class="photo-align-type2">
-              <div id="photos" class="photo-medium"></div>
-              <div id="photos" class="photo-medium"></div>
+        </article>
+        <article>
+          <div class="rcmd-swipe gap-16px">
+            <div class="category text-align-center">
+              <span class="font-24px bold">이번주 인기 피드</span
+              ><button class="btn-more btn-l">더보기</button>
             </div>
-            <div id="photos" class="photo-align-type1-1 photo-large"></div>
+            <div class="rcmd-cards gap-24px">
+              <div class="card-rectangle gap-16px">
+                <div class="photo-web-m"></div>
+                <div class="rcmd-card-1st-row text-align-center">
+                  <div class="card-reaction">
+                    <i class="bi-20px bi-heart"></i>
+                    <i class="bi-20px bi-chat"></i>
+                    <i class="bi-20px bi-bookmarks"></i>
+                  </div>
+                  <span class="font-14px natural500">2일 전</span>
+                </div>
+              </div>
+              <div class="card-rectangle gap-16px">
+                <div class="photo-web-m"></div>
+                <div class="rcmd-card-1st-row text-align-center">
+                  <div class="card-reaction">
+                    <i class="bi-20px bi-heart"></i>
+                    <i class="bi-20px bi-chat"></i>
+                    <i class="bi-20px bi-bookmarks"></i>
+                  </div>
+                  <span class="font-14px natural500">2일 전</span>
+                </div>
+              </div>
+              <div class="card-rectangle gap-16px">
+                <div class="photo-web-m"></div>
+                <div class="rcmd-card-1st-row text-align-center">
+                  <div class="card-reaction">
+                    <i class="bi-20px bi-heart"></i>
+                    <i class="bi-20px bi-chat"></i>
+                    <i class="bi-20px bi-bookmarks"></i>
+                  </div>
+                  <span class="font-14px natural500">2일 전</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article>
+          <div class="rcmd-scroll gap-16px">
+            <div class="category text-align-center">
+              <span class="font-24px bold">추천 피드</span
+              ><button class="btn-more btn-l">더보기</button>
+            </div>
+            <div class="hashtag">
+              <button class="btn-L btn-clicked" type="button">
+                # 모든 주제
+              </button>
+              <button class="btn-L btn-disable" type="button"># 운동</button>
+              <button class="btn-L btn-disable" type="button"># 식단</button>
+              <button class="btn-L btn-disable" type="button">
+                # 크로스핏
+              </button>
+              <button class="btn-L btn-disable" type="button"># 러닝</button>
+              <button class="btn-L btn-disable" type="button"># 레시피</button>
+            </div>
+            <div class="rcmd-contents">
+              <div
+                class="rcmd-content flex-row margin-bottom-16px border-bottom-200 gap-16px"
+              >
+                <div class="photo-web-xs"></div>
+                <div class="card-info flex-column gap-16px">
+                  <div class="font-16px semi-bold">게시글 제목</div>
+                  <div class="feed-content font-14px">
+                    게시글 내용은 최대 두줄로 노출되게 설정. 게시글 내용은 최대
+                    두줄로 노출되게 설정. 게시글 내용은 최대 두줄로 노출되게
+                    설정. 게시글 내용은 최대 두줄로 노출되게 설정. 게시글 내용은
+                    최대 두줄로 노출되게 설정.
+                  </div>
+                  <div class="rcmd-card-1st-row text-align-center">
+                    <div class="card-reaction">
+                      <i class="bi-20px bi-heart"></i>
+                      <i class="bi-20px bi-chat"></i>
+                      <i class="bi-20px bi-bookmarks"></i>
+                    </div>
+                    <span class="font-14px natural500">2일 전</span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="rcmd-content flex-row margin-bottom-16px border-bottom-200 gap-16px"
+              >
+                <div class="photo-web-xs"></div>
+                <div class="card-info flex-column gap-16px">
+                  <div class="font-16px semi-bold">게시글 제목</div>
+                  <div class="feed-content font-14px">
+                    게시글 내용은 최대 두줄로 노출되게 설정. 게시글 내용은 최대
+                    두줄로 노출되게 설정. 게시글 내용은 최대 두줄로 노출되게
+                    설정. 게시글 내용은 최대 두줄로 노출되게 설정. 게시글 내용은
+                    최대 두줄로 노출되게 설정.
+                  </div>
+                  <div class="rcmd-card-1st-row text-align-center">
+                    <div class="card-reaction">
+                      <i class="bi-20px bi-heart"></i>
+                      <i class="bi-20px bi-chat"></i>
+                      <i class="bi-20px bi-bookmarks"></i>
+                    </div>
+                    <span class="font-14px natural500">2일 전</span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="rcmd-content flex-row margin-bottom-16px border-bottom-200 gap-16px"
+              >
+                <div class="photo-web-xs"></div>
+                <div class="card-info flex-column gap-16px">
+                  <div class="font-16px semi-bold">게시글 제목</div>
+                  <div class="feed-content font-14px">
+                    게시글 내용은 최대 두줄로 노출되게 설정. 게시글 내용은 최대
+                    두줄로 노출되게 설정. 게시글 내용은 최대 두줄로 노출되게
+                    설정. 게시글 내용은 최대 두줄로 노출되게 설정. 게시글 내용은
+                    최대 두줄로 노출되게 설정.
+                  </div>
+                  <div class="rcmd-card-1st-row text-align-center">
+                    <div class="card-reaction">
+                      <i class="bi-20px bi-heart"></i>
+                      <i class="bi-20px bi-chat"></i>
+                      <i class="bi-20px bi-bookmarks"></i>
+                    </div>
+                    <span class="font-14px natural500">2일 전</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </article>
       </section>
