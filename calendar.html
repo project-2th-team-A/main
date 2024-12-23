@@ -16,7 +16,7 @@
         <link rel="stylesheet" href="./web_navbar.css" />
         <script src="./web_navbar.js" defer></script>
 
-        <link rel="stylesheet" href="calendar.css">
+        <link rel="stylesheet" href="calendar.css" />
         <script src="./calendar.js" defer></script>
     </head>
     <body>
@@ -83,7 +83,7 @@
         </div>
 
         <!-- 캘린더 페이지 -->
-         
+
         <div class="calendarContent">
             <!-- title -->
             <div class="title">
@@ -93,7 +93,7 @@
                     <i class="bi bi-toggle-off"></i>
                 </div>
             </div>
-            
+
             <!-- 캘린더 -->
             <div class="calendar">
                 <!-- 월 년 -->
@@ -115,8 +115,32 @@
                 </div>
 
                 <!-- 날짜 -->
-                <table>
-                </table>
+                <table></table>
             </div>
         </div>
+        <div class="todaysContent">
+            <div class="todaysSchedule">
+                <p class="scheduleTitle font18 fontMedium textColor">
+                    운동 일정
+                </p>
+                <div class="scheduleTimeTextBtn">
+                    <div class="schduleTimeText">
+                        <p class="font16 fontRegular textColor">11:00</p>
+                        <div class="scheduleLine"></div>
+                        <div class="scheduleNameTime">
+                            <p class="font16 fontRegular textColor">
+                                고운필라테스
+                            </p>
+                            <p class="font10 fontRegular textColorDisable">
+                                오전 11:00 - 오후 12:00
+                            </p>
+                        </div>
+                    </div>
+                    <button class="scheduleBtn btnPurpleMedium">
+                        예약변경
+                    </button>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>

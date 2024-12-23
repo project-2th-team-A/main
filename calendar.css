@@ -84,9 +84,9 @@ table {
     align-items: center;
 }
 
-/* .cell:hover {
-    background-color: #f1f1f1;
-} */
+.cell:hover {
+    background-color: #f5f5f5;
+}
 
 /* 오늘인 날짜 스타일 바꾸기 */
 .today p {
@@ -97,6 +97,51 @@ table {
 .selected P {
     border-radius: 50%;
     background-color: #828eec;
+}
+
+/* 오늘의 컨텐츠 */
+.todaysContent {
+    position: absolute;
+    top: 88px;
+    left: 1346px;
+    display: flex;
+    flex-direction: column;
+    width: 390px;
+    border-top: 2px solid #f5f5f5;
+    /* gap: 16px; */
+}
+
+.todaysSchedule {
+    padding: 16px 24px 24px 24px;
+    border-bottom: 2px solid #f5f5f5;
+}
+.scheduleTitle {
+    margin-bottom: 16px;
+}
+
+.scheduleTimeTextBtn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.schduleTimeText {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.scheduleLine {
+    width: 3px;
+    height: 36px;
+    border-radius: 2px;
+    background-color: #f0dafe;
+}
+
+.scheduleNameTime {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
 
 /* 기본 css */
@@ -114,11 +159,23 @@ table {
     color: #001652;
 }
 
+.textColorDisable {
+    color: #909090;
+}
 .textColorDisableMedium {
     color: #b1b1b1;
 }
 
 /* 폰트크기 굵기 */
+.font10 {
+    font-size: 10px;
+}
+.font16 {
+    font-size: 16px;
+}
+.font18 {
+    font-size: 18px;
+}
 .font20 {
     font-size: 20px;
 }
@@ -128,13 +185,24 @@ table {
 }
 
 .fontBold {
-    font-weight: bold;
+    font-weight: 800;
 }
 
 .fontMedium {
-    font-weight: medium;
+    font-weight: 500;
 }
 
 .fontRegular {
-    font-weight: regular;
+    font-weight: 400;
+}
+
+/* 버튼 */
+.btnPurpleMedium {
+    padding: 4px 8px;
+    background-color: #f1dbff;
+    border: none;
+    border-radius: 9px;
+    color: #c66efe;
+    font-size: 12px;
+    font-weight: 400;
 }
