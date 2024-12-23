@@ -1,13 +1,7 @@
 const navbar = document.querySelector('.navbar');
-const topList = document.querySelector('.topList');
+const topList = document.querySelector('.topList ul');
 const menuItems = document.querySelectorAll('.navbar a'); // 각 메뉴 아이템
 const menuTexts = document.querySelectorAll('.navbar p');
-
-// navbar의 높이 설정
-const navbarHeight = getComputedStyle(navbar).height;
-if (parseInt(navbarHeight) < window.innerHeight) {
-    navbar.style.height = '100vh';
-}
 
 // 미디어쿼리 객체 생성
 const mediaQuerySmall = window.matchMedia('(max-width: 600px)');

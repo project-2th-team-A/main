@@ -1,24 +1,33 @@
+/* 폰트 */
+@font-face {
+    font-family: 'CWDangamAsac-Bold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/CWDangamAsac-Bold.woff')
+        format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Noto Sans KR', sans-serif;
-}
-
 /* 네비게이션 */
 .navbar {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     position: fixed;
-    padding: 64px 64px 0px 64px;
-    border-right: 1px solid #b1b1b1;
+    padding: 64px;
+    height: 100vh;
+    background-color: white;
 }
 
 /* 네비게이션_로고 */
 .navbar .logo {
+    font-family: 'CWDangamAsac-Bold';
+    font-size: 48px;
     margin-bottom: 48px;
 }
 
@@ -36,15 +45,11 @@ body {
     flex-direction: column;
     justify-content: space-between;
     list-style: none;
+    gap: 24px;
 }
 
-.navbar .topList {
-    height: 256px;
-}
-
-.navbar .bottomList {
-    height: 144px;
-    margin-top: 400px;
+.bottomList {
+    margin-top: 24px;
 }
 
 .navbar a {
@@ -65,7 +70,65 @@ body {
     margin: 6px 16px;
 }
 
-/* 네비게이션_메뉴 -> 클릭했을 때 css */
-.navMenu.active {
-    color: #001652; /* 클릭된 메뉴 색상 */
+/* 기본 css */
+.textColor {
+    color: #292929;
+}
+.textColorRed {
+    color: #d80b0b;
+}
+
+.textColorBlue {
+    color: #1415eb;
+}
+.textColorSecondaryDark {
+    color: #001652;
+}
+
+.textColorDisable {
+    color: #909090;
+}
+.textColorDisableMedium {
+    color: #b1b1b1;
+}
+
+/* 폰트크기 굵기 */
+.font10 {
+    font-size: 10px;
+}
+.font16 {
+    font-size: 16px;
+}
+.font18 {
+    font-size: 18px;
+}
+.font20 {
+    font-size: 20px;
+}
+
+.font24 {
+    font-size: 24px;
+}
+
+.fontBold {
+    font-weight: 800;
+}
+
+.fontMedium {
+    font-weight: 500;
+}
+
+.fontRegular {
+    font-weight: 400;
+}
+
+/* 버튼 */
+.btnPurpleMedium {
+    padding: 4px 8px;
+    background-color: #f1dbff;
+    border: none;
+    border-radius: 9px;
+    color: #c66efe;
+    font-size: 12px;
+    font-weight: 400;
 }

@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Web_navbar</title>
+        <title>캘린더</title>
         <!-- CDN links (CSS) -->
         <link
             rel="stylesheet"
@@ -21,45 +21,42 @@
     </head>
     <body>
         <!-- 네비게이션 -->
-        <div class="navbar">
-            <!-- 네비게이션_로고 -->
-            <div class="logo"><span>튼튼</span></div>
-
-            <!-- 네비게이션_상단 -->
-            <ul class="topList">
-                <li>
-                    <a href="">
-                        <i class="bi bi-house-door-fill"></i>
-                        <p>홈</p></a
-                    >
-                </li>
-                <li>
-                    <a href=""
-                        ><i class="bi bi-calendar3"></i>
-                        <p>캘린더</p></a
-                    >
-                </li>
-                <li>
-                    <a href=""
-                        ><i class="bi bi-stickies-fill"></i>
-                        <p>피드</p></a
-                    >
-                </li>
-                <li>
-                    <a href=""
-                        ><i class="bi bi-person-fill"></i>
-                        <p>마이페이지</p></a
-                    >
-                </li>
-                <li>
-                    <a href=""
-                        ><i class="bi bi-plus-circle-fill"></i>
-                        <p>만들기</p></a
-                    >
-                </li>
-            </ul>
-
-            <!-- 네비게이션_하단 -->
+        <header class="navbar">
+            <div class="topList">
+                <div class="logo"><span>튼튼</span></div>
+                <ul>
+                    <li>
+                        <a href="">
+                            <i class="bi bi-house-door-fill"></i>
+                            <p>홈</p></a
+                        >
+                    </li>
+                    <li>
+                        <a href=""
+                            ><i class="bi bi-calendar3"></i>
+                            <p>캘린더</p></a
+                        >
+                    </li>
+                    <li>
+                        <a href=""
+                            ><i class="bi bi-stickies-fill"></i>
+                            <p>피드</p></a
+                        >
+                    </li>
+                    <li>
+                        <a href=""
+                            ><i class="bi bi-person-fill"></i>
+                            <p>마이페이지</p></a
+                        >
+                    </li>
+                    <li>
+                        <a href=""
+                            ><i class="bi bi-plus-circle-fill"></i>
+                            <p>만들기</p></a
+                        >
+                    </li>
+                </ul>
+            </div>
             <ul class="bottomList">
                 <li>
                     <a href=""
@@ -80,67 +77,73 @@
                     >
                 </li>
             </ul>
-        </div>
+        </header>
 
         <!-- 캘린더 페이지 -->
-
-        <div class="calendarContent">
-            <!-- title -->
-            <div class="title">
-                <span class="todayTitle"></span>
-                <div class="ptMode">
-                    <span class="textColor">PT 모드</span>
-                    <i class="bi bi-toggle-off"></i>
-                </div>
-            </div>
-
-            <!-- 캘린더 -->
-            <div class="calendar">
-                <!-- 월 년 -->
-                <div class="monthYear">
-                    <i class="bi bi-chevron-left" id="prevMonth"></i>
-                    <p></p>
-                    <i class="bi bi-chevron-right" id="nextMonth"></i>
-                </div>
-
-                <!-- 요일  -->
-                <div class="day">
-                    <p class="textColorRed">Sun</p>
-                    <p>Mon</p>
-                    <p>Tue</p>
-                    <p>Wed</p>
-                    <p>Thu</p>
-                    <p>Fri</p>
-                    <p class="textColorBlue">Sat</p>
-                </div>
-
-                <!-- 날짜 -->
-                <table></table>
-            </div>
-        </div>
-        <div class="todaysContent">
-            <div class="todaysSchedule">
-                <p class="scheduleTitle font18 fontMedium textColor">
-                    운동 일정
-                </p>
-                <div class="scheduleTimeTextBtn">
-                    <div class="schduleTimeText">
-                        <p class="font16 fontRegular textColor">11:00</p>
-                        <div class="scheduleLine"></div>
-                        <div class="scheduleNameTime">
-                            <p class="font16 fontRegular textColor">
-                                고운필라테스
-                            </p>
-                            <p class="font10 fontRegular textColorDisable">
-                                오전 11:00 - 오후 12:00
-                            </p>
-                        </div>
+        <main>
+            <div class="calendarContent">
+                <!-- title -->
+                <div class="title">
+                    <span class="todayTitle"></span>
+                    <div class="ptMode">
+                        <span class="textColor">PT 모드</span>
+                        <i class="bi bi-toggle-off"></i>
                     </div>
-                    <button class="scheduleBtn btnPurpleMedium">
-                        예약변경
-                    </button>
+                </div>
+
+                <!-- 캘린더 -->
+                <div class="calendar">
+                    <!-- 월 년 -->
+                    <div class="monthYear">
+                        <i class="bi bi-chevron-left" id="prevMonth"></i>
+                        <p></p>
+                        <i class="bi bi-chevron-right" id="nextMonth"></i>
+                    </div>
+
+                    <!-- 요일  -->
+                    <div class="day">
+                        <p class="textColorRed">Sun</p>
+                        <p>Mon</p>
+                        <p>Tue</p>
+                        <p>Wed</p>
+                        <p>Thu</p>
+                        <p>Fri</p>
+                        <p class="textColorBlue">Sat</p>
+                    </div>
+
+                    <!-- 날짜 -->
+                    <table></table>
                 </div>
             </div>
-        </div>
+        </main>
+        <aside>
+            <div class="todaysContent">
+                <div class="todaysSchedule">
+                    <p class="scheduleTitle font18 fontMedium textColor">
+                        운동 일정
+                    </p>
+                    <div class="scheduleTimeTextBtn">
+                        <div class="schduleTimeText">
+                            <p class="font16 fontRegular textColor">11:00</p>
+                            <div class="scheduleLine"></div>
+                            <div class="scheduleNameTime">
+                                <p class="font16 fontRegular textColor">
+                                    고운필라테스
+                                </p>
+                                <p class="font10 fontRegular textColorDisable">
+                                    오전 11:00 - 오후 12:00
+                                </p>
+                            </div>
+                        </div>
+                        <button
+                            type="button"
+                            class="scheduleBtn btnPurpleMedium"
+                        >
+                            예약변경
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </aside>
     </body>
 </html>

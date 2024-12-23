@@ -1,3 +1,8 @@
+/* navigation 메뉴 색 변경 */
+.topList li:nth-child(2) a {
+    color: #001652;
+}
+
 .calendarContent {
     display: flex;
     flex-direction: column;
@@ -99,7 +104,11 @@ table {
     background-color: #828eec;
 }
 
-/* 오늘의 컨텐츠 */
+/* <aside> 오늘의 컨텐츠 */
+aside {
+    display: none;
+}
+
 .todaysContent {
     position: absolute;
     top: 88px;
@@ -142,67 +151,4 @@ table {
     display: flex;
     flex-direction: column;
     gap: 4px;
-}
-
-/* 기본 css */
-.textColor {
-    color: #292929;
-}
-.textColorRed {
-    color: #d80b0b;
-}
-
-.textColorBlue {
-    color: #1415eb;
-}
-.textColorSecondaryDark {
-    color: #001652;
-}
-
-.textColorDisable {
-    color: #909090;
-}
-.textColorDisableMedium {
-    color: #b1b1b1;
-}
-
-/* 폰트크기 굵기 */
-.font10 {
-    font-size: 10px;
-}
-.font16 {
-    font-size: 16px;
-}
-.font18 {
-    font-size: 18px;
-}
-.font20 {
-    font-size: 20px;
-}
-
-.font24 {
-    font-size: 24px;
-}
-
-.fontBold {
-    font-weight: 800;
-}
-
-.fontMedium {
-    font-weight: 500;
-}
-
-.fontRegular {
-    font-weight: 400;
-}
-
-/* 버튼 */
-.btnPurpleMedium {
-    padding: 4px 8px;
-    background-color: #f1dbff;
-    border: none;
-    border-radius: 9px;
-    color: #c66efe;
-    font-size: 12px;
-    font-weight: 400;
 }
