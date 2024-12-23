@@ -1,0 +1,285 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  width: 100vw;
+}
+
+header {
+  position: fixed;
+}
+
+main {
+  width: 1920px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 96px 480px 0 480px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.text-align-center {
+  display: flex;
+  align-items: center;
+}
+
+@font-face {
+  font-family: "CWDangamAsac-Bold";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/CWDangamAsac-Bold.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font {
+  font-family: "Noto Sans KR", serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.light {
+  font-weight: 300;
+}
+
+.text-24px {
+  font-size: 24px;
+}
+
+.text-16px {
+  font-size: 16px;
+}
+
+.text-14px {
+  font-size: 14x;
+}
+
+.text-12px {
+  font-size: 12px;
+}
+
+.border-bottom {
+  border-bottom: 2px solid #121212;
+}
+
+.bi {
+  font-size: 32px;
+}
+
+.bi-24px {
+  font-size: 24px;
+}
+
+.main-nav {
+  width: 480px;
+  height: 100vh;
+  padding: 48px 68px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-nav-vertical {
+  height: 888px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main-nav-vertical li {
+  list-style: none;
+  padding: 12px 0;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.main-nav-vertical i {
+  margin-right: 16px;
+}
+
+.logo {
+  font-family: "CWDangamAsac-Bold";
+  font-size: 48px;
+  padding-bottom: 36px;
+  height: 96px;
+}
+
+header.sub-nav {
+  width: 1920px;
+  height: 88px;
+  position: fixed;
+  padding: 48px 480px;
+  font-size: 24px;
+}
+
+.sub-nav-menu {
+  width: 960px;
+  height: 48px;
+}
+.sub-nav-menu ul {
+  display: flex;
+  flex-direction: row;
+  padding: 8px;
+}
+
+.sub-nav-menu li {
+  list-style: none;
+  margin-right: 24px;
+  padding: 0px 24px;
+}
+
+button {
+  margin: 8px;
+  padding: 8px 8px;
+  border: none;
+  border-radius: 9px;
+}
+
+.btn-L {
+  font-size: 16px;
+}
+
+.btn-L span {
+  height: 20px;
+}
+
+.btn-clicked {
+  background-color: #001652;
+  color: #ffffff;
+}
+
+.btn-disable {
+  background-color: #f5f5f5;
+  color: #909090;
+}
+.category-set {
+  padding: 0 24px;
+}
+article.feed-all {
+  width: 960px;
+  padding: 0 118px 0 118px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.photo-align-type1 {
+  width: 724px;
+  height: 480px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.photo-align-type2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.photo-align-type3 {
+  width: 724px;
+  height: 236px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.photo-lagre {
+  width: 480px;
+  height: 480px;
+  border: 2px solid pink;
+}
+
+.photo-medium {
+  width: 236px;
+  height: 236px;
+  border: 2px solid red;
+}
+.margin-bottom-8px {
+  margin-bottom: 8px;
+}
+
+.photo-circle-160px {
+  width: 160px;
+  height: 160px;
+  border-radius: 100px;
+  border: 2px solid red;
+}
+
+article.feed-profile {
+  width: 960px;
+  height: 160px;
+  padding: 0 118px 0 118px;
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+.user-info {
+  height: 160px;
+  width: 540px;
+  padding: ;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.user-name {
+  width: 160px;
+}
+
+.user-feed-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-detail {
+  width: 80px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.user-desc {
+  height: 40px;
+}
+
+.feed-gallery {
+  display: flex;
+  flex-direction: column;
+}
+
+.feed-taps {
+  height: 48px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tap {
+  width: 236px;
+  height: 48px;
+  padding: 16px;
+  text-align: center;
+}
+
+.feed-photos {
+  display: flex;
+  flex-direction: column;
+}
