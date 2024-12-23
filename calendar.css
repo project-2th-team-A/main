@@ -1,0 +1,140 @@
+.calendarContent {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 724px;
+
+    position: absolute;
+    top: 88px;
+    left: 598px;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todayTitle {
+    font-size: 24px;
+    font-weight: medium;
+}
+
+.ptMode {
+    gap: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.ptMode span {
+    font-size: 14px;
+    font-weight: regular;
+}
+
+.ptMode i {
+    font-size: 24px;
+    color: #c66efe;
+}
+
+.monthYear {
+    display: flex;
+    justify-content: space-between;
+}
+
+.monthYear i {
+    font-size: 20px;
+}
+
+.day {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 104px;
+}
+
+.day p {
+    width: 100px;
+    font-size: 20px;
+    font-weight: medium;
+    text-align: center;
+}
+
+/* 테이블 설정 */
+table {
+    display: flex;
+    flex-direction: column;
+}
+.oneWeek {
+    display: flex;
+    justify-content: space-between;
+}
+.cell {
+    width: 100px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer; /* 커서 바꾸기 */
+}
+
+.cell p {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .cell:hover {
+    background-color: #f1f1f1;
+} */
+
+/* 오늘인 날짜 스타일 바꾸기 */
+.today p {
+    border-radius: 50%;
+    border: 4px solid #828eec;
+}
+
+.selected P {
+    border-radius: 50%;
+    background-color: #828eec;
+}
+
+/* 기본 css */
+.textColor {
+    color: #292929;
+}
+.textColorRed {
+    color: #d80b0b;
+}
+
+.textColorBlue {
+    color: #1415eb;
+}
+.textColorSecondaryDark {
+    color: #001652;
+}
+
+.textColorDisableMedium {
+    color: #b1b1b1;
+}
+
+/* 폰트크기 굵기 */
+.font20 {
+    font-size: 20px;
+}
+
+.font24 {
+    font-size: 24px;
+}
+
+.fontBold {
+    font-weight: bold;
+}
+
+.fontMedium {
+    font-weight: medium;
+}
+
+.fontRegular {
+    font-weight: regular;
+}
