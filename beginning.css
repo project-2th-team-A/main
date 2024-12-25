@@ -1,0 +1,336 @@
+@import url("./default.css");
+
+/*** 온보딩 폰트  medium 500으로 일단 함 ***/
+.font-onBoard-27px {
+  font-size: 27px;
+  font-weight: 800;
+  /* line-height: ?px; */
+}
+
+.font-onBoard-20px {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.font-onBoard-19px {
+  font-size: 19px;
+  font-weight: 800;
+  /* line-height: ?px; */
+}
+
+.font-onBoard-17px {
+  font-size: 17px;
+  /* 온보딩 폰트   .medium 500으로 일단 함 */
+  font-weight: 500;
+  /* line-height: ?px; */
+}
+
+.font-onBoard-12px {
+  font-size: 12px;
+  /* 온보딩 폰트   .medium 500으로 일단 함 */
+  font-weight: 500;
+  /* line-height: ?px; */
+}
+
+/* 시작 */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* w_0_0_logo */
+.logo {
+  font-family: CWDangamAsac-Bold;
+  font-size: 48px;
+  color: #b33ffc;
+  position: absolute;
+}
+
+.logo.first {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -155%);
+}
+
+/* w_1_1_choose */
+.logo.second {
+  margin-top: 91px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+#experience {
+  position: absolute;
+  color: #5932ad;
+  top: 168px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  text-align: center;
+}
+
+.pic_choose {
+  width: 492px;
+  height: 314px;
+  position: absolute;
+  top: 324px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+#container_choose {
+  display: flex;
+  justify-content: center;
+  gap: 54px;
+}
+
+.box_choose {
+  position: relative;
+  width: 265px;
+  height: 54px;
+  border: 1px solid;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 672px;
+}
+
+.box_choose > .check {
+  position: absolute;
+  left: 29px;
+}
+
+/*** Q : 왜 회원, 트레이너 박스에서부터 110px 인지 모르겠음. 835px 적용하면 안됨.  ***/
+.bottomText {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 110px;
+}
+.bottomText.one {
+  gap: 10px;
+}
+
+/* w_1_4_login */
+.container {
+  display: flex;
+  /* flex-wrap: wrap; */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.box {
+  width: 484px;
+  height: 800px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-top: 131px;
+}
+
+.title {
+  text-align: center;
+  padding-top: 68px;
+}
+
+.logIn {
+  margin-left: 41px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.loginBox {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.logInTitle {
+  margin-bottom: 8px;
+}
+
+.logIninput input {
+  width: 402px;
+  height: 54px;
+  border-radius: 5px;
+  border: 1px solid #f5f5f5;
+}
+
+.logIninput input::placeholder {
+  padding-left: 38px;
+  color: #b1b1b1;
+}
+
+.logInButton {
+  width: 402px;
+  height: 54px;
+  border-radius: 8px;
+  background-color: #c66efe;
+  margin-left: 41px;
+  margin-top: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.find {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 85.05px;
+  margin-top: 42px;
+}
+
+/*** Q : 어떻게 처리??? ***/
+/* .v-line {
+  border-left: 1px solid;
+  height: 13px;
+  margin-left: 50%;
+} */
+
+.logInButton {
+  width: 402px;
+  height: 54px;
+  border-radius: 8px;
+  margin-left: 41px;
+  margin-top: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logInButton.kakao {
+  background-color: #fee500;
+  margin-top: 43px;
+}
+
+.logInButton.naver {
+  background-color: #03c75a;
+  margin-top: 18px;
+}
+
+.logInButton.google {
+  background-color: #000000;
+  margin-top: 18px;
+}
+
+/* w_1_5_logIn_kakao */
+#kakao {
+  background-color: #fee500;
+}
+
+.kakao {
+  width: 80px;
+  height: 70.76px;
+  margin-top: 474px;
+  margin-left: 920px;
+}
+
+/* w_1_6_logIn_naver */
+#naver {
+  background-color: #03c75a;
+}
+
+.naver {
+  width: 120px;
+  height: 118.76px;
+  margin-top: 458px;
+  margin-left: 900px;
+}
+
+/* w_1_7_logIn_google */
+#google {
+  background-color: #000000;
+}
+
+.google {
+  width: 80px;
+  height: 76.37px;
+  margin-top: 474px;
+  margin-left: 920px;
+}
+
+/* w_1_8_create */
+
+.logo.create {
+  margin-top: 261 px;
+  left: 480px;
+  top: 261px;
+  left: 480px;
+}
+
+.containerCreate {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  gap: 388px;
+}
+
+.hi {
+  display: flex;
+  align-items: center;
+}
+
+.description {
+  font-size: 28px;
+  font-weight: 800;
+  margin-top: 343px;
+}
+
+/* hand margin-top이 figma와 다름 */
+.hand {
+  width: 56px;
+  height: 59px;
+  margin-top: 340px;
+}
+
+.input-pictures {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bar {
+  width: 402px;
+  height: 8px;
+  margin-top: 120px;
+}
+
+.picture {
+  width: 106.04px;
+  height: 106.04px;
+  padding-top: 45.02px;
+}
+
+/* .auth-form {
+   
+} */
+.createButton {
+  width: 284px;
+  height: 47px;
+  border-radius: 5px;
+  background-color: #c66efe;
+  margin-left: 100px;
+  margin-top: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.genderButtons {
+  gap: 7px;
+}
+
+.gender {
+  width: 129px;
+  height: 54px;
+  border: 1px solid #f5f5f5;
+  border-radius: 5px;
+  background-color: transparent;
+}

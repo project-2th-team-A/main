@@ -1,0 +1,123 @@
+/* 1. 폰트 */
+/* 기본 폰트 */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+
+* {
+  font-family: "Noto Sans KR", serif;
+  font-style: normal;
+  color: #292929;
+}
+
+/* 로고 폰트 (변경될 가능성 있음) */
+@font-face {
+  font-family: "CWDangamAsac-Bold";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/CWDangamAsac-Bold.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 2. 폰트 굵기 */
+.bold {
+  font-weight: 800;
+}
+
+.semi-bold {
+  font-weight: 600;
+}
+
+/*** Q: 이건 확인하기 ***/
+.medium {
+  font-weight: 500;
+}
+
+.light {
+  font-weight: 350;
+}
+
+/* 3. 폰트 크기 */
+.font-24px {
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.font-20px {
+  font-size: 20px;
+  line-height: 30px;
+}
+.font-16px {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.font-14px {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.font-12px {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.font-10px {
+  font-size: 10px;
+  line-height: 15px;
+}
+
+.font-8px {
+  font-size: 8px;
+  line-height: 12px;
+}
+
+/* 4. 색상 */
+/* 내추럴 : 화이트~블랙 */
+.natural100 {
+  color: #ffffff;
+}
+.natural200 {
+  color: #f5f5f5;
+}
+.natural300 {
+  color: #dfdfdf;
+}
+.natural400 {
+  color: #b1b1b1;
+}
+.natural500 {
+  color: #909090;
+}
+.natural900 {
+  color: #292929;
+}
+
+/* Primary */
+.primary100 {
+  color: #f1dbff;
+}
+.primary200 {
+  color: #ebd0fd;
+}
+.primary300 {
+  color: #c66efe;
+}
+.primary400 {
+  color: #b33ffc;
+}
+.primary500 {
+  color: #8a26c9;
+}
+.primary900 {
+  color: #5932ad;
+}
+
+/* Secondary */
+.secondary100 {
+  color: #dee7ff;
+}
+.secondary200 {
+  color: #93b0ff;
+}
+.secondary300 {
+  color: #4779ff;
+}
