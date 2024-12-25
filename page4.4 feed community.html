@@ -54,46 +54,113 @@
       </div>
     </header>
     <nav class="sub-nav">
-      <ul class="sub-nav-menu font-24px">
+      <ul class="sub-nav-menu">
         <li class="web text-align-center">내 피드</li>
         <li class="web text-align-center">전체</li>
         <li class="web text-align-center">추천</li>
         <li class="web text-align-center bold">커뮤니티</li>
       </ul>
     </nav>
-    <main class="gap-24px">
-      <section class="rcmd gap-48px">
+    <main>
+      <section class="rcmd">
         <article>
-          <div class="rcmd-swipe gap-16px">
+          <div class="rcmd-swipe">
             <div class="category text-align-center">
-              <span class="font-24px bold">내 커뮤니티</span
-              ><button class="btn-more btn-l">더보기</button>
+              <span class="rcmd-title">내 커뮤니티</span
+              ><button class="btn-more">더보기</button>
             </div>
-            <div class="gap-16px flex-row">
-              <div class="cmnt-card flex-row text-align-center gap-24px">
-                <div class="photo-circle-160px"></div>
-                <div class="cmnt-info flex-column gap-24px">
-                  <div class="flex-row gap-8px">
-                    <button class="btn-L btn-primary" type="button">
+            <div class="cmnt-cards">
+              <div class="cmnt-card text-align-center">
+                <div class="photo-circle"></div>
+                <div class="cmnt-info">
+                  <div class="cmnt-info-1st-row">
+                    <button class="btn-l btn-primary" type="button">
                       센터
                     </button>
-                    <div class="font-20px semi-bold">고운필라테스</div>
+                    <div class="semi-bold">고운필라테스</div>
                   </div>
-                  <div class="feed-content font-16px">
+                  <div class="cmnt-content">
+                    자세교정으로 내 '진짜' 키를 찾아보세요.
+                  </div>
+                </div>
+              </div>
+              <div class="cmnt-card text-align-center">
+                <div class="photo-circle"></div>
+                <div class="cmnt-info">
+                  <div class="cmnt-info-1st-row">
+                    <button class="btn-l btn-secondary" type="button">
+                      클럽
+                    </button>
+                    <div class="semi-bold">오늘만산다</div>
+                  </div>
+                  <div class="cmnt-content">
+                    내일이 없는 듯이 달리는 사람들! <br />내향인 친화 러닝
+                    클럽입니다
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article>
+          <div class="rcmd-swipe">
+            <div class="category text-align-center">
+              <span class="rcmd-title">추천 센터</span
+              ><button class="btn-more btn-l">더보기</button>
+            </div>
+            <div class="cmnt-cards app">
+              <div class="cmnt-card text-align-center">
+                <div class="photo-circle"></div>
+                <div class="cmnt-info">
+                  <div class="cmnt-info-1st-row">
+                    <button class="btn-l btn-primary" type="button">
+                      센터
+                    </button>
+                    <div class="semi-bold">센터이름</div>
+                  </div>
+                  <div class="cmnt-content">
                     게시글 내용은 최대 두줄로 노출되게 설정. 게시글 내용은 최대
                   </div>
                 </div>
               </div>
-              <div class="cmnt-card flex-row text-align-center gap-24px">
-                <div class="photo-circle-160px"></div>
-                <div class="cmnt-info flex-column gap-24px">
-                  <div class="flex-row gap-8px">
-                    <button class="btn-L btn-secondary" type="button">
-                      클럽
+              <div class="cmnt-card text-align-center">
+                <div class="photo-circle"></div>
+                <div class="cmnt-info">
+                  <div class="cmnt-info-1st-row">
+                    <button class="btn-l btn-primary" type="button">
+                      센터
                     </button>
-                    <div class="font-20px semi-bold">고운필라테스</div>
+                    <div class="semi-bold">센터이름</div>
                   </div>
-                  <div class="feed-content font-16px">
+                  <div class="cmnt-content">
+                    게시글 내용은 최대 두줄로 노출되게 설정. 게시글 내용은 최대
+                  </div>
+                </div>
+              </div>
+              <div class="cmnt-card text-align-center">
+                <div class="photo-circle"></div>
+                <div class="cmnt-info">
+                  <div class="cmnt-info-1st-row">
+                    <button class="btn-l btn-primary" type="button">
+                      센터
+                    </button>
+                    <div class="semi-bold">센터이름</div>
+                  </div>
+                  <div class="cmnt-content">
+                    게시글 내용은 최대 두줄로 노출되게 설정. 게시글 내용은 최대
+                  </div>
+                </div>
+              </div>
+              <div class="cmnt-card text-align-center">
+                <div class="photo-circle"></div>
+                <div class="cmnt-info">
+                  <div class="cmnt-info-1st-row">
+                    <button class="btn-l btn-primary" type="button">
+                      센터
+                    </button>
+                    <div class="semi-bold">센터이름</div>
+                  </div>
+                  <div class="cmnt-content">
                     게시글 내용은 최대 두줄로 노출되게 설정. 게시글 내용은 최대
                   </div>
                 </div>
@@ -102,134 +169,64 @@
           </div>
         </article>
         <article>
-          <div class="rcmd-swipe gap-16px">
+          <div class="rcmd-swipe">
             <div class="category text-align-center">
-              <span class="font-24px bold">추천 센터</span
+              <span class="rcmd-title">추천 클럽</span
               ><button class="btn-more btn-l">더보기</button>
             </div>
-            <div class="gap-16px flex-row">
-              <div class="cmnt-card flex-row text-align-center gap-24px">
-                <div class="photo-circle-160px"></div>
-                <div class="cmnt-info flex-column gap-24px">
-                  <div class="flex-row gap-8px">
-                    <button class="btn-L btn-primary" type="button">
-                      센터
-                    </button>
-                    <div class="font-20px semi-bold">고운필라테스</div>
-                  </div>
-                  <div class="feed-content font-16px">
-                    게시글 내용은 최대 두줄로 노출되게 설정. 게시글 내용은 최대
-                  </div>
-                </div>
-              </div>
-              <div class="cmnt-card flex-row text-align-center gap-24px">
-                <div class="photo-circle-160px"></div>
-                <div class="cmnt-info flex-column gap-24px">
-                  <div class="flex-row gap-8px">
-                    <button class="btn-L btn-primary" type="button">
-                      센터
-                    </button>
-                    <div class="font-20px semi-bold">고운필라테스</div>
-                  </div>
-                  <div class="feed-content font-16px">
-                    게시글 내용은 최대 두줄로 노출되게 설정. 게시글 내용은 최대
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="gap-16px flex-row">
-              <div class="cmnt-card flex-row text-align-center gap-24px">
-                <div class="photo-circle-160px"></div>
-                <div class="cmnt-info flex-column gap-24px">
-                  <div class="flex-row gap-8px">
-                    <button class="btn-L btn-primary" type="button">
-                      센터
-                    </button>
-                    <div class="font-20px semi-bold">고운필라테스</div>
-                  </div>
-                  <div class="feed-content font-16px">
-                    게시글 내용은 최대 두줄로 노출되게 설정. 게시글 내용은 최대
-                  </div>
-                </div>
-              </div>
-              <div class="cmnt-card flex-row text-align-center gap-24px">
-                <div class="photo-circle-160px"></div>
-                <div class="cmnt-info flex-column gap-24px">
-                  <div class="flex-row gap-8px">
-                    <button class="btn-L btn-primary" type="button">
-                      센터
-                    </button>
-                    <div class="font-20px semi-bold">고운필라테스</div>
-                  </div>
-                  <div class="feed-content font-16px">
-                    게시글 내용은 최대 두줄로 노출되게 설정. 게시글 내용은 최대
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-        <article>
-          <div class="rcmd-swipe gap-16px">
-            <div class="category text-align-center">
-              <span class="font-24px bold">추천 클럽</span
-              ><button class="btn-more btn-l">더보기</button>
-            </div>
-            <div class="gap-16px flex-row">
-              <div class="cmnt-card flex-row text-align-center gap-24px">
-                <div class="photo-circle-160px"></div>
-                <div class="cmnt-info flex-column gap-24px">
-                  <div class="flex-row gap-8px">
-                    <button class="btn-L btn-secondary" type="button">
+            <div class="cmnt-cards app">
+              <div class="cmnt-card text-align-center">
+                <div class="photo-circle"></div>
+                <div class="cmnt-info">
+                  <div class="cmnt-info-1st-row">
+                    <button class="btn-l btn-secondary" type="button">
                       클럽
                     </button>
-                    <div class="font-20px semi-bold">고운필라테스</div>
+                    <div class="semi-bold">클럽이름</div>
                   </div>
-                  <div class="feed-content font-16px">
+                  <div class="cmnt-content">
                     게시글 내용은 최대 두줄로 노출되게 설정. 게시글 내용은 최대
                   </div>
                 </div>
               </div>
-              <div class="cmnt-card flex-row text-align-center gap-24px">
-                <div class="photo-circle-160px"></div>
-                <div class="cmnt-info flex-column gap-24px">
-                  <div class="flex-row gap-8px">
-                    <button class="btn-L btn-secondary" type="button">
+              <div class="cmnt-card text-align-center">
+                <div class="photo-circle"></div>
+                <div class="cmnt-info">
+                  <div class="cmnt-info-1st-row">
+                    <button class="btn-l btn-secondary" type="button">
                       클럽
                     </button>
-                    <div class="font-20px semi-bold">고운필라테스</div>
+                    <div class="semi-bold">클럽이름</div>
                   </div>
-                  <div class="feed-content font-16px">
+                  <div class="cmnt-content">
                     게시글 내용은 최대 두줄로 노출되게 설정. 게시글 내용은 최대
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="gap-16px flex-row">
-              <div class="cmnt-card flex-row text-align-center gap-24px">
-                <div class="photo-circle-160px"></div>
-                <div class="cmnt-info flex-column gap-24px">
-                  <div class="flex-row gap-8px">
-                    <button class="btn-L btn-secondary" type="button">
+              <div class="cmnt-card text-align-center">
+                <div class="photo-circle"></div>
+                <div class="cmnt-info">
+                  <div class="cmnt-info-1st-row">
+                    <button class="btn-l btn-secondary" type="button">
                       클럽
                     </button>
-                    <div class="font-20px semi-bold">고운필라테스</div>
+                    <div class="semi-bold">클럽이름</div>
                   </div>
-                  <div class="feed-content font-16px">
+                  <div class="cmnt-content">
                     게시글 내용은 최대 두줄로 노출되게 설정. 게시글 내용은 최대
                   </div>
                 </div>
               </div>
-              <div class="cmnt-card flex-row text-align-center gap-24px">
-                <div class="photo-circle-160px"></div>
-                <div class="cmnt-info flex-column gap-24px">
-                  <div class="flex-row gap-8px">
-                    <button class="btn-L btn-secondary" type="button">
+              <div class="cmnt-card text-align-center">
+                <div class="photo-circle"></div>
+                <div class="cmnt-info">
+                  <div class="cmnt-info-1st-row">
+                    <button class="btn-l btn-secondary" type="button">
                       클럽
                     </button>
-                    <div class="font-20px semi-bold">고운필라테스</div>
+                    <div class="semi-bold">클럽이름</div>
                   </div>
-                  <div class="feed-content font-16px">
+                  <div class="cmnt-content">
                     게시글 내용은 최대 두줄로 노출되게 설정. 게시글 내용은 최대
                   </div>
                 </div>
