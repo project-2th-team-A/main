@@ -1,0 +1,71 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 네비게이션 */
+.navbar {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    padding: 64px 64px 0px 64px;
+    border-right: 1px solid #b1b1b1;
+}
+
+/* 네비게이션_로고 */
+.navbar .logo {
+    margin-bottom: 48px;
+}
+
+.navbar .logo span {
+    width: 153px;
+    height: 88px;
+    color: #b33ffc;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+/* 네비게이션_메뉴 */
+.navbar ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.navbar .topList {
+    height: 256px;
+}
+
+.navbar .bottomList {
+    height: 144px;
+    margin-top: 400px;
+}
+
+.navbar a {
+    color: #909090;
+    font-size: 14px;
+    font-weight: medium;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbar a i {
+    font-size: 32px;
+}
+
+.navbar a p {
+    display: inline-block;
+    margin: 6px 16px;
+}
+
+/* 네비게이션_메뉴 -> 클릭했을 때 css */
+.navMenu.active {
+    color: #001652; /* 클릭된 메뉴 색상 */
+}

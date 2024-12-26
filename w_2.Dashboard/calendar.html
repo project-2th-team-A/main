@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web_navbar</title>
+    <!-- CDN links (CSS) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css"
+    /> 
+
+    <!-- CDN links (JS) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="./navigation.css" />
+    <script src="./navigation.js" defer></script>
+
+    <link rel="stylesheet" href="calendar.css" />
+    <script src="./calendar.js" defer></script>
+  </head>
+  <body>
+    <!-- 네비게이션 -->
+    <div class="navbar">
+      <!-- 네비게이션_로고 -->
+      <div class="logo"><span>튼튼</span></div>
+
+      <!-- 네비게이션_상단 -->
+      <ul class="topList">
+        <li>
+          <a href="">
+            <i class="bi bi-house-door-fill"></i>
+            <p>홈</p></a
+          >
+        </li>
+        <li>
+          <a href=""
+            ><i class="bi bi-calendar3"></i>
+            <p>캘린더</p></a
+          >
+        </li>
+        <li>
+          <a href=""
+            ><i class="bi bi-stickies-fill"></i>
+            <p>피드</p></a
+          >
+        </li>
+        <li>
+          <a href=""
+            ><i class="bi bi-person-fill"></i>
+            <p>마이페이지</p></a
+          >
+        </li>
+        <li>
+          <a href=""
+            ><i class="bi bi-plus-circle-fill"></i>
+            <p>만들기</p></a
+          >
+        </li>
+      </ul>
+
+      <!-- 네비게이션_하단 -->
+      <ul class="bottomList">
+        <li>
+          <a href=""
+            ><i class="bi bi-search"></i>
+            <p>검색</p></a
+          >
+        </li>
+        <li>
+          <a href=""
+            ><i class="bi bi-bell"></i>
+            <p>알림</p></a
+          >
+        </li>
+        <li>
+          <a href=""
+            ><i class="bi bi-gear"></i>
+            <p>설정</p></a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <!-- 캘린더 페이지 -->
+
+    <div class="calendarContent">
+      <!-- title -->
+      <!-- <div class="title">
+        <span class="todayTitle"></span>
+        <div class="ptMode">
+          <span class="textColor">PT 모드</span>
+          <i class="bi bi-toggle-off"></i>
+        </div>
+      </div> -->
+
+      <!-- 캘린더 -->
+      <!-- <div class="calendar"> -->
+        <!-- 월 년 -->
+        <!-- <div class="monthYear">
+          <i class="bi bi-chevron-left" id="prevMonth"></i>
+          <p></p>
+          <i class="bi bi-chevron-right" id="nextMonth"></i>
+        </div> -->
+
+        <!-- 요일  -->
+        <!-- <div class="day">
+          <p class="textColorRed">Sun</p>
+          <p>Mon</p>
+          <p>Tue</p>
+          <p>Wed</p>
+          <p>Thu</p>
+          <p>Fri</p>
+          <p class="textColorBlue">Sat</p>
+        </div> -->
+
+        
+
+
+        
+
+
+
+        <!-- 날짜 -->
+        <!-- <table></table>
+      </div>
+    </div>
+    <div class="todaysContent">
+      <div class="todaysSchedule">
+        <p class="scheduleTitle font18 fontMedium textColor">운동 일정</p>
+        <div class="scheduleTimeTextBtn">
+          <div class="schduleTimeText">
+            <p class="font16 fontRegular textColor">11:00</p>
+            <div class="scheduleLine"></div>
+            <div class="scheduleNameTime">
+              <p class="font16 fontRegular textColor">고운필라테스</p>
+              <p class="font10 fontRegular textColorDisable">
+                오전 11:00 - 오후 12:00
+              </p>
+            </div>
+          </div>
+          <button class="scheduleBtn btnPurpleMedium">예약변경</button>
+        </div>
+      </div>
+    </div> -->
+    
+    
+
+
+    <!-- 메인 컨텐츠 영역 -->
+    <div class="main-container">
+        
+        <!-- 왼쪽 캘린더 섹션 -->
+        <div class="calendar-section">
+            <div class="calendar-header">
+                <span class="todayTitle"></span>
+                <div class="ptMode">
+                    <span class="textColor">PT 모드</span>
+                    <i class="bi bi-toggle-off"></i>
+                </div>
+            </div>
+
+            <div class="calendar">
+                <div class="monthYear">
+                    <i class="bi bi-chevron-left" id="prevMonth"></i>
+                    <p></p>
+                    <i class="bi bi-chevron-right" id="nextMonth"></i>
+                </div>
+
+                <div class="day">
+                    <p class="textColorRed">Sun</p>
+                    <p>Mon</p>
+                    <p>Tue</p>
+                    <p>Wed</p>
+                    <p>Thu</p>
+                    <p>Fri</p>
+                    <p class="textColorBlue">Sat</p>
+                </div>
+
+                <table></table>
+            </div>
+        </div>
+
+        <!-- 오른쪽 컨텐츠 섹션 -->
+        <!-- <div class="right-section"> -->
+            <!-- 통계 섹션 -->
+            <!-- <div class="stats-box">
+                <h3 class="section-title">나의 통계</h3>
+                <canvas id="statsChart"></canvas>
+            </div> -->
+
+            <!-- 챌린지 섹션 -->
+            <!-- <div class="challenge-box">
+                <h3 class="section-title">튼튼 챌린지</h3>
+                <div class="challenge-container">
+                    <div class="challenge-item">
+                        <p class="challenge-title">월간 챌린지</p>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 60%"></div>
+                        </div>
+                    </div>
+                    <div class="challenge-item">
+                        <p class="challenge-title">주간 챌린지</p>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 40%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- 제안 섹션 -->
+            <!-- <div class="suggestion-box">
+                <h3 class="section-title">튼튼 제안</h3>
+                <div class="suggestion-grid">
+                    <div class="suggestion-item">
+                        <p class="suggestion-title">헬스 클래스</p>
+                        <p class="suggestion-desc">30분 운동</p>
+                    </div>
+                    <div class="suggestion-item">
+                        <p class="suggestion-title">요가 클래스</p>
+                        <p class="suggestion-desc">45분 운동</p>
+                    </div>
+                    <div class="suggestion-item">
+                        <p class="suggestion-title">필라테스</p>
+                        <p class="suggestion-desc">60분 운동</p>
+                    </div>
+                    <div class="suggestion-item">
+                        <p class="suggestion-title">스트레칭</p>
+                        <p class="suggestion-desc">20분 운동</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Layout</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   
+        <!-- Right side - Dashboard sections -->
+        <div class="dashboard-content">
+            <!-- Graph section -->
+            <div class="card graph-section">
+                <h3>나의 통계</h3>
+                <canvas id="activityGraph"></canvas>
+            </div>
+
+            <!-- Two vertical boxes -->
+            <div class="vertical-boxes">
+              <span>튼튼 챌린지</span>
+                <div class="card">
+                   
+                    <p>일주일에  3회 이상 10시 운동하기</p>
+                
+              </div>
+                <div class="card">
+                    
+                    <p>한 달 동안 하루 한 번 채식하기</p>
+                </div>
+            </div>
+
+            <!-- 2x2 grid boxes -->
+             <span>튼튼 제안</span>
+            <div class="grid-boxes">
+                <div class="card">
+                    <h3>레그 익스텐션</h3>
+                    <p>하체 | 5세트 | 50kg </p>
+                </div>
+                <div class="card">
+                    <h3>리코타 샐러드</h3>
+                    <p>점심 | 3시 | 200kcal</p>
+                </div>
+                <div class="card">
+                    <h3>우삼겹 숙제 볶음</h3>
+                    <p>점심 | 3시 | 200kcal</p>
+                </div>
+                <div class="card">
+                    <h3>레그 익스텐션</h3>
+                    <p>하체 | 5세트 | 50kg</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <script src="./calendar.js"></script>
+</body>
+</html>
+
+
+      
+  </body>
+</html>

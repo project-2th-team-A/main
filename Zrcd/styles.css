@@ -278,3 +278,51 @@ body {
     padding-bottom: 80px;
   }
 }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+}
+
+.sidebar {
+  flex: 1;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.main-content {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.content-wrapper {
+  display: flex;
+  flex: 1;
+}
+
+.vertical-layout {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.vertical-section {
+  flex: 1;
+  border: 1px solid #ddd;
+  margin: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

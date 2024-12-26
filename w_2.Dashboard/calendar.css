@@ -1,0 +1,480 @@
+.calendarContent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 724px;
+
+  position: absolute;
+  top: 88px;
+  left: 380px;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todayTitle {
+  font-size: 24px;
+  font-weight: medium;
+}
+
+.ptMode {
+  gap: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.ptMode span {
+  font-size: 14px;
+  font-weight: regular;
+}
+
+.ptMode i {
+  font-size: 24px;
+  color: #c66efe;
+}
+
+.monthYear {
+  display: flex;
+  justify-content: space-between;
+}
+
+.monthYear i {
+  font-size: 20px;
+}
+
+.day {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 104px;
+}
+
+.day p {
+  width: 100px;
+  font-size: 20px;
+  font-weight: medium;
+  text-align: center;
+}
+
+/* 테이블 설정 */
+table {
+  display: flex;
+  flex-direction: column;
+}
+.oneWeek {
+  display: flex;
+  justify-content: space-between;
+}
+.cell {
+  width: 100px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer; /* 커서 바꾸기 */
+}
+
+.cell p {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cell:hover {
+  background-color: #f5f5f5;
+}
+
+/* 오늘인 날짜 스타일 바꾸기 */
+.today p {
+  border-radius: 50%;
+  border: 4px solid #828eec;
+}
+
+.selected P {
+  border-radius: 50%;
+  background-color: #828eec;
+}
+
+/* 오늘의 컨텐츠 */
+.todaysContent {
+  position: absolute;
+  top: 88px;
+  left: 1346px;
+  display: flex;
+  flex-direction: column;
+  width: 390px;
+  border-top: 2px solid #f5f5f5;
+  /* gap: 16px; */
+}
+
+.todaysSchedule {
+  padding: 16px 24px 24px 24px;
+  border-bottom: 2px solid #f5f5f5;
+}
+.scheduleTitle {
+  margin-bottom: 16px;
+}
+
+.scheduleTimeTextBtn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.schduleTimeText {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.scheduleLine {
+  width: 3px;
+  height: 36px;
+  border-radius: 2px;
+  background-color: #f0dafe;
+}
+
+.scheduleNameTime {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* 기본 css */
+.textColor {
+  color: #292929;
+}
+.textColorRed {
+  color: #d80b0b;
+}
+
+.textColorBlue {
+  color: #1415eb;
+}
+.textColorSecondaryDark {
+  color: #001652;
+}
+
+.textColorDisable {
+  color: #909090;
+}
+.textColorDisableMedium {
+  color: #b1b1b1;
+}
+
+/* 폰트크기 굵기 */
+.font10 {
+  font-size: 10px;
+}
+.font16 {
+  font-size: 16px;
+}
+.font18 {
+  font-size: 18px;
+}
+.font20 {
+  font-size: 20px;
+}
+
+.font24 {
+  font-size: 24px;
+}
+
+.fontBold {
+  font-weight: 800;
+}
+
+.fontMedium {
+  font-weight: 500;
+}
+
+.fontRegular {
+  font-weight: 400;
+}
+
+/* 버튼 */
+.btnPurpleMedium {
+  padding: 4px 8px;
+  background-color: #f1dbff;
+  border: none;
+  border-radius: 9px;
+  color: #c66efe;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.exercise-schedule {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.additional-sections {
+  display: flex;
+  flex: 1;
+}
+
+.vertical-layout {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.vertical-section {
+  flex: 1;
+  border: 1px solid #ddd;
+  margin: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 메인 컨테이너 레이아웃 */
+.main-container {
+  display: flex;
+  gap: 24px;
+  padding: 24px;
+  margin-left: 240px; /* 네비게이션 바 너비만큼 여백 */
+}
+
+/* 캘린더 섹션 */
+.calendar-section {
+  flex: 2;
+  min-width: 724px;
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* 오른쪽 섹션 공통 스타일 */
+.right-section {
+  flex: 1;
+  min-width: 390px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* 박스 공통 스타일 */
+.stats-box,
+.challenge-box,
+.suggestion-box {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* 섹션 제목 스타일 */
+.section-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #292929;
+  margin-bottom: 16px;
+}
+
+/* 통계 차트 영역 */
+#statsChart {
+  width: 100%;
+  height: 200px;
+}
+
+/* 챌린지 스타일 */
+.challenge-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.challenge-item {
+  background: #f5f5f5;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.challenge-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #292929;
+  margin-bottom: 8px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #e5e5e5;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background: #c66efe;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+/* 제안 그리드 스타일 */
+.suggestion-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.suggestion-item {
+  background: #f5f5f5;
+  padding: 16px;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.suggestion-item:hover {
+  transform: translateY(-2px);
+}
+
+.suggestion-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #292929;
+  margin-bottom: 4px;
+}
+
+.suggestion-desc {
+  font-size: 12px;
+  color: #909090;
+}
+
+/* 기존 스타일 유지 */
+.textColor {
+  color: #292929;
+}
+
+.textColorRed {
+  color: #d80b0b;
+}
+
+.textColorBlue {
+  color: #1415eb;
+}
+
+.font24 {
+  font-size: 24px;
+}
+
+.fontMedium {
+  font-weight: 500;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 1440px) {
+  .main-container {
+    flex-direction: column;
+  }
+
+  .right-section {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.dashboard-container {
+    display: flex;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.calendar-section {
+    flex: 1;
+    min-width: 600px;
+}
+
+.dashboard-content {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.graph-section {
+    height: 200px;
+}
+
+.vertical-boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.grid-boxes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+
+
+h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+p {
+    font-size: 14px;
+    color: #666;
+}
+
+#activityGraph {
+    width: 100%;
+    height: calc(100% - 30px);
+}
+
+@media (max-width: 768px) {
+    .dashboard-container {
+        flex-direction: column;
+    }
+
+    .dashboard-content {
+        width: 100%;
+    }
+}

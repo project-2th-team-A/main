@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>튼튼 App</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <style>
+        :root {
+            --primary-color: #5D5FEF;
+            --secondary-color: #5EE6D0;
+            --background-color: #F8F9FA;
+            --card-background: #FFFFFF;
+            --text-primary: #333333;
+            --text-secondary: #666666;
+            --border-color: #EEEEEE;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        body {
+            background-color: var(--background-color);
+        }
+
+        .mobile-container {
+            max-width: 480px;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+            position: relative;
+            padding-bottom: 60px;
+        }
+
+        /* Header Styles */
+        .app-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background: var(--card-background);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .title {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        /* Calendar Styles */
+        .calendar-section {
+            padding: 20px;
+            background: var(--card-background);
+        }
+
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+            text-align: center;
+        }
+
+        .weekday {
+            text-align: center;
+            font-size: 12px;
+            color: var(--text-secondary);
+            padding: 5px;
+        }
+
+        .calendar-day {
+            padding: 5px;
+            font-size: 14px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .sunday { color: #FF0000; }
+        .saturday { color: #0000FF; }
+
+        /* Stats Section */
+        .stats-section {
+            padding: 20px;
+            margin-top: 10px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .section-header h2 {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .more-btn {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .graph-container {
+            background: var(--card-background);
+            border-radius: 15px;
+            padding: 20px;
+            height: 200px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        /* Progress Section */
+        .progress-section {
+            padding: 20px;
+        }
+
+        .progress-card {
+            background: var(--card-background);
+            border-radius: 15px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .progress-circle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #E8FFF8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--secondary-color);
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .progress-info h3 {
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: var(--text-primary);
+        }
+
+        .progress-info p {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        /* Medicine Section */
+        .medicine-section {
+            padding: 20px;
+        }
+
+        .medicine-cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .medicine-card {
+            background: var(--card-background);
+            border-radius: 15px;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .medicine-info h3 {
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: var(--text-primary);
+        }
+
+        .medicine-info p {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        .add-btn {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: auto;
+        }
+
+        /* Bottom Navigation */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            max-width: 480px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            background: var(--card-background);
+            padding: 10px 0;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 12px;
+            gap: 5px;
+        }
+
+        .nav-item.active {
+            color: var(--primary-color);
+        }
+
+        .nav-icon {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="mobile-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="time">12:00</div>
+            <div class="title">튼튼</div>
+            <div class="notification-icon">🔔</div>
+        </header>
+
+        <!-- Calendar Section -->
+        <div class="calendar-section">
+            <div class="calendar-header">
+                <span class="back-btn">〈</span>
+                <span class="current-month">Dec 2024</span>
+                <span class="forward-btn">〉</span>
+            </div>
+            <div class="calendar-grid">
+                <div class="weekday sunday">Sun</div>
+                <div class="weekday">Mon</div>
+                <div class="weekday">Tue</div>
+                <div class="weekday">Wed</div>
+                <div class="weekday">Thu</div>
+                <div class="weekday">Fri</div>
+                <div class="weekday saturday">Sat</div>
+                <!-- Days will be generated by JS -->
+            </div>
+        </div>
+
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="section-header">
+                <h2>나의 통계</h2>
+                <span class="more-btn">더보기 ›</span>
+            </div>
+            <div class="graph-container">
+                <canvas id="statsGraph"></canvas>
+            </div>
+        </section>
+
+        <!-- Progress Section -->
+        <section class="progress-section">
+            <div class="section-header">
+                <h2>튼튼 챌린지</h2>
+                <span class="more-btn">더보기 ›</span>
+            </div>
+            <div class="progress-card">
+                <div class="progress-circle">
+                    <span class="progress-text">85%</span>
+                </div>
+                <div class="progress-info">
+                    <h3>일주일에 3회 이상 10시 운동하기</h3>
+                    <p>챌린지 성공까지 2일 21시간 남았습니다</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Medicine Section -->
+        <section class="medicine-section">
+            <div class="section-header">
+                <h2>맞춤 제안</h2>
+                <span class="more-btn">더보기 ›</span>
+            </div>
+            <div class="medicine-cards">
+                <div class="medicine-card">
+                    <div class="medicine-icon">💊</div>
+                    <div class="medicine-info">
+                        <h3>체중 인슐린젠</h3>
+                        <p>2정 | 1회당 | 20분전</p>
+                    </div>
+                    <button class="add-btn">+</button>
+                </div>
+                <div class="medicine-card">
+                    <div class="medicine-icon">🥗</div>
+                    <div class="medicine-info">
+                        <h3>리코타 샐러드</h3>
+                        <p>2인분 | 점심 | 20분전</p>
+                    </div>
+                    <button class="add-btn">+</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigation Bar -->
+        <nav class="bottom-nav">
+            <a href="#" class="nav-item active">
+                <span class="nav-icon">🏠</span>
+                <span class="nav-text">홈</span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-icon">📅</span>
+                <span class="nav-text">캘린더</span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-icon">📝</span>
+                <span class="nav-text">피드</span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-icon">👤</span>
+                <span class="nav-text">마이페이지</span>
+            </a>
+        </nav>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Calendar Generation
+            function generateCalendar() {
+                const daysInMonth = 31; // December 2024
+                const firstDay = 0; // Sunday
+                const calendar = document.querySelector('.calendar-grid');
+                
+                // Clear existing dates
+                const existingDates = document.querySelectorAll('.calendar-day');
+                existingDates.forEach(date => date.remove());
+
+                // Generate days
+                for (let i = 1; i <= daysInMonth; i++) {
+                    const dayElement = document.createElement('div');
+                    dayElement.classList.add('calendar-day');
+                    dayElement.textContent = i;
+                    
+                    // Style for weekends
+                    const dayOfWeek = (firstDay + i - 1) % 7;
+                    if (dayOfWeek === 0) dayElement.style.color = '#FF0000';
+                    if (dayOfWeek === 6) dayElement.style.color = '#0000FF';
+                    
+                    // Style for current day (3rd in the image)
+                    if (i === 3) {
+                        dayElement.style.backgroundColor = '#5D5FEF';
+                        dayElement.style.color = 'white';
+                        dayElement.style.borderRadius = '50%';
+                        dayElement.style.width = '30px';
+                        dayElement.style.height = '30px';
+                        dayElement.style.display = 'flex';
+                        dayElement.style.alignItems = 'center';
+                        dayElement.style.justifyContent = 'center';
+                    }
+                    
+                    calendar.appendChild(dayElement);
+                }
+            }
+
+            // Stats Graph
+            function initializeGraph() {
+                const ctx = document.getElementById('statsGraph').getContext('2d');
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Sep', 'Oct', 'Nov', 'Dec'],
+                        datasets: [{
+                            data: [10, 12, 15, 18, 20, 22, 25, 23, 21, 19, 17],
+                            backgroundColor: '#5EE6D0',
+                            borderRadius: 8,
+                            barThickness: 20
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                display: false
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                grid: {
+                                    display: false
+                                }
+                            },
+                            x: {
+                                grid: {
+                                    display: false
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
+            // Initialize components
+            generateCalendar();
+            initializeGraph();
+        });
+    </script>
+</body>
+</html>
