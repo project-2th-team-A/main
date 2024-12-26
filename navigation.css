@@ -135,7 +135,21 @@
     font-weight: 400;
 }
 
+.fontDemiLight {
+    font-weight: 350;
+}
+
 /* 버튼 */
+.btnMainMedium {
+    padding: 4px 8px;
+    background-color: #b33ffc;
+    border: none;
+    border-radius: 9px;
+    color: white;
+    font-size: 12px;
+    font-weight: 400;
+}
+
 .btnPurpleMedium {
     padding: 4px 8px;
     background-color: #f1dbff;
@@ -144,4 +158,40 @@
     color: #c66efe;
     font-size: 12px;
     font-weight: 400;
+}
+
+.btnDisableMedium {
+    padding: 4px 8px;
+    background-color: #f5f5f5;
+    border: none;
+    border-radius: 9px;
+    color: #909090;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.btnSelectTime {
+    width: 72px;
+    padding: 4px 8px;
+    background-color: #f5f5f5;
+    border: none;
+    border-radius: 9px;
+    text-align: center;
+    color: #909090;
+    font-size: 12px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.btnSelectTime_selceted {
+    width: 72px;
+    padding: 4px 8px;
+    background-color: #b33ffc;
+    border: none;
+    border-radius: 9px;
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    font-weight: 400;
+    cursor: pointer;
 }

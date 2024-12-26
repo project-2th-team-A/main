@@ -117,7 +117,8 @@ table {
 
 /* <aside> 오늘의 컨텐츠 */
 .todaysContent,
-.todaysContent_PTmode {
+.todaysContent_PTmode,
+.makingReservation {
     position: absolute;
     top: 88px;
     left: 1346px;
@@ -160,6 +161,21 @@ table {
     display: flex;
     flex-direction: column;
     gap: 4px;
+}
+
+.todaysContentComponent button.btnPurpleMedium {
+    align-self: flex-end;
+}
+
+/* 수업 예약하기 makingReservation */
+.btnSelectTimeContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.confrimReservation {
+    display: none;
 }
 
 /* 모달창 */

@@ -1,4 +1,6 @@
+const todayTitle = document.querySelector('.todayTitle');
 const calendarTable = document.querySelector('.calendar table');
+
 const monthYear = document.querySelector('.monthYear p');
 const prevMonthBtn = document.querySelector('#prevMonth');
 const nextMonthBtn = document.querySelector('#nextMonth');
@@ -6,6 +8,15 @@ const aside = document.querySelector('aside');
 const ptModeIcon = document.querySelector('.ptMode i');
 const todaysContent = document.querySelector('.todaysContent');
 const todaysContent_PTmode = document.querySelector('.todaysContent_PTmode');
+const btnMakingReservation = document.getElementById('btnMakingReservation');
+const makingReservation = document.querySelector('.makingReservation');
+const btnSelectTimeArray = document.querySelectorAll(
+    '.btnSelectTimeContainer button'
+);
+const confrimReservation = document.querySelector('.confrimReservation');
+const confrimReservationText = document.querySelector(
+    '.confrimReservation p.confrimReservationText'
+);
 
 // 달력 만들기
 let currentDate = new Date();
@@ -162,21 +173,19 @@ function clearPreviousSelection() {
 function hideAside() {
     todaysContent.style.display = 'none';
     todaysContent_PTmode.style.display = 'none';
+    makingReservation.style.display = 'none';
 }
 function showAside() {
     if (ptModeIcon.classList.contains('bi-toggle-on')) {
-        console.log('on');
         todaysContent.style.display = 'none';
         todaysContent_PTmode.style.display = 'block';
     } else if (ptModeIcon.classList.contains('bi-toggle-off')) {
-        console.log('off');
         todaysContent.style.display = 'block';
         todaysContent_PTmode.style.display = 'none';
     }
 }
 
 function updateTodayTitle(year, month, day) {
-    const todayTitle = document.querySelector('.todayTitle');
     todayTitle.innerText = `${year}년 ${month + 1}월 ${day}일`;
     todayTitle.classList.add('font24', 'fontMedium', 'textColorSecondaryDark');
 }
@@ -210,6 +219,51 @@ ptModeIcon.addEventListener('click', () => {
         showAside();
     }
 });
+
+// PT 수업 예약하기
+btnMakingReservation.addEventListener('click', () => {
+    hideAside();
+    makingReservation.style.display = 'block';
+});
+// btnChangeReservation 버튼일때
+
+// 예약할 떄 버튼 바꾸기
+for (let btnSelectTime of btnSelectTimeArray) {
+    btnSelectTime.addEventListener('click', () => {
+        // 이미 선택된 버튼이 있는지 확인
+        const previouslySelected = document.querySelector(
+            '.btnSelectTime_selceted'
+        );
+
+        if (previouslySelected === btnSelectTime) {
+            // 같은 버튼을 누른 경우, selected 상태를 해제
+            btnSelectTime.classList.remove('btnSelectTime_selceted');
+            btnSelectTime.classList.add('btnSelectTime');
+            confrimReservation.style.display = 'none'; // 예약 확인 숨김
+        } else {
+            // 이전 선택된 버튼이 있으면 상태 초기화
+            if (previouslySelected) {
+                previouslySelected.classList.remove('btnSelectTime_selceted');
+                previouslySelected.classList.add('btnSelectTime');
+            }
+
+            // 현재 클릭한 버튼에 selected 상태 추가
+            btnSelectTime.classList.remove('btnSelectTime');
+            btnSelectTime.classList.add('btnSelectTime_selceted');
+            confrimReservation.style.display = 'flex'; // 예약 확인 표시
+            confrimDayTime(btnSelectTime);
+        }
+    });
+}
+
+function confrimDayTime(time) {
+    confrimReservationText.innerHTML = '';
+    if (time.classList.contains('am')) {
+        confrimReservationText.innerHTML = `<span>${todayTitle.innerText} 오전 ${time.innerText}</span>`;
+    } else if (time.classList.contains('pm')) {
+        confrimReservationText.innerHTML = `<span>${todayTitle.innerText} 오후 ${time.innerText}</span>`;
+    }
+}
 
 // 모달창
 const modal = document.querySelector('.modal');

@@ -130,8 +130,11 @@
                                 </p>
                             </div>
                         </div>
-                        <button type="button" class="btnPurpleMedium">
-                            예약변경
+                        <button
+                            type="button"
+                            class="btnChangeReservation btnPurpleMedium"
+                        >
+                            예약 변경
                         </button>
                     </div>
                 </div>
@@ -158,8 +161,11 @@
                                 </p>
                             </div>
                         </div>
-                        <button type="button" class="btnPurpleMedium">
-                            예약변경
+                        <button
+                            type="button"
+                            class="btnPurpleMedium btnChangeReservation"
+                        >
+                            예약 변경
                         </button>
                     </div>
                 </div>
@@ -167,22 +173,182 @@
                     <p class="todaysContentTitle font18 fontMedium textColor">
                         수업 일정
                     </p>
-                    <div>내용</div>
-                </div>
-                <div class="todaysContentComponent">
-                    <p class="todaysContentTitle font18 fontMedium textColor">
-                        수업 일지
-                    </p>
-                    <div>내용</div>
-                    <button type="button" class="btnPurpleMedium">
+                    <div
+                        style="display: flex; flex-direction: column; gap: 4px"
+                    >
+                        <div style="display: flex; gap: 8px">
+                            <button type="button" class="btnDisableMedium">
+                                다음 수업
+                            </button>
+                            <p class="font16 fontMedium">12월 27일 (금)</p>
+                        </div>
+                        <p class="font14" style="opacity: 70%">
+                            ⏰ 오전 11:00 ~ 오전 11:50 (50분)
+                        </p>
+                        <p class="font14" style="opacity: 70%">
+                            ☑️ 3회차 / 10회차
+                        </p>
+                    </div>
+                    <button
+                        type="button"
+                        id="btnMakingReservation"
+                        class="btnPurpleMedium"
+                        style="cursor: pointer"
+                    >
                         PT 수업 예약하기
                     </button>
+                </div>
+                <div class="todaysContentComponent">
+                    <div style="display: flex; justify-content: space-between">
+                        <p
+                            class="todaysContentTitle font18 fontMedium textColor"
+                        >
+                            수업 일지
+                        </p>
+                        <div style="display: flex; gap: 4px">
+                            <p class="font10 textColorDisable">
+                                수업 일지 모아보기
+                            </p>
+                            <i
+                                class="bi bi-chevron-right font10 textColorDisable"
+                            ></i>
+                        </div>
+                    </div>
+                    <div
+                        style="
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            gap: 4px;
+                            padding: 16px 32px;
+                            background-color: #f1dbff;
+                            border-radius: 9px;
+                        "
+                    >
+                        <p class="fontMedium">12월 11일 수요일 일지</p>
+                        <p class="font14" style="opacity: 70%">
+                            ☑️ 3회차 / 10회차
+                        </p>
+                    </div>
                 </div>
                 <div class="todaysContentComponent">
                     <p class="todaysContentTitle font18 fontMedium textColor">
                         오늘의 기록
                     </p>
                     <div>내용</div>
+                </div>
+            </div>
+            <div class="makingReservation">
+                <div class="todaysContentComponent">
+                    <p class="todaysContentTitle font18 fontMedium textColor">
+                        시간 선택
+                    </p>
+                    <div style="margin-bottom: 8px">
+                        <p
+                            class="font12 textColorDisable"
+                            style="margin-bottom: 8px"
+                        >
+                            오전
+                        </p>
+                        <div class="btnSelectTimeContainer">
+                            <button type="button" class="am btnSelectTime">
+                                6:00
+                            </button>
+                            <button type="button" class="am btnSelectTime">
+                                7:00
+                            </button>
+                            <button type="button" class="am btnSelectTime">
+                                8:00
+                            </button>
+                            <button type="button" class="am btnSelectTime">
+                                9:00
+                            </button>
+                            <button type="button" class="am btnSelectTime">
+                                10:00
+                            </button>
+                            <button type="button" class="am btnSelectTime">
+                                11:00
+                            </button>
+                        </div>
+                    </div>
+                    <div>
+                        <p
+                            class="font12 textColorDisable"
+                            style="margin-bottom: 8px"
+                        >
+                            오후
+                        </p>
+                        <div class="btnSelectTimeContainer">
+                            <button type="button" class="pm btnSelectTime">
+                                12:00
+                            </button>
+                            <button type="button" class="pm btnSelectTime">
+                                1:00
+                            </button>
+                            <button type="button" class="pm btnSelectTime">
+                                2:00
+                            </button>
+                            <button type="button" class="pm btnSelectTime">
+                                3:00
+                            </button>
+                            <button type="button" class="pm btnSelectTime">
+                                4:00
+                            </button>
+                            <button type="button" class="pm btnSelectTime">
+                                5:00
+                            </button>
+                            <button type="button" class="pm btnSelectTime">
+                                6:00
+                            </button>
+                            <button type="button" class="pm btnSelectTime">
+                                7:00
+                            </button>
+                            <button type="button" class="pm btnSelectTime">
+                                8:00
+                            </button>
+                            <button type="button" class="pm btnSelectTime">
+                                9:00
+                            </button>
+                            <button type="button" class="pm btnSelectTime">
+                                10:00
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="todaysContentComponent confrimReservation">
+                    <p
+                        class="todaysContentTitle btnChangeReservation font18 fontMedium textColor"
+                    >
+                        예약 확인
+                    </p>
+                    <p class="font12 fontDemiLight">
+                        아래 내용이 맞는지 확인해 주세요.
+                    </p>
+                    <div
+                        style="
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            gap: 4px;
+                            padding: 16px 32px;
+                            background-color: #f1dbff;
+                            border-radius: 9px;
+                        "
+                    >
+                        <p class="fontMedium confrimReservationText">
+                            <span>12월 30일 월요일 </span>
+                        </p>
+                        <p class="font12" style="opacity: 70%">
+                            트레이너의 예약 확인 후 수업이 확정됩니다.
+                        </p>
+                    </div>
+                    <button
+                        type="button"
+                        class="btnMainMedium"
+                        style="align-self: flex-end"
+                    >
+                        예약 신청하기
+                    </button>
                 </div>
             </div>
         </aside>
