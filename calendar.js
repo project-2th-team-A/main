@@ -3,10 +3,13 @@ const monthYear = document.querySelector('.monthYear p');
 const prevMonthBtn = document.querySelector('#prevMonth');
 const nextMonthBtn = document.querySelector('#nextMonth');
 const aside = document.querySelector('aside');
+const ptModeIcon = document.querySelector('.ptMode i');
+const todaysContent = document.querySelector('.todaysContent');
+const todaysContent_PTmode = document.querySelector('.todaysContent_PTmode');
 
+// 달력 만들기
 let currentDate = new Date();
 let selectedDate = null; // 현재 선택된 날짜를 저장
-
 function makingCalendar(date) {
     const year = date.getFullYear();
     const month = date.getMonth();
@@ -106,17 +109,11 @@ function makingCalendar(date) {
                 day++;
             }
 
-            cell.classList.add('cell', 'font20', 'fontRegular');
+            cell.classList.add('cell', 'font20');
             row.appendChild(cell);
         }
         calendarTable.appendChild(row);
     }
-}
-
-function updateTodayTitle(year, month, day) {
-    const todayTitle = document.querySelector('.todayTitle');
-    todayTitle.innerText = `${year}년 ${month + 1}월 ${day}일`;
-    todayTitle.classList.add('font24', 'fontMedium', 'textColorSecondaryDark');
 }
 
 function createCell(content, textColor, clickHandler) {
@@ -131,13 +128,6 @@ function createCell(content, textColor, clickHandler) {
     return cell;
 }
 
-function clearPreviousSelection() {
-    const previouslySelected = document.querySelector('.selected');
-    if (previouslySelected) {
-        previouslySelected.classList.remove('selected');
-    }
-}
-
 function handleDateClick(year, month, day, cell) {
     // 같은 날짜를 다시 클릭했을 경우
     if (
@@ -147,7 +137,7 @@ function handleDateClick(year, month, day, cell) {
         selectedDate.day === day
     ) {
         clearPreviousSelection();
-        aside.style.display = 'none';
+        hideAside();
         selectedDate = null; // 선택된 날짜 해제
         return;
     }
@@ -155,27 +145,109 @@ function handleDateClick(year, month, day, cell) {
     // 다른 날짜를 클릭했을 경우
     clearPreviousSelection();
     cell.classList.add('selected');
-    aside.style.display = 'block';
+    showAside();
     updateTodayTitle(year, month, day);
 
     // 현재 선택된 날짜 저장
     selectedDate = { year, month, day };
 }
 
+function clearPreviousSelection() {
+    const previouslySelected = document.querySelector('.selected');
+    if (previouslySelected) {
+        previouslySelected.classList.remove('selected');
+    }
+}
+
+function hideAside() {
+    todaysContent.style.display = 'none';
+    todaysContent_PTmode.style.display = 'none';
+}
+function showAside() {
+    if (ptModeIcon.classList.contains('bi-toggle-on')) {
+        console.log('on');
+        todaysContent.style.display = 'none';
+        todaysContent_PTmode.style.display = 'block';
+    } else if (ptModeIcon.classList.contains('bi-toggle-off')) {
+        console.log('off');
+        todaysContent.style.display = 'block';
+        todaysContent_PTmode.style.display = 'none';
+    }
+}
+
+function updateTodayTitle(year, month, day) {
+    const todayTitle = document.querySelector('.todayTitle');
+    todayTitle.innerText = `${year}년 ${month + 1}월 ${day}일`;
+    todayTitle.classList.add('font24', 'fontMedium', 'textColorSecondaryDark');
+}
+
 // Event listeners
 prevMonthBtn.addEventListener('click', () => {
     currentDate.setMonth(currentDate.getMonth() - 1);
     selectedDate = null; // 월 변경 시 선택 상태 초기화
-    aside.style.display = 'none';
+    hideAside();
     makingCalendar(currentDate);
 });
 
 nextMonthBtn.addEventListener('click', () => {
     currentDate.setMonth(currentDate.getMonth() + 1);
     selectedDate = null; // 월 변경 시 선택 상태 초기화
-    aside.style.display = 'none';
+    hideAside();
     makingCalendar(currentDate);
 });
 
-// Initial render
+// 캘린더 만들기 실행
 makingCalendar(currentDate);
+
+// PTmode on off
+ptModeIcon.addEventListener('click', () => {
+    ptModeIcon.classList.toggle('bi-toggle-off');
+    ptModeIcon.classList.toggle('bi-toggle-on');
+    if (
+        todaysContent.style.display === 'block' ||
+        todaysContent_PTmode.style.display === 'block'
+    ) {
+        showAside();
+    }
+});
+
+// 모달창
+const modal = document.querySelector('.modal');
+const btnCalendarPlus = document.querySelector('.bi-calendar-plus');
+const modalTitleIcon = document.querySelector('.modalTitleIcon');
+
+// 버튼 클릭 시 모달창 열기기
+btnCalendarPlus.addEventListener('click', openModal);
+// 모달창 아이콘 x 클릭 시 모달창 닫기
+modalTitleIcon.addEventListener('click', closeModal);
+// 모달 외부 클릭시 모달창 닫기
+window.addEventListener('click', (event) => {
+    if (event.target === modal) {
+        closeModal();
+    }
+});
+
+function openModal() {
+    modal.style.display = 'block'; // 모달창 열기
+}
+function closeModal() {
+    modal.style.display = 'none'; // 모달창 닫기
+}
+
+// 모달창 오전오후 버튼
+const btnAmPm = document.querySelector('.setTime button');
+btnAmPm.style.cursor = 'pointer';
+btnAmPm.addEventListener('click', () => {
+    if (btnAmPm.innerText === '오전') {
+        btnAmPm.innerText = '오후';
+    } else if (btnAmPm.innerText === '오후') {
+        btnAmPm.innerText = '오전';
+    }
+});
+
+// 모달창 시간분 버튼
+const btnInputSchedule = document.querySelector('.btnInputSchedule');
+const timeInput = document.getElementById('timeInput');
+const minuteInput = document.getElementById('minuteInput');
+const inputText = document.querySelector('.inputText input');
+inputText.style.height = getComputedStyle(btnInputSchedule).height;
