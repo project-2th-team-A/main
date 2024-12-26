@@ -94,11 +94,16 @@
 .textColorDisable {
     color: #909090;
 }
+
 .textColorDisableMedium {
     color: #b1b1b1;
 }
 
 /* 폰트크기 굵기 */
+.font8 {
+    font-size: 8px;
+}
+
 .font10 {
     font-size: 10px;
 }
@@ -121,6 +126,10 @@
 
 .font32 {
     font-size: 32px;
+}
+
+.font40 {
+    font-size: 40px;
 }
 
 .fontBold {
@@ -166,6 +175,16 @@
     border: none;
     border-radius: 9px;
     color: #909090;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.btnSelectedMedium {
+    padding: 4px 8px;
+    background-color: #001652;
+    border: none;
+    border-radius: 9px;
+    color: white;
     font-size: 12px;
     font-weight: 400;
 }

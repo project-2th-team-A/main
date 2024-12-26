@@ -20,6 +20,13 @@ const todaysContentTitleIcon = document.querySelector(
     '.makingReservation .todaysContentComponent i'
 );
 const btnConfrimReservation = confrimReservation.querySelector('button');
+const addLogToday = document.querySelector('.addLog p.addLogToday');
+const addLogTypeButtonArray = document.querySelectorAll(
+    '.addLogComponent button'
+);
+const uploadSettingIconsArray = document.querySelectorAll(
+    '.uploadSetting i.uploadSettingIcon'
+);
 
 // 달력 만들기
 let currentDate = new Date();
@@ -161,6 +168,7 @@ function handleDateClick(year, month, day, cell) {
     cell.classList.add('selected');
     showAside();
     updateTodayTitle(year, month, day);
+    addChangeAddLogToday();
 
     // 현재 선택된 날짜 저장
     selectedDate = { year, month, day };
@@ -281,6 +289,27 @@ function confrimDayTime(time) {
     }
 }
 
+// 기록하기 창
+function addChangeAddLogToday() {
+    addLogToday.innerHTML = '';
+    addLogToday.innerHTML = `${todayTitle.innerText}`;
+}
+
+// 운동 종류 버튼 선택
+for (let addLogTypeButton of addLogTypeButtonArray) {
+    addLogTypeButton.addEventListener('click', () => {
+        addLogTypeButton.classList.toggle('btnSelectedMedium');
+        addLogTypeButton.classList.toggle('btnDisableMedium');
+    });
+}
+
+// 업로드 설정 토글버튼
+for (let uploadSettingIcon of uploadSettingIconsArray) {
+    uploadSettingIcon.addEventListener('click', () => {
+        uploadSettingIcon.classList.toggle('bi-toggle-off');
+        uploadSettingIcon.classList.toggle('bi-toggle-on');
+    });
+}
 // 모달창
 const modal = document.querySelector('.modal');
 const btnCalendarPlus = document.querySelector('.bi-calendar-plus');

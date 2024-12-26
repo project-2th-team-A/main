@@ -252,7 +252,10 @@
                         >
                             시간 선택
                         </p>
-                        <i class="bi bi-x font24 textColorDisableMedium"></i>
+                        <i
+                            class="bi bi-x font24 textColorDisableMedium"
+                            style="cursor: pointer"
+                        ></i>
                     </div>
                     <div style="margin-bottom: 8px">
                         <p
@@ -358,6 +361,227 @@
                     >
                         예약 신청하기
                     </button>
+                </div>
+            </div>
+            <div class="addLog">
+                <div class="addLogContainer">
+                    <div style="display: flex; justify-content: space-between">
+                        <i class="bi bi-x font20"></i>
+                        <p class="fontMedium textColorSecondaryDark">
+                            기록하기
+                        </p>
+                        <p class="tabSelected fontMedium textColorDisable">
+                            완료
+                        </p>
+                    </div>
+                    <div class="addImage">
+                        <i
+                            class="font20 textColorDisable bi bi-camera-fill"
+                        ></i>
+                        <p class="font8 textColorDisable">0/10</p>
+                    </div>
+                    <div class="addLogTab">
+                        <p class="addLogTabText_selected">운동</p>
+                        <p class="addLogTabText">식단</p>
+                        <p class="addLogTabText">일상</p>
+                    </div>
+                    <div
+                        class="addLogToday"
+                        style="
+                            display: flex;
+                            gap: 16px;
+                            align-items: center;
+                            padding: 0px 24px;
+                        "
+                    >
+                        <p class="addLogToday fontBold">0000년 0월 0일</p>
+                        <i class="font16 bi bi-chevron-down"></i>
+                    </div>
+                    <div class="addLogComponentContainer">
+                        <div class="addLogComponent">
+                            <div
+                                style="
+                                    display: flex;
+                                    justify-content: space-between;
+                                "
+                            >
+                                <p class="fontBold" style="margin-bottom: 8px">
+                                    운동 기록
+                                </p>
+                                <p class="font12">총 000kcal 소모 예상</p>
+                            </div>
+                            <div
+                                style="
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 32px;
+                                "
+                            >
+                                <div>
+                                    <p
+                                        class="font14"
+                                        style="margin-bottom: 8px"
+                                    >
+                                        운동 종류
+                                    </p>
+                                    <div
+                                        style="
+                                            display: flex;
+                                            justify-content: space-between;
+                                            align-items: center;
+                                        "
+                                    >
+                                        <div>
+                                            <button
+                                                type="button"
+                                                class="btnDisableMedium"
+                                            >
+                                                #복싱
+                                            </button>
+                                            <button
+                                                type="button"
+                                                class="btnDisableMedium"
+                                            >
+                                                #러닝
+                                            </button>
+                                            <button
+                                                type="button"
+                                                class="btnSelectedMedium"
+                                            >
+                                                #헬스
+                                            </button>
+                                            <button
+                                                type="button"
+                                                class="btnDisableMedium"
+                                            >
+                                                #홈트
+                                            </button>
+                                            <button
+                                                type="button"
+                                                class="btnDisableMedium"
+                                            >
+                                                #요가
+                                            </button>
+                                            <button
+                                                type="button"
+                                                class="btnDisableMedium"
+                                            >
+                                                #수영
+                                            </button>
+                                        </div>
+                                        <p class="textColorBlue font10">추가</p>
+                                    </div>
+                                </div>
+
+                                <div
+                                    style="
+                                        display: flex;
+                                        justify-content: space-between;
+                                    "
+                                >
+                                    <p class="font14">운동한 시간</p>
+                                    <div style="display: flex; gap: 4px">
+                                        <input
+                                            type="number"
+                                            class="workoutTime"
+                                            placeholder="0"
+                                        />
+                                        <p>:</p>
+                                        <input
+                                            type="number"
+                                            class="workoutTime"
+                                            placeholder="0"
+                                        />
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="font14">내용</p>
+                                    <textarea
+                                        name=""
+                                        id=""
+                                        style="height: 160px"
+                                        placeholder="운동에 대한 기록을 입력해주세요."
+                                        class="textBox"
+                                    ></textarea>
+                                </div>
+                                <div>
+                                    <p class="font14">태그</p>
+                                    <input
+                                        type="text"
+                                        placeholder="#태그"
+                                        class="textBox"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="addLogComponent">
+                            <p class="fontBold" style="margin-bottom: 8px">
+                                컨디션 체크
+                            </p>
+                            <div
+                                style="
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 16px;
+                                "
+                            >
+                                <div class="conditionRange">
+                                    <span class="font14">신체 피로도</span>
+                                    <input
+                                        type="range"
+                                        class="form-range"
+                                        min="0"
+                                        max="5"
+                                        step="0.5"
+                                        id="customRange3"
+                                    />
+                                </div>
+                                <div class="conditionRange">
+                                    <span class="font14">운동 만족도</span>
+                                    <input
+                                        type="range"
+                                        class="form-range"
+                                        min="0"
+                                        max="10"
+                                        step="1"
+                                        id="customRange3"
+                                    />
+                                </div>
+
+                                <textarea
+                                    name=""
+                                    id=""
+                                    class="textBox"
+                                    placeholder="컨디션에 대한 기록을 입력해주세요."
+                                ></textarea>
+                            </div>
+                        </div>
+                        <div class="addLogComponent">
+                            <p class="fontBold" style="margin-bottom: 8px">
+                                업로드 설정
+                            </p>
+                            <div class="uploadSetting">
+                                <div>
+                                    <p class="font14">피드 업로드</p>
+                                    <i
+                                        class="uploadSettingIcon bi bi-toggle-off font24"
+                                    ></i>
+                                </div>
+                                <div>
+                                    <p class="font14">전체 공개</p>
+                                    <i
+                                        class="uploadSettingIcon bi bi-toggle-off font24"
+                                    ></i>
+                                </div>
+                                <div>
+                                    <p class="font14">댓글</p>
+                                    <i
+                                        class="uploadSettingIcon bi bi-toggle-off font24"
+                                    ></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </aside>
