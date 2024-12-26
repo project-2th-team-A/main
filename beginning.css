@@ -124,7 +124,6 @@ body {
 /* w_1_4_login */
 .container {
   display: flex;
-  /* flex-wrap: wrap; */
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -133,7 +132,7 @@ body {
 .box {
   width: 484px;
   height: 800px;
-  border: 1px solid black;
+  border: 1px solid #f5f5f5;
   border-radius: 5px;
   margin-top: 131px;
 }
@@ -199,7 +198,7 @@ body {
   margin-left: 50%;
 } */
 
-.logInButton {
+/* .logInButton {
   width: 402px;
   height: 54px;
   border-radius: 8px;
@@ -208,7 +207,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-}
+} */
 
 .logInButton.kakao {
   background-color: #fee500;
@@ -375,7 +374,18 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.questionButtons.one {
   margin-top: 36px;
+}
+
+.questionButtons.two {
+  margin-top: 35.6 px;
+}
+
+.questionButtons.three {
+  margin-top: 34 px;
 }
 
 /* w_1_10_create */
@@ -421,4 +431,26 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* w_1_11_create */
+.purposes {
+  margin-top: 33px;
+}
+
+.purpose {
+  width: 381px;
+  height: 64px;
+  border: 1px solid #f5f5f5;
+  border-radius: 14px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* w_1_12_create */
+.question.final {
+  margin-top: 310px;
+  margin-bottom: 310px;
 }

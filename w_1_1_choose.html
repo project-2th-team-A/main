@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>튼튼_선택</title>
     <link rel="stylesheet" href="./beginning.css" />
-    <script src="./beginning.js"></script>
+    <script src="./beginning.js" defer></script>
 
     <link
       rel="stylesheet"
@@ -22,19 +22,24 @@
     </section>
 
     <section>
-      <img class="pic_choose" src="./img/choose.png" alt="trinee and trainer" />
+      <img
+        class="pic_choose"
+        id="both"
+        src="./img/choose.png"
+        alt="trinee and trainer"
+      />
     </section>
 
     <section id="container_choose">
-      <div class="box_choose natural200">
-        <div class="check">
+      <div class="box_choose natural200" id="trainee" onclick="toggleTrainee()">
+        <div class="check inactive">
           <i class="bi bi-check-circle primary300"></i>
         </div>
         <div class="text">회원</div>
       </div>
 
-      <div class="box_choose natural200">
-        <div class="check">
+      <div class="box_choose natural200" id="trainer" onclick="toggleTrainer()">
+        <div class="check active">
           <i class="bi bi-check-circle primary300"></i>
         </div>
         <div class="text">트레이너</div>
