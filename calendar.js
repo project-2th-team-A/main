@@ -1,6 +1,5 @@
 const todayTitle = document.querySelector('.todayTitle');
 const calendarTable = document.querySelector('.calendar table');
-
 const monthYear = document.querySelector('.monthYear p');
 const prevMonthBtn = document.querySelector('#prevMonth');
 const nextMonthBtn = document.querySelector('#nextMonth');
@@ -17,6 +16,10 @@ const confrimReservation = document.querySelector('.confrimReservation');
 const confrimReservationText = document.querySelector(
     '.confrimReservation p.confrimReservationText'
 );
+const todaysContentTitleIcon = document.querySelector(
+    '.makingReservation .todaysContentComponent i'
+);
+const btnConfrimReservation = confrimReservation.querySelector('button');
 
 // 달력 만들기
 let currentDate = new Date();
@@ -222,9 +225,22 @@ ptModeIcon.addEventListener('click', () => {
 
 // PT 수업 예약하기
 btnMakingReservation.addEventListener('click', () => {
-    hideAside();
-    makingReservation.style.display = 'block';
+    showMakingReservation();
 });
+btnConfrimReservation.addEventListener('click', () => {
+    hideMakingReservation();
+});
+todaysContentTitleIcon.addEventListener('click', () => {
+    hideMakingReservation();
+});
+
+function showMakingReservation() {
+    makingReservation.style.display = 'flex';
+}
+
+function hideMakingReservation() {
+    makingReservation.style.display = 'none';
+}
 // btnChangeReservation 버튼일때
 
 // 예약할 떄 버튼 바꾸기
