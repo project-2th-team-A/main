@@ -310,6 +310,7 @@ for (let uploadSettingIcon of uploadSettingIconsArray) {
         uploadSettingIcon.classList.toggle('bi-toggle-on');
     });
 }
+
 // 모달창
 const modal = document.querySelector('.modal');
 const btnCalendarPlus = document.querySelector('.bi-calendar-plus');
