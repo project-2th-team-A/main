@@ -31,7 +31,6 @@ function toggleFloatingBtnModal() {
 }
 
 // 모달 열기함수 & 닫기 함수
-// 모달 열기함수 & 닫기 함수
 function openfloatingBtnModal() {
     floatingBtnModal.style.display = 'block'; // 모달창 열기
     floatingBtn.style.display = 'none';

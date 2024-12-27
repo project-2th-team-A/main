@@ -1,3 +1,6 @@
+@import url('./navigation.css');
+
+/* navigation css */
 /* 폰트 */
 @import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Noto+Sans+KR:wght@100..900&family=Shizuru&display=swap');
 
@@ -30,6 +33,7 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
 }
 
 .floatingBtnModalandBtn {
@@ -37,8 +41,8 @@
     flex-direction: column;
     align-items: end;
     position: absolute;
-    right: 5%;
-    bottom: 8%;
+    right: 5vw;
+    bottom: 8vh;
 }
 
 .floatingBtnModalBody {
@@ -82,79 +86,86 @@
 /* 버튼부분 */
 #floatingBtn {
     position: absolute;
-    right: 5%;
-    bottom: 8%;
+    right: 5vw;
+    bottom: 8vh;
 }
 
-/* 웹ver. */
-@media (min-width: 601px) {
-    /* 네비게이션 */
+
+/* 네비게이션 */
+.navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    padding: 64px;
+    height: 100vh;
+    background-color: white;
+    z-index: 10;
+}
+
+/* 네비게이션_로고 */
+.navbar .logo {
+    padding: 24px 16px;
+    margin-bottom: 48px;
+}
+
+.navbar .logo span {
+    font-family: 'CWDangamAsac-Bold' !important;
+    font-size: 48px;
+    font-weight: 800;
+    color: #b33ffc;
+}
+
+/* 네비게이션_메뉴 */
+.navbar ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    list-style: none;
+    gap: 24px;
+}
+
+.bottomList {
+    margin-top: 24px;
+}
+
+.navbar a {
+    font-size: 14px;
+    font-weight: medium;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbar a i {
+    font-size: 32px;
+    color: #909090;
+}
+
+.navbar a p {
+    margin: 6px 16px;
+    color: #909090;
+}
+
+/* 모바일에서 */
+@media (max-width: 600px) {
+    /* 사라질 것들 */
+    .logo, .bottomList li {
+        display: none;
+    }
+
     .navbar {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         position: fixed;
-        padding: 64px;
-        height: 100vh;
+        padding: 0px;
+        height: auto;
         background-color: white;
+        z-index: 10;
     }
 
-    /* 네비게이션_로고 */
-    .navbar .logo {
-        padding: 24px 16px;
-        margin-bottom: 48px;
-    }
-
-    .navbar .logo span {
-        font-family: 'CWDangamAsac-Bold' !important;
-        font-size: 48px;
-        font-weight: 800;
-        color: #b33ffc;
-    }
-
-    /* 네비게이션_메뉴 */
-    .navbar ul {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        list-style: none;
-        gap: 24px;
-    }
-
-    .bottomList {
-        margin-top: 24px;
-    }
-
-    .navbar a {
-        font-size: 14px;
-        font-weight: medium;
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-    }
-
-    .navbar a i {
-        font-size: 32px;
-        color: #909090;
-    }
-
-    .navbar a p {
-        margin: 6px 16px;
-        color: #909090;
-    }
-}
-
-@media (max-width: 600px) {
-    /* 사라질 것들 */
-    .logo {
-        display: none;
-    }
-    .bottomList {
-        display: none;
-    }
-    #menuAdding {
-        display: none;
-    }
+   
 
     /* 네비게이션 */
     .navbar .topList ul {
@@ -172,7 +183,7 @@
     }
 
     /* 네비게이션_메뉴 */
-    .navbar a {
+    .navbar .topList a {
         display: flex;
         flex-direction: column;
         gap: 4px;
@@ -193,16 +204,18 @@
 
     /* 플로팅버튼의 모달 */
     .floatingBtnModalandBtn {
-        right: 6%;
+        right: 6vw;
         bottom: 100px;        
     }
     /* 플로팅버튼 */
     #floatingBtn {
         position: absolute;
-        right: 6%;
+        right: 6vw;
         bottom: 100px;   
+        z-index: 20; 
     }
 }
+
 
 /* 기본 css */
 .textColor {

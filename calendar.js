@@ -219,6 +219,8 @@ nextMonthBtn.addEventListener('click', () => {
 // 캘린더 만들기 실행
 makingCalendar(currentDate);
 
+// 캘린더에 일정 넣기
+
 // PTmode on off
 ptModeIcon.addEventListener('click', () => {
     ptModeIcon.classList.toggle('bi-toggle-off');
