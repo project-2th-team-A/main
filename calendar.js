@@ -220,6 +220,7 @@ nextMonthBtn.addEventListener('click', () => {
 makingCalendar(currentDate);
 
 // 캘린더에 일정 넣기
+// 달력에 일정 넣기
 
 // PTmode on off
 ptModeIcon.addEventListener('click', () => {

@@ -47,7 +47,6 @@
 
 .floatingBtnModalBody {
     width: 240px;
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);s
     display: flex;
     flex-direction: column;
 }
@@ -63,6 +62,8 @@
     padding: 16px 24px;
     background-color: #f1dbff;
     border-radius: 20px 20px 0 0;
+
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
 }
 
 .floatingBtnModalContent a {
@@ -71,6 +72,11 @@
     padding: 16px 24px;
     background-color: white;
     cursor: pointer;
+    text-decoration: none;
+}
+
+.floatingBtnModalContent a:hover {
+    background-color: #f5f5f5;
 }
 
 .floatingBtnModalContent i {
@@ -79,7 +85,7 @@
 
 .floatingBtn i {
     font-size: 48px;
-    color: #b33ffc;    
+    color: #b33ffc;
     cursor: pointer;
 }
 
@@ -89,7 +95,6 @@
     right: 5vw;
     bottom: 8vh;
 }
-
 
 /* 네비게이션 */
 .navbar {
@@ -150,7 +155,8 @@
 /* 모바일에서 */
 @media (max-width: 600px) {
     /* 사라질 것들 */
-    .logo, .bottomList li {
+    .logo,
+    .bottomList li {
         display: none;
     }
 
@@ -164,8 +170,6 @@
         background-color: white;
         z-index: 10;
     }
-
-   
 
     /* 네비게이션 */
     .navbar .topList ul {
@@ -205,17 +209,16 @@
     /* 플로팅버튼의 모달 */
     .floatingBtnModalandBtn {
         right: 6vw;
-        bottom: 100px;        
+        bottom: 100px;
     }
     /* 플로팅버튼 */
     #floatingBtn {
         position: absolute;
         right: 6vw;
-        bottom: 100px;   
-        z-index: 20; 
+        bottom: 100px;
+        z-index: 20;
     }
 }
-
 
 /* 기본 css */
 .textColor {
