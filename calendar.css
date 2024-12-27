@@ -1,7 +1,8 @@
 @import url('./navigation.css');
 
 /* navigation 메뉴 색 변경 */
-.topList li:nth-child(2) a {
+.topList li:nth-child(2) a i,
+.topList li:nth-child(2) a p {
     color: #001652;
 }
 

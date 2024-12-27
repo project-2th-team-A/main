@@ -10,66 +10,99 @@
         />
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+        <script src="./navigation.js" defer></script>
         <link rel="stylesheet" href="calendar.css" />
         <script src="./calendar.js" defer></script>
     </head>
     <body>
-        <header class="navbar">
-            <div class="topList">
-                <div class="logo"><span>튼튼</span></div>
-                <ul>
+        <header>
+            <!-- 네비게이션 -->
+            <nav class="navbar">
+                <div class="topList">
+                    <div class="logo"><span>튼튼</span></div>
+                    <ul>
+                        <li>
+                            <a href="">
+                                <i class="bi bi-house-door-fill"></i>
+                                <p>홈</p></a
+                            >
+                        </li>
+                        <li>
+                            <a href=""
+                                ><i class="bi bi-calendar3"></i>
+                                <p>캘린더</p></a
+                            >
+                        </li>
+                        <li>
+                            <a href=""
+                                ><i class="bi bi-stickies-fill"></i>
+                                <p>피드</p></a
+                            >
+                        </li>
+                        <li>
+                            <a href=""
+                                ><i class="bi bi-person-fill"></i>
+                                <p>마이페이지</p></a
+                            >
+                        </li>
+                    </ul>
+                </div>
+                <ul class="bottomList">
                     <li>
-                        <a href="">
-                            <i class="bi bi-house-door-fill"></i>
-                            <p>홈</p></a
+                        <a href=""
+                            ><i class="bi bi-search"></i>
+                            <p>검색</p></a
                         >
                     </li>
                     <li>
                         <a href=""
-                            ><i class="bi bi-calendar3"></i>
-                            <p>캘린더</p></a
+                            ><i class="bi bi-bell"></i>
+                            <p>알림</p></a
                         >
                     </li>
                     <li>
                         <a href=""
-                            ><i class="bi bi-stickies-fill"></i>
-                            <p>피드</p></a
-                        >
-                    </li>
-                    <li>
-                        <a href=""
-                            ><i class="bi bi-person-fill"></i>
-                            <p>마이페이지</p></a
-                        >
-                    </li>
-                    <li>
-                        <a href=""
-                            ><i class="bi bi-plus-circle-fill"></i>
-                            <p>만들기</p></a
+                            ><i class="bi bi-gear"></i>
+                            <p>설정</p></a
                         >
                     </li>
                 </ul>
+            </nav>
+
+            <!-- floating button과 modal -->
+            <!-- 모달부분분 -->
+            <div class="floatingBtnModal">
+                <div class="floatingBtnModalandBtn">
+                    <div class="floatingBtnModalBody">
+                        <div class="floatingBtnModalTitle">
+                            <i class="bi bi-chevron-left font20"></i>
+                            <p class="fontMedium">제목</p>
+                            <i class="bi bi-chevron-right font20"></i>
+                        </div>
+                        <div class="floatingBtnModalContent">
+                            <a>
+                                <p>PT 수업 예약하기</p>
+                                <i class="bi bi-plus-circle-fill font16"></i>
+                            </a>
+                            <a>
+                                <p>운동 일정 추가하기</p>
+                                <i class="bi bi-plus-circle-fill font16"></i>
+                            </a>
+                            <a>
+                                <p>기록하기</p>
+                                <i class="bi bi-plus-circle-fill font16"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="floatingBtnWithModal" class="floatingBtn">
+                        <i class="bi bi-x-circle-fill"></i>
+                    </div>
+                </div>
             </div>
-            <ul class="bottomList">
-                <li>
-                    <a href=""
-                        ><i class="bi bi-search"></i>
-                        <p>검색</p></a
-                    >
-                </li>
-                <li>
-                    <a href=""
-                        ><i class="bi bi-bell"></i>
-                        <p>알림</p></a
-                    >
-                </li>
-                <li>
-                    <a href=""
-                        ><i class="bi bi-gear"></i>
-                        <p>설정</p></a
-                    >
-                </li>
-            </ul>
+            <!-- 버튼부분 -->
+            <div id="floatingBtn" class="floatingBtn">
+                <i class="bi bi-plus-circle-fill"></i>
+            </div>
         </header>
 
         <!-- 캘린더 페이지 -->
