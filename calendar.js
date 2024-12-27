@@ -140,7 +140,7 @@ function makingCalendar(date) {
 function createCell(content, textColor, clickHandler) {
     const cell = document.createElement('div');
     cell.innerHTML = `<p>${content}</p>`;
-    cell.classList.add(textColor);
+    cell.querySelector('p').classList.add(textColor);
 
     if (clickHandler) {
         cell.addEventListener('click', clickHandler);
@@ -220,12 +220,31 @@ nextMonthBtn.addEventListener('click', () => {
 makingCalendar(currentDate);
 
 // 캘린더에 일정 넣기
-// 달력에 일정 넣기
+const cellArray = document.querySelectorAll('table .cell');
+for (let cell of cellArray) {
+    const dayText = cell.querySelector('p').innerText;
+    if (dayText === '12' || dayText === '17' || dayText === '31') {
+        const pElement = document.createElement('p');
+        pElement.classList.add('regularSchedule');
+        pElement.textContent = '수영';
+        cell.appendChild(pElement);
+    } else if (dayText === '25' || dayText === '11' || dayText === '18') {
+        const pElement = document.createElement('p');
+        pElement.classList.add('PTmodeSchedule');
+        pElement.textContent = 'PT';
+        cell.appendChild(pElement);
+    }
+}
 
 // PTmode on off
 ptModeIcon.addEventListener('click', () => {
     ptModeIcon.classList.toggle('bi-toggle-off');
     ptModeIcon.classList.toggle('bi-toggle-on');
+
+    // PT 모드에 따라 스케줄 보이기/숨기기
+    const isPTMode = ptModeIcon.classList.contains('bi-toggle-on'); // PT 모드 상태 확인
+    toggleScheduleVisibility(isPTMode);
+
     if (
         todaysContent.style.display === 'block' ||
         todaysContent_PTmode.style.display === 'block'
@@ -233,6 +252,26 @@ ptModeIcon.addEventListener('click', () => {
         showAside();
     }
 });
+
+// PT 모드에 따라 스케줄 표시/숨기기 함수
+function toggleScheduleVisibility(isPTMode) {
+    const regularSchedules = document.querySelectorAll('.regularSchedule');
+    const ptSchedules = document.querySelectorAll('.PTmodeSchedule');
+
+    if (isPTMode) {
+        // PT 모드: PT 스케줄만 표시
+        regularSchedules.forEach(
+            (schedule) => (schedule.style.display = 'none')
+        );
+        ptSchedules.forEach((schedule) => (schedule.style.display = 'block'));
+    } else {
+        // 일반 모드: 모든 스케줄 표시
+        regularSchedules.forEach(
+            (schedule) => (schedule.style.display = 'block')
+        );
+        ptSchedules.forEach((schedule) => (schedule.style.display = 'block'));
+    }
+}
 
 // PT 수업 예약하기
 btnMakingReservation.addEventListener('click', () => {

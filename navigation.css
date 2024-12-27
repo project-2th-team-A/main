@@ -179,7 +179,7 @@
         align-items: center;
         position: fixed;
         bottom: 0;
-        width: 100%;
+        width: 100vw;
         height: 88px;
         padding: 0px 33px;
         background-color: white;

@@ -116,6 +116,33 @@ table {
     background-color: #828eec;
 }
 
+/* 캘린더에 일정 넣기 */
+table .cell {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+table .cell .regularSchedule {
+    width: 100%;
+    height: 20px;
+    border-radius: 2px;
+    font-size: 12px;
+    background-color: #d1dcfe;
+    text-align: center;
+}
+
+table .cell .PTmodeSchedule {
+    width: 100%;
+    height: 20px;
+    border-radius: 2px;
+    font-size: 12px;
+    background-color: #f0d9fd;
+    text-align: center;
+}
+
 /* <aside> 오늘의 컨텐츠 */
 .todaysContent,
 .todaysContent_PTmode,
@@ -389,4 +416,69 @@ table {
 .inputText input {
     width: 216px;
     padding: 10px 8px;
+}
+
+/* 모바일버전 */
+@media (max-width: 600px) {
+    /* <main> */
+    /* .calendarContent {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        width: 724px;
+
+        position: absolute;
+        top: 88px;
+        left: 598px;
+    }
+
+    .title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .titleIconText {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .bi-calendar-plus {
+        cursor: pointer;
+    }
+
+    .ptMode {
+        gap: 8px;
+        display: flex;
+        align-items: center;
+    }
+
+    .ptMode i {
+        font-size: 40px;
+        color: #c66efe;
+    }
+
+    .monthYear {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .monthYear i {
+        font-size: 20px;
+    }
+
+    .day {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 104px;
+    }
+
+    .day p {
+        width: 100px;
+        font-size: 20px;
+        font-weight: medium;
+        text-align: center;
+    } */
 }
