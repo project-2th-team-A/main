@@ -25,14 +25,7 @@
   top: 831px;
 }
 
-/* 
-.question.final {
-  margin-top: 310px;
-  margin-bottom: 310px;
-}
+/* 미디어쿼리 적용 */
+/* @media screen and (max-width: 600px) {
 
-.borderColor_click {
-  border-color: #c66efe;
-  color: #c66efe;
-  font-weight: 500;
 } */

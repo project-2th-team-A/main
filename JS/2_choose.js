@@ -47,6 +47,45 @@ function choose(role) {
 trainee.addEventListener("click", () => choose("trainee"));
 trainer.addEventListener("click", () => choose("trainer"));
 
+/* 미디어쿼리 적용 */
+const mediaQuery = window.matchMedia("(max-width: 600px)");
+
+function choose(role) {
+  if (role === "trainee") {
+    pic.src = "../img/trainee.png";
+    checkTrainee.src = "../img/filled.png";
+    trainee.style.borderColor = "#c66efe";
+    text1.style.color = "#8A26C9";
+
+    // Trainer 초기화
+    checkTrainer.src = "../img/empty.png";
+    trainer.style.borderColor = "";
+    text2.style.color = "";
+  } else if (role === "trainer") {
+    pic.src = "../img/trainer.png";
+    checkTrainer.src = "../img/filled.png";
+    trainer.style.borderColor = "#c66efe";
+    text2.style.color = "#8A26C9";
+
+    // Trainee 초기화
+    checkTrainee.src = "../img/empty.png";
+    trainee.style.borderColor = "";
+    text1.style.color = "";
+  }
+}
+
+// 클릭 이벤트 등록
+trainee.addEventListener("click", () => choose("trainee"));
+trainer.addEventListener("click", () => choose("trainer"));
+
+// 시작하기 버튼 누르면 -> 회원가입 페이지로 이동하기
+const bottomButton = document.querySelector(".bottomButton");
+bottomButton.addEventListener("click", () => {
+  window.location.href = "./4_account.html";
+});
+
+//////////////////////////////////////////////////
+
 // 시도한것 (extra)
 // if (trainee) {
 //   trainee.addEventListener("click", () => {

@@ -85,17 +85,6 @@ input::focus {
     margin-left: 50%;
   } */
 
-/* .logInButton {
-  width: 402px;
-  height: 54px;
-  border-radius: 8px;
-  margin-left: 41px;
-  margin-top: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
-
 footer {
   display: flex;
   flex-direction: column;
@@ -126,3 +115,8 @@ footer {
   background-color: #000000;
   margin-top: 18px;
 }
+
+/* 미디어쿼리 적용 */
+/* @media screen and (max-width: 600px) {
+
+} */
