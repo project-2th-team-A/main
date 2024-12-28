@@ -28,6 +28,11 @@
     display: flex;
     align-items: center;
     gap: 16px;
+    font-size: 24px;
+}
+
+.titleIconText span {
+    font-size: 24px;
 }
 
 .bi-calendar-plus {
@@ -155,10 +160,14 @@ table .cell .PTmodeSchedule {
     flex-direction: column;
     width: 390px;
     height: 100vh;
-    /* background-color: white; */
+    background-color: white;
     border-top: 2px solid #f5f5f5;
     gap: 16px;
     display: none;
+}
+
+.addLog {
+    display: flex;
 }
 
 .todaysContentComponent {
@@ -216,6 +225,7 @@ table .cell .PTmodeSchedule {
     gap: 24px;
     padding: 24px 0px;
     border-bottom: 2px solid #f5f5f5;
+    background-color: white;
 }
 
 .addLog .addImage {
@@ -416,69 +426,4 @@ table .cell .PTmodeSchedule {
 .inputText input {
     width: 216px;
     padding: 10px 8px;
-}
-
-/* 모바일버전 */
-@media (max-width: 600px) {
-    /* <main> */
-    /* .calendarContent {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        width: 724px;
-
-        position: absolute;
-        top: 88px;
-        left: 598px;
-    }
-
-    .title {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .titleIconText {
-        display: flex;
-        align-items: center;
-        gap: 16px;
-    }
-
-    .bi-calendar-plus {
-        cursor: pointer;
-    }
-
-    .ptMode {
-        gap: 8px;
-        display: flex;
-        align-items: center;
-    }
-
-    .ptMode i {
-        font-size: 40px;
-        color: #c66efe;
-    }
-
-    .monthYear {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .monthYear i {
-        font-size: 20px;
-    }
-
-    .day {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 104px;
-    }
-
-    .day p {
-        width: 100px;
-        font-size: 20px;
-        font-weight: medium;
-        text-align: center;
-    } */
 }

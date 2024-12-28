@@ -59,7 +59,7 @@ function makingCalendar(date) {
     ];
     monthYear.innerText = `${monthNames[month]} ${year}`;
     monthYear.classList.add('textColor', 'font24', 'fontBold');
-
+    // monthYear.style.fontSize = '24px';
     // 현재 월과 이전/다음 월 정보
     const firstDay = new Date(year, month, 1).getDay(); // 이번 달 첫째 날의 요일
     const daysInMonth = new Date(year, month + 1, 0).getDate(); // 이번 달의 마지막 날짜
@@ -332,6 +332,23 @@ function confrimDayTime(time) {
 }
 
 // 기록하기 창
+// 운동 식단 일상 선택
+const addLogTabArray = document.querySelectorAll('.addLogTab p');
+for (let addLogTab of addLogTabArray) {
+    addLogTab.addEventListener('click', () => {
+        // 모든 탭의 선택 상태 초기화
+        addLogTabArray.forEach((tab) => {
+            tab.classList.remove('addLogTabText_selected');
+            tab.classList.add('addLogTabText');
+        });
+
+        // 클릭된 탭만 선택 상태로 설정
+        addLogTab.classList.add('addLogTabText_selected');
+        addLogTab.classList.remove('addLogTabText');
+    });
+}
+
+// 제목의 날짜 달력을 누른 날로 바꿈
 function addChangeAddLogToday() {
     addLogToday.innerHTML = '';
     addLogToday.innerHTML = `${todayTitle.innerText}`;
@@ -393,3 +410,32 @@ const timeInput = document.getElementById('timeInput');
 const minuteInput = document.getElementById('minuteInput');
 const inputText = document.querySelector('.inputText input');
 inputText.style.height = getComputedStyle(btnInputSchedule).height;
+
+// // 모바일 버전
+// // 미디어쿼리 시 캘린더 클릭할 때
+// // 미디어 쿼리 객체 생성
+// const mediaQuery = window.matchMedia('(max-width: 600px)');
+
+// // 이벤트 핸들러 함수 정의
+// function handleButtonClick() {
+//     alert('You clicked the button in mobile view!');
+// }
+
+// // 미디어 쿼리에 따른 이벤트 핸들러 설정
+// function handleMediaChange(e) {
+//     for (let cell of cellArray) {
+//         if (e.matches) {
+//             // 600px 이하일 때 이벤트 핸들러 추가
+//             cell.addEventListener('click', handleButtonClick);
+//         } else {
+//             // 600px 초과일 때 이벤트 핸들러 제거
+//             cell.removeEventListener('click', handleButtonClick);
+//         }
+//     }
+// }
+
+// // 초기 미디어 쿼리 상태 체크 및 핸들러 설정
+// handleMediaChange(mediaQuery);
+
+// // 미디어 쿼리 변경 시 이벤트 감지
+// mediaQuery.addEventListener('change', handleMediaChange);
