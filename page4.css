@@ -123,6 +123,9 @@ section {
   height: 96px;
 }
 
+.sub-nav a {
+  text-decoration: none;
+}
 .sub-nav {
   width: 1920px;
   height: 88px;
@@ -254,7 +257,10 @@ article.feed-all {
 .photo-xl,
 .photo-l,
 .photo-m,
-.photo-s {
+.photo-s,
+.photo-xs,
+.photo-circle,
+.photo-circle-s {
   position: relative;
   width: 100%; /* div 크기에 맞춰서 */
   height: 100%; /* div 크기에 맞춰서 */
@@ -264,7 +270,10 @@ article.feed-all {
 .photo-xl img,
 .photo-l img,
 .photo-m img,
-.photo-s img {
+.photo-s img,
+.photo-xs img,
+.photo-circle img,
+.photo-circle-s img {
   width: 100%; /* div의 가로 크기에 맞게 이미지 크기 조정 */
   height: 100%; /* div의 세로 크기에 맞게 이미지 크기 조정 */
   object-fit: cover; /* 이미지가 div 안에 맞게 잘리면서 채워지도록 */
@@ -273,45 +282,38 @@ article.feed-all {
 .photo-xl {
   width: 724px;
   height: 724px;
-  border: 1px solid palevioletred;
 }
 
 .photo-l {
   width: 480px;
   height: 480px;
-  border: 1px solid pink;
 }
 
 .photo-m {
   width: 344px;
   height: 344px;
-  border: 1px solid pink;
 }
 
 .photo-s {
   width: 236px;
   height: 236px;
-  border: 1px solid red;
 }
 
 .photo-xs {
   width: 160px;
   height: 160px;
-  border: 1px solid deeppink;
 }
 
 .photo-circle {
   width: 160px;
   height: 160px;
   border-radius: 100px;
-  border: 1px solid yellowgreen;
 }
 
 .photo-circle-s {
   width: 88px;
   height: 88px;
   border-radius: 100px;
-  border: 1px solid yellowgreen;
 }
 
 .margin-bottom-8px {
@@ -391,8 +393,8 @@ article.feed-gallery {
 }
 
 .feed-taps {
-  height: 48px;
   font-size: 16px;
+  height: 48px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -406,9 +408,20 @@ article.feed-gallery {
   text-align: center;
 }
 
+.tap-selected {
+  width: 236px;
+  height: 48px;
+  padding: 16px;
+  text-align: center;
+  border-bottom: 2px solid #292929;
+  font-weight: 600;
+}
+
 .feed-photos {
+  width: 724px;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 /* page4.0 */
 .feed-single {
@@ -484,7 +497,6 @@ article.feed-gallery {
 .rcmd {
   width: 960px;
   gap: 48px;
-  overflow-x: hidden;
 }
 
 .rcmd-title {
@@ -496,13 +508,13 @@ article.feed-gallery {
   gap: 24px;
   display: flex;
   flex-direction: row;
+  overflow: scroll;
 }
 
 .rcmd-swipe {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  overflow: scroll;
 }
 
 .rcmd-scroll {
@@ -598,9 +610,10 @@ article.feed-gallery {
   overflow: hidden;
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 600px) {
   main {
-    width: 390px;
+    width: 100vw;
+    min-width: 390px;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -609,7 +622,8 @@ article.feed-gallery {
   }
 
   .main-nav {
-    width: 390px;
+    width: 100vw;
+    min-width: 390px;
     height: 88px;
     padding: 19px 33px;
     bottom: 0;
@@ -646,7 +660,8 @@ article.feed-gallery {
   }
 
   .sub-nav {
-    width: 390px;
+    width: 100vw;
+    min-width: 390px;
     height: 88px;
     padding: 40px 0 8px 24px;
     font-size: 16px;
@@ -713,14 +728,12 @@ article.feed-gallery {
     width: 88px;
     height: 88px;
     border-radius: 100px;
-    border: 1px solid yellowgreen;
   }
 
   .photo-circle-s {
     width: 48px;
     height: 48px;
     border-radius: 100px;
-    border: 1px solid yellowgreen;
   }
 
   /* page4.2 */
@@ -765,7 +778,7 @@ article.feed-gallery {
   .rcmd {
     width: 390px;
     gap: 24px;
-    padding: 0 24px;
+    padding: 0 24px 88px 24px;
   }
 
   .rcmd-cards {
@@ -783,23 +796,22 @@ article.feed-gallery {
 
   .rcmd-swipe {
     display: flex;
-    gap: 8px;
     flex-direction: column;
-    overflow: scroll;
+    gap: 8px;
   }
 
   .rcmd-scroll {
     display: flex;
-    gap: 16px;
     flex-direction: column;
+    gap: 16px;
   }
 
   .card-circle {
     width: 88px;
     display: flex;
-    gap: 4px;
     flex-direction: column;
     align-items: center;
+    gap: 4px;
   }
 
   .user-nickname {
@@ -1033,5 +1045,21 @@ article.feed-gallery {
     height: 32px;
     padding: 8px;
     text-align: center;
+  }
+
+  .tap-selected {
+    width: 130px;
+    height: 32px;
+    padding: 8px;
+    text-align: center;
+    border-bottom: 2px solid #292929;
+    font-weight: 600;
+  }
+
+  .feed-photos {
+    width: 390px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 88px;
   }
 }

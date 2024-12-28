@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>feed-recommend</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="./page4.css" />
+    <script src="feed-recommend.js" defer></script>
+  </head>
+  <body>
+    <header class="main-nav">
+      <div class="logo">튼튼</div>
+      <div class="main-nav-vertical">
+        <nav class="main-nav-menu">
+          <ul>
+            <li class="home">
+              <i class="bi bi-house-door-fill"></i>
+              <span class="font-14px">홈</span>
+            </li>
+            <li class="calendar">
+              <i class="bi bi-calendar3"></i>
+              <span class="font-14px">캘린더</span>
+            </li>
+            <li class="feed">
+              <i class="bi bi-stickies-fill"></i>
+              <span class="font-14px"> 피드</span>
+            </li>
+            <li class="mypage">
+              <i class="bi bi-person-fill"></i>
+              <span class="font-14px">마이페이지</span>
+            </li>
+          </ul>
+        </nav>
+        <nav class="main-nav-setting">
+          <ul>
+            <li class="search">
+              <i class="bi bi-search"></i>
+              <span class="font-14px">검색</span>
+            </li>
+            <li class="calendar">
+              <i class="bi bi-bell"></i>
+              <span class="font-14px">알림</span>
+            </li>
+            <li class="feed">
+              <i class="bi bi-gear"></i>
+              <span class="font-14px">설정</span>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <nav class="sub-nav">
+      <ul class="sub-nav-menu">
+        <li class="web text-align-center">
+          <a href="feed-personal.html">내 피드</a>
+        </li>
+        <li class="web text-align-center"><a href="feed-grid.html">전체</a></li>
+        <li class="web text-align-center bold">
+          <a href="feed-recommend.html">추천</a>
+        </li>
+        <li class="web text-align-center">
+          <a href="feed-community.html">커뮤니티</a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <section class="rcmd">
+        <article>
+          <div class="rcmd-swipe">
+            <div class="category text-align-center">
+              <span class="rcmd-title">튼튼 인플루언서</span
+              ><button class="btn-more">더보기</button>
+            </div>
+            <div class="rcmd-cards">
+              <div class="card-circle">
+                <div class="photo-circle influencer1"></div>
+                <div class="user-nickname">김매달</div>
+                <button class="btn-l btn-disable" type="button">
+                  # 클라이밍
+                </button>
+              </div>
+              <div class="card-circle">
+                <div class="photo-circle influencer2"></div>
+                <div class="user-nickname">헬스중독</div>
+                <button class="btn-l btn-disable" type="button">
+                  # 웨이트트레이닝
+                </button>
+              </div>
+              <div class="card-circle">
+                <div class="photo-circle influencer3"></div>
+                <div class="user-nickname">건강한끼</div>
+                <button class="btn-l btn-disable" type="button">
+                  # 레시피
+                </button>
+              </div>
+              <div class="card-circle">
+                <div class="photo-circle influencer3"></div>
+                <div class="user-nickname">맛있는식탁</div>
+                <button class="btn-l btn-disable" type="button">
+                  # 레시피
+                </button>
+              </div>
+              <div class="card-circle">
+                <div class="photo-circle influencer4"></div>
+                <div class="user-nickname">복서지원</div>
+                <button class="btn-l btn-disable" type="button"># 복싱</button>
+              </div>
+              <div class="card-circle">
+                <div class="photo-circle influencer2"></div>
+                <div class="user-nickname">알렉스</div>
+                <button class="btn-l btn-disable" type="button">
+                  # 웨이트트레이닝
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article>
+          <div class="rcmd-swipe">
+            <div class="category text-align-center">
+              <span class="rcmd-title">이번주 인기 피드</span
+              ><button class="btn-more">더보기</button>
+            </div>
+            <div class="rcmd-cards">
+              <div class="card-rectangle">
+                <div class="photo-m feed3"></div>
+                <div class="rcmd-card-1st-row text-align-center">
+                  <div class="card-reaction">
+                    <i class="bi bi-heart"></i>
+                    <i class="bi bi-chat"></i>
+                    <i class="bi bi-bookmarks"></i>
+                  </div>
+                  <span class="btn-more natural500">2일 전</span>
+                </div>
+              </div>
+              <div class="card-rectangle">
+                <div class="photo-m feed1"></div>
+                <div class="rcmd-card-1st-row text-align-center">
+                  <div class="card-reaction">
+                    <i class="bi bi-heart"></i>
+                    <i class="bi bi-chat"></i>
+                    <i class="bi bi-bookmarks"></i>
+                  </div>
+                  <span class="btn-more natural500">2일 전</span>
+                </div>
+              </div>
+              <div class="card-rectangle">
+                <div class="photo-m influencer4"></div>
+                <div class="rcmd-card-1st-row text-align-center">
+                  <div class="card-reaction">
+                    <i class="bi bi-heart"></i>
+                    <i class="bi bi-chat"></i>
+                    <i class="bi bi-bookmarks"></i>
+                  </div>
+                  <span class="btn-more natural500">2일 전</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article>
+          <div class="rcmd-scroll">
+            <div class="category text-align-center">
+              <span class="rcmd-title">추천 피드</span
+              ><button class="btn-more">더보기</button>
+            </div>
+            <div class="hashtag">
+              <button class="btn-l btn-clicked" type="button">
+                # 모든 주제
+              </button>
+              <button class="btn-l btn-disable" type="button"># 운동</button>
+              <button class="btn-l btn-disable" type="button"># 식단</button>
+              <button class="btn-l btn-disable" type="button">
+                # 크로스핏
+              </button>
+              <button class="btn-l btn-disable" type="button"># 러닝</button>
+              <button class="btn-l btn-disable" type="button"># 레시피</button>
+            </div>
+            <div>
+              <div class="rcmd-content border-bottom-200">
+                <div class="photo-xs feed4"></div>
+                <div class="card-info flex-column">
+                  <div class="content-title semi-bold">
+                    제21회 서울마라톤대회, 추운 겨울을 이겨내는 뜨거운 열정!
+                  </div>
+                  <div class="feed-content">
+                    지난 12월 6일, 2만 명 이상의 참가자가 서울의 거리를 가득
+                    메웠다. 이번 대회는 다양한 연령대와 수준의 선수들이 함께하는
+                    축제의 장으로, 많은 이들에게 도전의 기회를 제공했다. 특히
+                    눈길을 끌었던 참가자가 있는데, 바로 아이를 태운 유아차와
+                    함께 뛴 참가자 '김승민'씨였다. 그는 아이와 취미를 공유하고
+                    추억을 남겨주고 싶어 참가했다고 한다.
+                  </div>
+                  <div class="rcmd-card-1st-row text-align-center">
+                    <div class="card-reaction">
+                      <i class="bi bi-heart"></i>
+                      <i class="bi bi-chat"></i>
+                      <i class="bi bi-bookmarks"></i>
+                    </div>
+                    <span class="btn-more natural500">2일 전</span>
+                  </div>
+                </div>
+              </div>
+              <div class="rcmd-content border-bottom-200">
+                <div class="photo-xs feed3"></div>
+                <div class="card-info flex-column">
+                  <div class="content-title semi-bold">
+                    단백질 보충제, 어떤 걸 골라야할까?
+                  </div>
+                  <div class="feed-content">
+                    좋은 단백질 보충제를 선택할 때는 몇 가지 중요한 요소를
+                    고려해야 한다. 첫째, 단백질의 원료를 확인해보자. 유청
+                    단백질(Whey Protein)은 흡수 속도가 빠르고, 식물성 단백질은
+                    유당을 피해야 하는 사람들에게 좋다. 둘째, 단백질 함량이 높은
+                    제품을 선택하는 것이 중요하다. 보통 한 서빙당 20g 이상의
+                    단백질을 제공하는 제품이 이상적이다.
+                  </div>
+                  <div class="rcmd-card-1st-row text-align-center">
+                    <div class="card-reaction">
+                      <i class="bi bi-heart"></i>
+                      <i class="bi bi-chat"></i>
+                      <i class="bi bi-bookmarks"></i>
+                    </div>
+                    <span class="btn-more natural500">2일 전</span>
+                  </div>
+                </div>
+              </div>
+              <div class="rcmd-content border-bottom-200 gap-16px">
+                <div class="photo-xs feed2"></div>
+                <div class="card-info flex-column">
+                  <div class="content-title semi-bold">
+                    동네 농구장, 커뮤니티의 중심이 되다
+                  </div>
+                  <div class="feed-content">
+                    동네 농구장은 단순한 운동 공간을 넘어서, 지역 커뮤니티를
+                    형성하는 중요한 역할을 한다. 정기적으로 농구를 즐기는
+                    사람들은 자연스럽게 서로의 얼굴을 익히고, 소통을 하면서
+                    끈끈한 유대감을 쌓는다. 농구를 통해 다양한 연령대와 배경을
+                    가진 사람들이 하나의 목표를 가지고 협력하면서, 서로를
+                    이해하고 존중하는 문화를 만들어 갈 수 있다. 또한, 농구
+                    대회나 친선 경기를 통해 더욱 긴밀한 관계를 형성하고, 공동체
+                    의식을 높일 수 있다. 결국, 동네 농구장은 단순한 운동을
+                    넘어서, 사람들 간의 소통과 화합을 이끄는 중요한 공간으로
+                    기능하게 된다.
+                  </div>
+                  <div class="rcmd-card-1st-row text-align-center">
+                    <div class="card-reaction">
+                      <i class="bi bi-heart"></i>
+                      <i class="bi bi-chat"></i>
+                      <i class="bi bi-bookmarks"></i>
+                    </div>
+                    <span class="btn-more natural500">2일 전</span>
+                  </div>
+                </div>
+              </div>
+              <div class="rcmd-content border-bottom-200">
+                <div class="photo-xs influencer3"></div>
+                <div class="card-info flex-column">
+                  <div class="content-title semi-bold">
+                    나를 위한 보상 '치팅데이', 오히려 독이 될 수 있다?
+                  </div>
+                  <div class="feed-content">
+                    치팅데이는 일시적으로 식단의 규칙을 벗어나는 것이지만,
+                    지나치게 자주 또는 과도하게 섭취할 경우 체중 증가와 건강에
+                    부정적인 영향을 미칠 수 있다. 갑작스러운 칼로리 과잉은 체내
+                    인슐린 수치를 급격히 상승시켜, 지방 축적을 촉진할 수 있다.
+                    또한, 치팅데이 후에는 소화 불편함이나 피로감을 느낄 수 있어
+                    운동 수행에도 영향을 줄 수 있다. 결국, 치팅데이가 체중
+                    관리와 장기적인 목표 달성에 방해가 될 수 있기 때문에, 적당한
+                    조절이 필요하다.
+                  </div>
+                  <div class="rcmd-card-1st-row text-align-center">
+                    <div class="card-reaction">
+                      <i class="bi bi-heart"></i>
+                      <i class="bi bi-chat"></i>
+                      <i class="bi bi-bookmarks"></i>
+                    </div>
+                    <span class="btn-more natural500">2일 전</span>
+                  </div>
+                </div>
+              </div>
+              <div class="rcmd-content border-bottom-200 gap-16px">
+                <div class="photo-xs feed2"></div>
+                <div class="card-info flex-column">
+                  <div class="content-title semi-bold">
+                    스트릿 스포츠의 대표주자 '스케이트보드', 공식 스포츠로
+                    자리매김하다
+                  </div>
+                  <div class="feed-content">
+                    스케이트보드가 2020 도쿄 올림픽에서 정식 종목으로
+                    채택되면서, 전 세계 스케이트보드 문화는 큰 변화를 맞이했다.
+                    이번 올림픽 진출은 스케이트보드가 단순한 스트리트 스포츠를
+                    넘어, 국제적으로 인정받는 공식 스포츠로 자리잡는 계기가
+                    되었습니다. 특히, 젊은 세대를 중심으로 한 열정적인 팬층을
+                    확보하며, 스포츠의 대중화와 글로벌화가 가속화됐다.
+                    스케이트보드는 이번 올림픽에서 거리 기반의 자유로운 스타일과
+                    기술적인 난이도를 결합한 경기를 선보이며, 그 자체로도 큰
+                    인기를 끌었다. 이로 인해 스케이트보드는 새로운 스포츠
+                    문화로서의 가능성을 넓히고, 미래의 올림픽에서 더욱 중요한
+                    종목으로 자리 잡을 전망이다.
+                  </div>
+                  <div class="rcmd-card-1st-row text-align-center">
+                    <div class="card-reaction">
+                      <i class="bi bi-heart"></i>
+                      <i class="bi bi-chat"></i>
+                      <i class="bi bi-bookmarks"></i>
+                    </div>
+                    <span class="btn-more natural500">2일 전</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
