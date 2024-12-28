@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Interface</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<!-- web 마이페이지가 100% 화면크기로 설정하면 네이게이션이랑 내용이 넘치고 75%로 해야 다보이네요.. -->
+<body>
+    <div class="container">
+        <nav class="side-nav">
+            <div class="logo">
+                <div class="logo-bars">
+                    <div class="logo-bar"></div>
+                    <div class="logo-bar"></div>
+                </div>
+            </div>
+            <ul>
+                <li><a href="#"><i class="bi bi-house"></i> 홈</a></li>
+                <li><a href="#"><i class="bi bi-calendar3"></i> 캘린더</a></li>
+                <li><a href="#"><i class="bi bi-card-text"></i> 피드</a></li>
+                <li><a href="#"><i class="bi bi-person"></i> 마이페이지</a></li>
+            </ul>
+            <div class="bottom-nav">
+                <ul>
+                    <li><a href="#"><i class="bi bi-search"></i> 검색</a></li>
+                    <li><a href="#"><i class="bi bi-bell"></i> 알림</a></li>
+                    <li><a href="#"><i class="bi bi-gear"></i> 설정</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <main class="main-content">
+            <div class="profile-section">
+                <div class="profile-image">
+                    <i class="bi bi-person" style="font-size: 40px; color: white;"></i>
+                </div>
+                <div class="profile-info">
+                    <span class="user-name">정아로님</span>
+                    <span class="program-name">크로스핏 3개월 프로그램</span>
+                </div>
+            </div>
+
+            <div class="content-box app-settings">
+                <h2>앱 설정</h2>
+                <ul>
+                    <li><i class="bi bi-person-circle"></i> 개인 프로필</li>
+                    <li><i class="bi bi-alarm"></i> 오늘의 기록</li>
+                    <li><i class="bi bi-graph-up"></i> 수업 일지</li>
+                    <li><i class="bi bi-calendar-check"></i> 나의 일정</li>
+                </ul>
+            </div>
+
+            <div class="content-box content-manage">
+                <h2>콘텐츠 관리</h2>
+                <ul>
+                    <li><i class="bi bi-camera"></i> 게시글</li>
+                    <li><i class="bi bi-chat"></i> 스크랩</li>
+                    <li><i class="bi bi-person-plus"></i> 가능한 일정</li>
+                </ul>
+            </div>
+
+            <div class="content-box payment">
+                <h2>통계 및 분석</h2>
+                <ul>
+                    <li><i class="bi bi-credit-card"></i> 결제 리포트</li>
+                    <li><i class="bi bi-graph-up"></i> 신체 변화 기록</li>
+                    <li><i class="bi bi-star"></i> 제공 후기 관리</li>
+                </ul>
+            </div>
+
+            <div class="content-box usage-info">
+                <h2>이용 정보</h2>
+                <ul>
+                    <li><i class="bi bi-question-circle"></i> FAQ</li>
+                    <li><i class="bi bi-file-text"></i> 이용약관</li>
+                    <li><i class="bi bi-info-circle"></i> 이용 약관</li>
+                </ul>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

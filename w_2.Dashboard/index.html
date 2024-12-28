@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+            <html lang="ko">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Calendar Layout</title>
+                <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+                <link rel="stylesheet" href="styles.css">
+                <script src="./navigation.js" defer></script>
+                </head>
+            <body>
+                <div class="container">
+                    <!-- Left Navigator -->
+                    <header>
+                        <!-- 네비게이션 -->
+                        <nav class="navbar">
+                            <div class="topList">
+                                <div class="logo"><span>튼튼</span></div>
+                                <ul>
+                                    <li>
+                                        <a href="">
+                                            <i class="bi bi-house-door-fill"></i>
+                                            <p>홈</p></a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                            ><i class="bi bi-calendar3"></i>
+                                            <p>캘린더</p></a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                            ><i class="bi bi-stickies-fill"></i>
+                                            <p>피드</p></a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                            ><i class="bi bi-person-fill"></i>
+                                            <p>마이페이지</p></a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                            <ul class="bottomList">
+                                <li>
+                                    <a href=""
+                                        ><i class="bi bi-search"></i>
+                                        <p>검색</p></a
+                                    >
+                                </li>
+                                <li>
+                                    <a href=""
+                                        ><i class="bi bi-bell"></i>
+                                        <p>알림</p></a
+                                    >
+                                </li>
+                                <li>
+                                    <a href=""
+                                        ><i class="bi bi-gear"></i>
+                                        <p>설정</p></a
+                                    >
+                                </li>
+                            </ul>
+                        </nav>
+            
+                        <!-- floating button과 modal -->
+                        <!-- 모달부분 -->
+                        <div class="floatingBtnModal">
+                            <div class="floatingBtnModalandBtn">
+                                <div class="floatingBtnModalBody">
+                                    <div class="floatingBtnModalTitle">
+                                        <i class="bi bi-chevron-left font20"></i>
+                                        <p class="fontMedium">제목</p>
+                                        <i class="bi bi-chevron-right font20"></i>
+                                    </div>
+                                    <div class="floatingBtnModalContent">
+                                        <a href="">
+                                            <p>PT 수업 예약하기</p>
+                                            <i class="bi bi-plus-circle-fill font16"></i>
+                                        </a>
+                                        <a href="">
+                                            <p>운동 일정 추가하기</p>
+                                            <i class="bi bi-plus-circle-fill font16"></i>
+                                        </a>
+                                        <a href="">
+                                            <p>기록하기</p>
+                                            <i class="bi bi-plus-circle-fill font16"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div id="floatingBtnWithModal" class="floatingBtn">
+                                    <i class="bi bi-x-circle-fill"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 버튼부분 -->
+                        <div id="floatingBtn" class="floatingBtn">
+                            <i class="bi bi-plus-circle-fill"></i>
+                        </div>
+                    </header>
+            
+                    <!-- Main Content -->
+                    <main class="main-content">
+                        <!-- Calendar Section -->
+                        <div class="calendar-section">
+                            <div class="calendar-header">
+                                <button class="btn-prev"><i class="bi bi-chevron-left"></i></button>
+                                <h2>Dec 2024</h2>
+                                <button class="btn-next"><i class="bi bi-chevron-right"></i></button>
+                            </div>
+                            <div class="calendar-grid">
+                                <div class="weekdays">
+                                    <div class="weekday sun">Sun</div>
+                                    <div class="weekday">Mon</div>
+                                    <div class="weekday">Tue</div>
+                                    <div class="weekday">Wed</div>
+                                    <div class="weekday">Thu</div>
+                                    <div class="weekday">Fri</div>
+                                    <div class="weekday sat">Sat</div>
+                                </div>
+                                <div class="days" id="calendar-days"></div>
+                            </div>
+                        </div>
+            
+                        <!-- Right Sidebar -->
+                        <div class="right-sidebar">
+                            <p class="graph-title">나의 통계</p>
+                            
+                            <!-- Statistics -->
+                            <div class="statistics">
+
+                                <div class="graph-container">
+                                    <canvas id="statsGraph"></canvas>
+                                </div>
+                            </div>
+
+                    
+                            <script>
+                                document.addEventListener('DOMContentLoaded', function() {
+                                    // Calendar Generation
+                                    function generateCalendar() {
+                                        const daysInMonth = 31; // December 2024
+                                        const firstDay = 0; // Sunday
+                                        const calendar = document.querySelector('.calendar-grid');
+                                        
+                                        
+                        
+                                    }
+                        
+                                    // Stats Graph
+                                    function initializeGraph() {
+                                        const ctx = document.getElementById('statsGraph').getContext('2d');
+                                        new Chart(ctx, {
+                                            type: 'bar',
+                                            data: {
+                                                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Sep', 'Oct', 'Nov', 'Dec'],
+                                                datasets: [{
+                                                    data: [10, 12, 15, 18, 20, 22, 25, 23, 21, 19, 17],
+                                                    backgroundColor: '#5EE6D0',
+                                                    borderRadius: 8,
+                                                    barThickness: 20
+                                                }]
+                                            },
+                                            options: {
+                                                responsive: true,
+                                                maintainAspectRatio: false,
+                                                plugins: {
+                                                    legend: {
+                                                        display: false
+                                                    }
+                                                },
+                                                scales: {
+                                                    y: {
+                                                        beginAtZero: true,
+                                                        grid: {
+                                                            display: false
+                                                        }
+                                                    },
+                                                    x: {
+                                                        grid: {
+                                                            display: false
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        });
+                                    }
+                        
+                                    // Initialize components
+                                    generateCalendar();
+                                    initializeGraph();
+                                });
+                            </script>
+                        
+
+                            
+
+                             <!-- Stats Section -->
+       
+                             
+                            
+            
+                            <!-- Challenges -->
+                            <div class="challenges">
+                                <div class="challenges-card">
+                                    <h3>튼튼 챌린지</h3>
+                                    <span class="more-btn">더보기 ›</span>
+                                </div>
+                                <div class="progress-card">
+                                    <div class="progress-circle">
+                                        <span class="progress-text">85%</span>
+                                    </div>
+                                    <div class="progress-info">
+                                        <h3>일주일에 3회 이상 10시 운동하기</h3>
+                                        <p>챌린지 성공까지 2일 21시간 남았습니다</p>
+                                    </div>
+                                </div>
+
+                                <div class="progress-card">
+                                    <div class="progress-circle">
+                                        <span class="progress-text">85%</span>
+                                    </div>
+                                    <div class="progress-info">
+                                        <h3>일주일에 3회 이상 10시 운동하기</h3>
+                                        <p>챌린지 성공까지 2일 21시간 남았습니다</p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                             <!-- Medicine Section -->
+        <section class="medicine-section">
+            <div class="section-header">
+                <span>맞춤 제안</span>
+                <span class="more-btn">더보기 ›</span>
+            </div>
+            <div class="medicine-cards">
+                <div class="medicine-card">
+                    <div class="medicine-icon">💊</div>
+                    <div class="medicine-info">
+                        <h3>체중 인슐린젠</h3>
+                        <p>2정 | 1회당 | 20분전</p>
+                    </div>
+                    <button class="add-btn">+</button>
+                </div>
+                <div class="medicine-card">
+                    <div class="medicine-icon">🥗</div>
+                    <div class="medicine-info">
+                        <h3>리코타 샐러드</h3>
+                        <p>2인분 | 점심 | 20분전</p>
+                    </div>
+                    <button class="add-btn">+</button>
+                </div>
+            </div>
+        </section>
+
+        
+            
+                            <!-- Suggestions -->
+                            <!-- 삭제 -->
+
+
+                           
+                        </div>
+                    </main>
+                </div>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+                <script src="script.js"></script>
+            </body>
+            </html>
+
+            
+
+            <section class="meal-suggestions">
+                <h3>튼튼 제안</h3>
+                <div class="meal-grid">
+                    <div class="meal-item">
+                        <i class="bi bi-egg-fried"></i>
+                        <div class="meal-info">
+                            <h4>계란 익스텐션</h4>
+                            <p>하체 | 2세트 | 50kg</p>
+                        </div>
+                        <button class="add-btn">+</button>
+                    </div>
+                    <!-- More meal items -->
+                </div>
+            </section>
+        </aside>
+    </div>
+</body>
+</html>
