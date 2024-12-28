@@ -71,8 +71,8 @@ input::placeholder {
 input:focus {
   outline: 1px solid #c66efe;
 }
-
 .nextButton {
+  position: absolute;
   width: 381px;
   height: 64px;
   border-radius: 14px;
@@ -80,5 +80,5 @@ input:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 185px;
+  top: 831px;
 }

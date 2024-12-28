@@ -10,10 +10,11 @@
 }
 
 .question {
-  margin-top: 72px;
+  padding-top: 310px;
 }
 
 .nextButton {
+  position: absolute;
   width: 381px;
   height: 64px;
   border-radius: 14px;
@@ -21,15 +22,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* margin-top: 36px; */
-}
-
-footer {
-  position: relative;
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
-  top: 500px;
+  top: 831px;
 }
 
 /* 

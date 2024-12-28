@@ -6,7 +6,7 @@
 body {
   display: flex;
   justify-content: center;
-  gap: 388px;
+  gap: 430px;
 }
 
 .left {
@@ -17,8 +17,6 @@ body {
 
 .logo.account {
   top: 282px;
-  left: 506px;
-  /* left: 480px; */
   transform: translate(0%, -50%);
 }
 

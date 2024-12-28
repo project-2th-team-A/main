@@ -3,20 +3,12 @@
 
 /* 5_question1*/
 
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* justify-content: center; */
-}
-
-/*.questions {
+.questions {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}*/
-
+}
 .question {
   margin-top: 72px;
 }
@@ -53,6 +45,7 @@ input::placeholder {
 }
 
 .nextButton {
+  position: absolute;
   width: 381px;
   height: 64px;
   border-radius: 14px;
@@ -60,9 +53,5 @@ input::placeholder {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-footer {
-  position: absolute;
   top: 831px;
 }

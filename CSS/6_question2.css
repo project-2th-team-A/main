@@ -79,6 +79,7 @@ input:focus {
 }
 
 .nextButton {
+  position: absolute;
   width: 381px;
   height: 64px;
   border-radius: 14px;
@@ -86,5 +87,5 @@ input:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 36px;
+  top: 831px;
 }
