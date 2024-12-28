@@ -1,28 +1,24 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Add active state to navigation items
-    const navItems = document.querySelectorAll('.nav-item, .menu-item');
-    
-    navItems.forEach(item => {
-        item.addEventListener('click', function() {
-            // Remove active class from all items
-            navItems.forEach(nav => nav.classList.remove('active'));
-            // Add active class to clicked item
-            this.classList.add('active');
+    // 메뉴 아이템 호버 효과
+    const menuItems = document.querySelectorAll('.side-nav ul li a');
+    menuItems.forEach(item => {
+        item.addEventListener('mouseenter', function() {
+            this.style.color = '#000';
+        });
+        item.addEventListener('mouseleave', function() {
+            this.style.color = '#666';
         });
     });
 
-    // Optional: Add smooth scroll behavior for the sidebar
-    const sidebarItems = document.querySelectorAll('.nav-item');
-    sidebarItems.forEach(item => {
-        item.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            if (targetId && targetId !== '#') {
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    targetElement.scrollIntoView({ behavior: 'smooth' });
-                }
-            }
+    // 콘텐츠 박스 호버 효과
+    const contentBoxes = document.querySelectorAll('.content-box ul li');
+    contentBoxes.forEach(box => {
+        box.addEventListener('mouseenter', function() {
+            this.style.backgroundColor = '#f5f5f5';
+            this.style.cursor = 'pointer';
+        });
+        box.addEventListener('mouseleave', function() {
+            this.style.backgroundColor = 'transparent';
         });
     });
 });
