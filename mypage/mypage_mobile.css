@@ -1,0 +1,73 @@
+@media (max-width: 600px) {
+    @import url(../navigation.css);
+
+    main {
+        position: static;
+        padding: 0px 24px;
+        width: 100%;
+        align-items: center;
+    }
+
+    main nav {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #mobileUpperNav {
+        height: 32px;
+        margin-bottom: 12px;
+    }
+
+    #mobileUpperTitle {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #mobileUpperTitle span {
+        font-weight: 800;
+    }
+
+    #mobileUpperTitleIcons {
+        display: flex;
+        gap: 16px;
+    }
+
+    /* 프로필 */
+    .profile-section {
+        gap: 12px;
+        width: 100%;
+    }
+
+    .profile-img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .profile-info {
+        gap: 4px;
+    }
+
+    .profile-name,
+    .profile-program {
+        font-size: 14px;
+    }
+
+    /* 메뉴들  */
+    .card-container {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        width: 100%;
+    }
+
+    .card-title {
+        font-size: 14px;
+    }
+
+    .menu-item p {
+        font-size: 12px;
+        color: #c084fc;
+    }
+}
