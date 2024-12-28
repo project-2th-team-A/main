@@ -1,9 +1,27 @@
 @import url("./default.css");
 @import url("./default_mine.css");
 
-/* w_1_10_create */
+/* 6_questions2 */
+
+.questions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.goodLine {
+  display: flex;
+  flex-direction: column;
+}
+
+.question {
+  margin-top: 52px;
+}
+
 .describe {
   padding-top: 15.44px;
+  /* 텍스트를 맨 앞자리부터 공간 없이 시작하게 함 */
   text-align: start;
 }
 
@@ -36,7 +54,7 @@
   margin-top: 16.4px;
 }
 
-.times {
+input {
   width: 192px;
   height: 68px;
   border: 1px solid #f5f5f5;
@@ -44,4 +62,29 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  /* input 커서 없애기 */
+  caret-color: transparent;
+}
+
+input::placeholder {
+  color: #292929;
+  text-align: center;
+  line-height: 50%;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+input:focus {
+  outline: 1px solid #c66efe;
+}
+
+.nextButton {
+  width: 381px;
+  height: 64px;
+  border-radius: 14px;
+  background-color: #c66efe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 36px;
 }

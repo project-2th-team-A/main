@@ -1,7 +1,38 @@
 @import url("./default.css");
 @import url("./default_mine.css");
 
-/* w_1_12_create */
+/* 8_ready */
+.questions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.question {
+  margin-top: 72px;
+}
+
+.nextButton {
+  width: 381px;
+  height: 64px;
+  border-radius: 14px;
+  background-color: #c66efe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-top: 36px; */
+}
+
+footer {
+  position: relative;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  top: 500px;
+}
+
+/* 
 .question.final {
   margin-top: 310px;
   margin-bottom: 310px;
@@ -11,4 +42,4 @@
   border-color: #c66efe;
   color: #c66efe;
   font-weight: 500;
-}
+} */

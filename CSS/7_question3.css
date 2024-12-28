@@ -1,12 +1,53 @@
 @import url("./default.css");
 @import url("./default_mine.css");
 
-/* w_1_11_create */
-.purposes {
-  margin-top: 33px;
+/* 7_questions3 */
+.questions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.purpose {
+.goodLine {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.question {
+  margin-top: 72px;
+}
+
+.describe {
+  padding-top: 36px;
+}
+
+.coachTalk {
+  width: 402px;
+  height: 67px;
+  background-color: #d6d0fd;
+  border: 1px solid #8d79f6;
+  border-radius: 14px;
+  margin-top: 174px;
+  display: flex;
+  align-items: center;
+  gap: 12.93px;
+}
+
+.coach {
+  width: 38.79px;
+  height: 38.79px;
+  margin-left: 14.11px;
+}
+
+.purposes {
+  margin-top: 33px;
+  /* margin-bottom: 18px; */
+}
+
+input {
   width: 381px;
   height: 64px;
   border: 1px solid #f5f5f5;
@@ -15,4 +56,29 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  /* input 커서 없애기 */
+  caret-color: transparent;
+}
+
+input::placeholder {
+  color: #292929;
+  text-align: center;
+  line-height: 50%;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+input:focus {
+  outline: 1px solid #c66efe;
+}
+
+.nextButton {
+  width: 381px;
+  height: 64px;
+  border-radius: 14px;
+  background-color: #c66efe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 185px;
 }

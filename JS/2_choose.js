@@ -20,9 +20,9 @@ if (trainee) {
   trainee.addEventListener("click", () => {
     pic.src = "../img/trainee.png";
     checkTrainee.src = "../img/filled.png";
-    trainee.style.borderColor = "#c66efe";
+    // trainee.style.borderColor = "#c66efe";
     text1.style.color = "#8A26C9";
-    setTimeout("location.href='./w_1_8_create.html'", 800);
+    // setTimeout("location.href='./4_account.html'", 800);
   });
 }
 
@@ -30,9 +30,9 @@ if (trainer) {
   trainer.addEventListener("click", () => {
     pic.src = "../img/trainer.png";
     checkTrainer.src = "../img/filled.png";
-    trainer.style.borderColor = "#c66efe";
+    // trainer.style.borderColor = "#c66efe";
     text2.style.color = "#8A26C9";
-    setTimeout("location.href='./w_1_8_create.html'", 800);
+    // setTimeout("location.href='./4_account.html'", 800);
   });
 }
 

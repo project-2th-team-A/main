@@ -13,72 +13,80 @@
     />
   </head>
   <body>
-    <div class="containerCreate">
-      <div class="intro">
-        <div class="logo create">튼튼</div>
-        <div class="hi">
-          <div class="description">회원가입을 진행해요</div>
-          <img src="./img/img_hand.png" alt="hand" class="hand" />
-        </div>
-      </div>
-
-      <div class="input-section">
-        <div class="input-pictures">
-          <img src="./img/img_bar1.png" alt="bar1" class="bar one"/>
-          <img src="./img/img_picture.png" alt="profile picture" class="picture" id="profilePic"/>
-         
-
-          <input type="file" accept="image/jpeg, image/png, image/jpg" id="input-file" style="display:none">
-          <label for="input-file">update image</label>
-        </div>
-
-        <section class="logIn">
-          <div class="loginBox">
-            <div class="logInTitle font-16px">닉네임</div>
-            <div class="logIninput">
-              <input type="text" placeholder="6~8자 사이의 영문,숫자 혼용" class="borderColor"/>
-            </div>
-          </div>
-
-          <div class="loginBox">
-            <div class="logInTitle font-16px">이메일</div>
-            <div class="logIninput">
-              <input type="text" placeholder="example@teunteun.com" class="borderColor"/>
-            </div>
-          </div>
-
-          <div class="loginBox">
-            <div class="logInTitle font-16px">키</div>
-            <div class="logIninput">
-              <input type="text" placeholder="cm" class="borderColor"/>
-            </div>
-          </div>
-
-          <div class="loginBox">
-            <div class="logInTitle font-16px">몸무게</div>
-            <div class="logIninput">
-              <input type="text" placeholder="kg" class="borderColor"/>
-            </div>
-          </div>
-
-          <div class="loginBox">
-            <div class="logInTitle font-16px">성별</div>
-            <div class="genderButtons">
-              <button class="gender borderColor"
-              onclick="btnActive()">남성</button>
-              <button class="gender borderColor" onclick="btnActive()">여성</button>
-              <button class="gender borderColor" onclick="genderButton()">비공개</button>
-            </div>
-          </div>
-        </section>
-
-        <div class="createButton">
-          <p class="font-16px natural100">회원가입</p>
-        </div>
-
-
-        </div>
+    <div class="left">
+      <div class="logo account">튼튼</div>
+      <div class="description">
+        <div class="saying">회원가입을 진행해요</div>
+        <img src="../IMG/hand.png" alt="hand" />
       </div>
     </div>
+
+    <div class="right">
+      <header>
+        <img src="../IMG/bar1.png" alt="bar1" class="bar" />
+        <img
+          src="../IMG/picture.png"
+          alt="profile picture"
+          class="picture"
+          id="profilePic"
+        />
+      </header>
+      <!-- <input type="file" accept="image/jpeg, image/png, image/jpg" id="input-file" style="display:none">
+          <label for="input-file">update image</label> -->
+
+      
+      <main class="accountInput">
+        <div class="inputSet">
+          <div class="inputTitle">닉네임</div>
+            <input
+              type="text"
+              placeholder="6~8자 사이의 영문,숫자 혼용"
+              
+            />
+        </div>
+
+        <div class="inputSet">
+          <div class="inputTitle">이메일</div>
+            <input
+              type="text"
+              placeholder="example@teunteun.com"
+             
+            />
+
+        </div>
+
+        <div class="inputSet">
+          <div class="inputTitle">키</div>
+            <input type="text" placeholder="cm"/>
+
+        </div>
+
+        <div class="inputSet">
+          <div class="inputTitle">몸무게</div>
+            <input type="text" placeholder="kg"/>
+        </div>
+
+        <div class="inputSet">
+          <div class="inputTitle">성별</div>
+          <div class="genderButtons">
+            <button class="gender">
+              남성
+            </button>
+            <button class="gender">
+              여성
+            </butto n>
+            <button class="gender" >
+              비공개
+            </button>
+          </div>
+        </div>
+        <footer class="accountButton">
+          <p class="font-16px natural100">회원가입</p>
+        </footer>
+      </main>
+
+
+    </div>
+  </div>
   </body>
 </html>
