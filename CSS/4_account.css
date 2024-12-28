@@ -1,0 +1,81 @@
+@import url("./default.css");
+@import url("./default_mine.css");
+
+/* w_1_8_create */
+
+.containerCreate {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  gap: 388px;
+}
+
+.logo.create {
+  margin-top: 261 px;
+  left: 480px;
+  top: 261px;
+  left: 480px;
+}
+
+.hi {
+  display: flex;
+  align-items: center;
+}
+
+.description {
+  font-size: 28px;
+  font-weight: 800;
+  margin-top: 343px;
+}
+
+/* hand margin-top이 figma와 다름 */
+.hand {
+  width: 56px;
+  height: 59px;
+  margin-top: 340px;
+}
+
+.input-pictures {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bar {
+  width: 402px;
+  height: 8px;
+  margin-top: 120px;
+}
+
+.picture {
+  width: 106.04px;
+  height: 106.04px;
+  padding-top: 45.02px;
+}
+
+/* .auth-form {
+     
+  } */
+.createButton {
+  width: 284px;
+  height: 47px;
+  border-radius: 5px;
+  background-color: #c66efe;
+  margin-left: 100px;
+  margin-top: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.genderButtons {
+  gap: 7px;
+}
+
+.gender {
+  width: 129px;
+  height: 54px;
+  border: 1px solid #f5f5f5;
+  border-radius: 5px;
+  background-color: transparent;
+}

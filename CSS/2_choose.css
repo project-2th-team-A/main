@@ -1,0 +1,86 @@
+@import url("./default.css");
+@import url("./default_mine.css");
+
+/* 2_choose */
+
+.logo.second {
+  margin-top: 91px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#experience {
+  position: absolute;
+  color: #5932ad;
+  top: 168px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  text-align: center;
+}
+
+.pic_choose {
+  width: 492px;
+  height: 314px;
+  position: absolute;
+  top: 324px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+#container_choose {
+  display: flex;
+  justify-content: center;
+  gap: 61px;
+  /* gap: 54px; */
+}
+
+.box_choose {
+  position: relative;
+  width: 265px;
+  height: 54px;
+  border: 1px solid;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 672px;
+}
+
+/* .box_choose > .check {
+  position: absolute;
+  left: 29px;
+} */
+
+.check {
+  display: flex;
+  align-items: center;
+}
+
+.check > img {
+  position: absolute;
+  left: 29px;
+  width: 20px;
+  height: 20px;
+  left: 29px;
+}
+
+/*** Q : 왜 회원, 트레이너 박스에서부터 110px 인지 모르겠음. 835px 적용하면 안됨.  ***/
+.bottomTextBefore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 110px;
+}
+
+/* .bottomTextAfter {
+  display: none;
+} */
+
+.bottomText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 110px;
+}

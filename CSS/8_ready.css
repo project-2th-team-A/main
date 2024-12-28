@@ -1,0 +1,14 @@
+@import url("./default.css");
+@import url("./default_mine.css");
+
+/* w_1_12_create */
+.question.final {
+  margin-top: 310px;
+  margin-bottom: 310px;
+}
+
+.borderColor_click {
+  border-color: #c66efe;
+  color: #c66efe;
+  font-weight: 500;
+}

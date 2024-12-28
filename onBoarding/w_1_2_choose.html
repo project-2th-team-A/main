@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>튼튼_선택</title>
-    <link rel="stylesheet" href="./beginning.css" />
-    <script src="./beginning.js" defer></script>
+    <title>튼튼_회원</title>
+    <link rel="stylesheet" href="../CSS/w_1_2_choose.css" />
+    <script src="../JS/w_1_2_choose.js" defer></script>
 
     <link
       rel="stylesheet"
@@ -14,7 +14,7 @@
   </head>
   <body>
     <section>
-      <h1 class="logo second">튼튼</h1>
+      <div class="logo second">튼튼</div>
       <p id="experience" class="font-onBoard-19px">
         사용자 유형을 선택해<br />
         최적의 서비스를 경험하세요
@@ -23,34 +23,31 @@
 
     <section>
       <img
-        class="pic_choose"
-        id="both"
-        src="./img/choose.png"
+        class="pic_choose trainee"
+        src="../img/trainee.png"
         alt="trinee and trainer"
       />
     </section>
 
     <section id="container_choose">
-      <div class="box_choose natural200" id="trainee" onclick="toggleTrainee()">
-        <div class="check inactive">
-          <i class="bi bi-check-circle primary300"></i>
+      <div class="box_choose natural200">
+        <div class="check">
+          <i class="bi bi-check-circle-fill primary300"></i>
         </div>
         <div class="text">회원</div>
       </div>
 
-      <div class="box_choose natural200" id="trainer" onclick="toggleTrainer()">
-        <div class="check active">
+      <div class="box_choose natural200">
+        <div class="check">
+          <img src="../IMG/empty.png" />
           <i class="bi bi-check-circle primary300"></i>
         </div>
         <div class="text">트레이너</div>
       </div>
     </section>
 
-    <section class="bottomText one">
-      <div class="font-14px">이미 계정이 있으신가요?</div>
-      <div>
-        <a href="./w_1_4_login.html" class="primary300 font-14px">로그인</a>
-      </div>
+    <section class="bottomText">
+      <a href="./w_1_1_choose.html" class="primary300">뒤로가기</a>
     </section>
   </body>
 </html>

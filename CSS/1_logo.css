@@ -1,0 +1,9 @@
+@import url("./default.css");
+@import url("./default_mine.css");
+
+/* w_0_0_logo */
+.logo.first {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -155%);
+}

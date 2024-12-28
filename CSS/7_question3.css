@@ -1,0 +1,18 @@
+@import url("./default.css");
+@import url("./default_mine.css");
+
+/* w_1_11_create */
+.purposes {
+  margin-top: 33px;
+}
+
+.purpose {
+  width: 381px;
+  height: 64px;
+  border: 1px solid #f5f5f5;
+  border-radius: 14px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

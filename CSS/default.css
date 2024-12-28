@@ -1,4 +1,6 @@
 /* 1. 폰트 */
+/* 미디어쿼리 최소 390 최대 600 (모바일) */
+
 /* 기본 폰트 */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
 
@@ -34,6 +36,8 @@
 .light {
   font-weight: 350;
 }
+
+/* regular ==> 400  */
 
 /* 3. 폰트 크기 */
 .font-24px {
