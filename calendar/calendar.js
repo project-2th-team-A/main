@@ -20,6 +20,7 @@ const todaysContentTitleIcon = document.querySelector(
     '.makingReservation .todaysContentComponent i'
 );
 const btnConfrimReservation = confrimReservation.querySelector('button');
+const addLog = document.querySelector('.addLog');
 const addLogToday = document.querySelector('.addLog p.addLogToday');
 const addLogTypeButtonArray = document.querySelectorAll(
     '.addLogComponent button'
@@ -158,7 +159,9 @@ function handleDateClick(year, month, day, cell) {
         selectedDate.day === day
     ) {
         clearPreviousSelection();
-        hideAside();
+        if (addLog.style.display === 'none') {
+            hideAside();
+        }
         selectedDate = null; // 선택된 날짜 해제
         return;
     }
@@ -185,6 +188,7 @@ function hideAside() {
     todaysContent.style.display = 'none';
     todaysContent_PTmode.style.display = 'none';
     makingReservation.style.display = 'none';
+    addLog.style.display = 'none';
 }
 function showAside() {
     if (ptModeIcon.classList.contains('bi-toggle-on')) {
@@ -275,13 +279,16 @@ function toggleScheduleVisibility(isPTMode) {
 
 // PT 수업 예약하기
 btnMakingReservation.addEventListener('click', () => {
+    hideAside();
     showMakingReservation();
 });
 btnConfrimReservation.addEventListener('click', () => {
     hideMakingReservation();
+    showAside();
 });
 todaysContentTitleIcon.addEventListener('click', () => {
     hideMakingReservation();
+    showAside();
 });
 
 function showMakingReservation() {
@@ -332,6 +339,12 @@ function confrimDayTime(time) {
 }
 
 // 기록하기 창
+// 기록하기 창 닫기
+const addLogExitIcon = document.querySelector('.addLogContainer i.bi-x');
+addLogExitIcon.addEventListener('click', () => {
+    addLog.style.display = 'none';
+});
+
 // 운동 식단 일상 선택
 const addLogTabArray = document.querySelectorAll('.addLogTab p');
 for (let addLogTab of addLogTabArray) {
@@ -348,6 +361,8 @@ for (let addLogTab of addLogTabArray) {
     });
 }
 
+// // 기본 제목의 날짜
+addLogToday.innerHTML = `${todayTitle.innerText}`;
 // 제목의 날짜 달력을 누른 날로 바꿈
 function addChangeAddLogToday() {
     addLogToday.innerHTML = '';

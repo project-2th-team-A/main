@@ -1,0 +1,734 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>캘린더</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css"
+        />
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+        <script src="../navigation.js" defer></script>
+
+        <link rel="stylesheet" href="calendar.css" />
+        <link rel="stylesheet" href="calenar_mobile.css" />
+        <script src="./calendar.js" defer></script>
+
+        <link rel="stylesheet" href="./add_schedule.css" />
+    </head>
+    <body>
+        <header>
+            <!-- 네비게이션 -->
+            <nav class="navbar">
+                <div class="topList">
+                    <div class="logo"><span>튼튼</span></div>
+                    <ul>
+                        <li>
+                            <a href="">
+                                <i class="bi bi-house-door-fill"></i>
+                                <p>홈</p></a
+                            >
+                        </li>
+                        <li>
+                            <a href=""
+                                ><i class="bi bi-calendar3"></i>
+                                <p>캘린더</p></a
+                            >
+                        </li>
+                        <li>
+                            <a href=""
+                                ><i class="bi bi-stickies-fill"></i>
+                                <p>피드</p></a
+                            >
+                        </li>
+                        <li>
+                            <a href=""
+                                ><i class="bi bi-person-fill"></i>
+                                <p>마이페이지</p></a
+                            >
+                        </li>
+                    </ul>
+                </div>
+                <ul class="bottomList">
+                    <li>
+                        <a href=""
+                            ><i class="bi bi-search"></i>
+                            <p>검색</p></a
+                        >
+                    </li>
+                    <li>
+                        <a href=""
+                            ><i class="bi bi-bell"></i>
+                            <p>알림</p></a
+                        >
+                    </li>
+                    <li>
+                        <a href=""
+                            ><i class="bi bi-gear"></i>
+                            <p>설정</p></a
+                        >
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- floating button과 modal -->
+            <!-- 모달부분 -->
+            <div class="floatingBtnModal">
+                <div class="floatingBtnModalandBtn">
+                    <div class="floatingBtnModalBody">
+                        <div class="floatingBtnModalTitle">
+                            <i class="iconPrev bi bi-chevron-left font20"></i>
+                            <p class="fontMedium">제목</p>
+                            <i class="iconNext bi bi-chevron-right font20"></i>
+                        </div>
+                        <div class="floatingBtnModalContent">
+                            <a href="./pt_class_reservation.html">
+                                <p>PT 수업 예약하기</p>
+                                <i class="bi bi-plus-circle-fill font16"></i>
+                            </a>
+                            <a href="./add_schedule.html">
+                                <p>운동 일정 추가하기</p>
+                                <i class="bi bi-plus-circle-fill font16"></i>
+                            </a>
+                            <a href="./create_log.html">
+                                <p>기록하기</p>
+                                <i class="bi bi-plus-circle-fill font16"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="floatingBtnWithModal" class="floatingBtn">
+                        <i class="bi bi-x-circle-fill"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- 버튼부분 -->
+            <div id="floatingBtn" class="floatingBtn">
+                <i class="bi bi-plus-circle-fill"></i>
+            </div>
+        </header>
+
+        <!-- 캘린더 페이지 -->
+        <main>
+            <nav id="mobileUpperNav"></nav>
+            <section>
+                <div class="calendarContent">
+                    <!-- title -->
+                    <div class="title">
+                        <div class="titleIconText">
+                            <i class="bi bi-calendar-plus"></i>
+                            <span class="todayTitle fontMedium"></span>
+                        </div>
+                        <div class="ptMode">
+                            <span>PT 모드</span>
+                            <i class="bi bi-toggle-off"></i>
+                        </div>
+                    </div>
+
+                    <!-- 캘린더 -->
+                    <div class="calendar">
+                        <!-- 월 년 -->
+                        <div class="monthYear">
+                            <i class="bi bi-chevron-left" id="prevMonth"></i>
+                            <p></p>
+                            <i class="bi bi-chevron-right" id="nextMonth"></i>
+                        </div>
+
+                        <!-- 요일  -->
+                        <div class="day">
+                            <p class="textColorRed">Sun</p>
+                            <p>Mon</p>
+                            <p>Tue</p>
+                            <p>Wed</p>
+                            <p>Thu</p>
+                            <p>Fri</p>
+                            <p class="textColorBlue">Sat</p>
+                        </div>
+
+                        <!-- 날짜 -->
+                        <table></table>
+                    </div>
+                </div>
+            </section>
+            <aside>
+                <div class="todaysContent">
+                    <div class="todaysContentComponent">
+                        <p
+                            class="todaysContentTitle font18 fontMedium textColor"
+                        >
+                            운동 일정
+                        </p>
+                        <div class="scheduleTimeTextBtn">
+                            <div class="schduleTimeText">
+                                <p class="font16 textColor">11:00</p>
+                                <div class="scheduleLine"></div>
+                                <div class="scheduleNameTime">
+                                    <p class="font16 textColor">고운필라테스</p>
+                                    <p class="font10 textColorDisable">
+                                        오전 11:00 - 오후 12:00
+                                    </p>
+                                </div>
+                            </div>
+                            <button
+                                type="button"
+                                class="btnChangeReservation btnPurpleMedium"
+                            >
+                                예약 변경
+                            </button>
+                        </div>
+                    </div>
+                    <div class="todaysContentComponent">
+                        <p
+                            class="todaysContentTitle font18 fontMedium textColor"
+                        >
+                            오늘의 기록
+                        </p>
+                        <div>내용</div>
+                    </div>
+                </div>
+            </aside>
+            <aside>
+                <div class="todaysContent_PTmode">
+                    <div class="todaysContentComponent">
+                        <p
+                            class="todaysContentTitle font18 fontMedium textColor"
+                        >
+                            운동 일정
+                        </p>
+                        <div class="scheduleTimeTextBtn">
+                            <div class="schduleTimeText">
+                                <p class="font16 textColor">11:00</p>
+                                <div class="scheduleLine"></div>
+                                <div class="scheduleNameTime">
+                                    <p class="font16 textColor">고운필라테스</p>
+                                    <p class="font10 textColorDisable">
+                                        오전 11:00 - 오후 12:00
+                                    </p>
+                                </div>
+                            </div>
+                            <button
+                                type="button"
+                                class="btnPurpleMedium btnChangeReservation"
+                            >
+                                예약 변경
+                            </button>
+                        </div>
+                    </div>
+                    <div class="todaysContentComponent">
+                        <p
+                            class="todaysContentTitle font18 fontMedium textColor"
+                        >
+                            수업 일정
+                        </p>
+                        <div
+                            style="
+                                display: flex;
+                                flex-direction: column;
+                                gap: 4px;
+                            "
+                        >
+                            <div style="display: flex; gap: 8px">
+                                <button type="button" class="btnDisableMedium">
+                                    다음 수업
+                                </button>
+                                <p class="font16 fontMedium">12월 27일 (금)</p>
+                            </div>
+                            <p class="font14" style="opacity: 70%">
+                                ⏰ 오전 11:00 ~ 오전 11:50 (50분)
+                            </p>
+                            <p class="font14" style="opacity: 70%">
+                                ☑️ 3회차 / 10회차
+                            </p>
+                        </div>
+                        <button
+                            type="button"
+                            id="btnMakingReservation"
+                            class="btnPurpleMedium"
+                            style="cursor: pointer"
+                        >
+                            PT 수업 예약하기
+                        </button>
+                    </div>
+                    <div class="todaysContentComponent">
+                        <div
+                            style="
+                                display: flex;
+                                justify-content: space-between;
+                            "
+                        >
+                            <p
+                                class="todaysContentTitle font18 fontMedium textColor"
+                            >
+                                수업 일지
+                            </p>
+                            <div style="display: flex; gap: 4px">
+                                <p class="font10 textColorDisable">
+                                    수업 일지 모아보기
+                                </p>
+                                <i
+                                    class="bi bi-chevron-right font10 textColorDisable"
+                                ></i>
+                            </div>
+                        </div>
+                        <div
+                            style="
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                gap: 4px;
+                                padding: 16px 32px;
+                                background-color: #f1dbff;
+                                border-radius: 9px;
+                            "
+                        >
+                            <p class="fontMedium">12월 11일 수요일 일지</p>
+                            <p class="font14" style="opacity: 70%">
+                                ☑️ 3회차 / 10회차
+                            </p>
+                        </div>
+                    </div>
+                    <div class="todaysContentComponent">
+                        <p
+                            class="todaysContentTitle font18 fontMedium textColor"
+                        >
+                            오늘의 기록
+                        </p>
+                        <div>내용</div>
+                    </div>
+                </div>
+            </aside>
+            <aside>
+                <div class="makingReservation">
+                    <div class="todaysContentComponent">
+                        <div
+                            style="
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                            "
+                        >
+                            <p
+                                class="todaysContentTitle font18 fontMedium textColor"
+                            >
+                                시간 선택
+                            </p>
+                            <i
+                                class="bi bi-x font24 textColorDisableMedium"
+                                style="cursor: pointer"
+                            ></i>
+                        </div>
+                        <div style="margin-bottom: 8px">
+                            <p
+                                class="font12 textColorDisable"
+                                style="margin-bottom: 8px"
+                            >
+                                오전
+                            </p>
+                            <div class="btnSelectTimeContainer">
+                                <button type="button" class="am btnSelectTime">
+                                    6:00
+                                </button>
+                                <button type="button" class="am btnSelectTime">
+                                    7:00
+                                </button>
+                                <button type="button" class="am btnSelectTime">
+                                    8:00
+                                </button>
+                                <button type="button" class="am btnSelectTime">
+                                    9:00
+                                </button>
+                                <button type="button" class="am btnSelectTime">
+                                    10:00
+                                </button>
+                                <button type="button" class="am btnSelectTime">
+                                    11:00
+                                </button>
+                            </div>
+                        </div>
+                        <div>
+                            <p
+                                class="font12 textColorDisable"
+                                style="margin-bottom: 8px"
+                            >
+                                오후
+                            </p>
+                            <div class="btnSelectTimeContainer">
+                                <button type="button" class="pm btnSelectTime">
+                                    12:00
+                                </button>
+                                <button type="button" class="pm btnSelectTime">
+                                    1:00
+                                </button>
+                                <button type="button" class="pm btnSelectTime">
+                                    2:00
+                                </button>
+                                <button type="button" class="pm btnSelectTime">
+                                    3:00
+                                </button>
+                                <button type="button" class="pm btnSelectTime">
+                                    4:00
+                                </button>
+                                <button type="button" class="pm btnSelectTime">
+                                    5:00
+                                </button>
+                                <button type="button" class="pm btnSelectTime">
+                                    6:00
+                                </button>
+                                <button type="button" class="pm btnSelectTime">
+                                    7:00
+                                </button>
+                                <button type="button" class="pm btnSelectTime">
+                                    8:00
+                                </button>
+                                <button type="button" class="pm btnSelectTime">
+                                    9:00
+                                </button>
+                                <button type="button" class="pm btnSelectTime">
+                                    10:00
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="todaysContentComponent confrimReservation">
+                        <p
+                            class="todaysContentTitle btnChangeReservation font18 fontMedium textColor"
+                        >
+                            예약 확인
+                        </p>
+                        <p class="font12 fontDemiLight">
+                            아래 내용이 맞는지 확인해 주세요.
+                        </p>
+                        <div
+                            style="
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                gap: 4px;
+                                padding: 16px 32px;
+                                background-color: #f1dbff;
+                                border-radius: 9px;
+                            "
+                        >
+                            <p class="fontMedium confrimReservationText"></p>
+                            <p class="font12" style="opacity: 70%">
+                                트레이너의 예약 확인 후 수업이 확정됩니다.
+                            </p>
+                        </div>
+                        <button
+                            type="button"
+                            class="btnMainMedium"
+                            style="align-self: flex-end"
+                        >
+                            예약 신청하기
+                        </button>
+                    </div>
+                </div>
+            </aside>
+            <aside>
+                <div class="addLog">
+                    <div class="addLogContainer">
+                        <div
+                            style="
+                                display: flex;
+                                justify-content: space-between;
+                            "
+                        >
+                            <i
+                                class="bi bi-x font20"
+                                style="cursor: pointer"
+                            ></i>
+                            <p class="fontMedium textColorSecondaryDark">
+                                기록하기
+                            </p>
+                            <p class="tabSelected fontMedium textColorDisable">
+                                완료
+                            </p>
+                        </div>
+                        <div class="addImage">
+                            <i
+                                class="font20 textColorDisable bi bi-camera-fill"
+                            ></i>
+                            <p class="font8 textColorDisable">0/10</p>
+                        </div>
+                        <div class="addLogTab">
+                            <p class="addLogTabText_selected">운동</p>
+                            <p class="addLogTabText">식단</p>
+                            <p class="addLogTabText">일상</p>
+                        </div>
+                        <div
+                            class="addLogToday"
+                            style="
+                                display: flex;
+                                gap: 16px;
+                                align-items: center;
+                                padding: 0px 24px;
+                            "
+                        >
+                            <p class="addLogToday fontBold"></p>
+                            <i class="font16 bi bi-chevron-down"></i>
+                        </div>
+                        <div class="addLogComponentContainer">
+                            <div class="addLogComponent">
+                                <div
+                                    style="
+                                        display: flex;
+                                        justify-content: space-between;
+                                    "
+                                >
+                                    <p
+                                        class="fontBold"
+                                        style="margin-bottom: 8px"
+                                    >
+                                        운동 기록
+                                    </p>
+                                    <p class="font12">총 000kcal 소모 예상</p>
+                                </div>
+                                <div
+                                    style="
+                                        display: flex;
+                                        flex-direction: column;
+                                        gap: 32px;
+                                    "
+                                >
+                                    <div>
+                                        <p
+                                            class="font14"
+                                            style="margin-bottom: 8px"
+                                        >
+                                            운동 종류
+                                        </p>
+                                        <div
+                                            style="
+                                                display: flex;
+                                                justify-content: space-between;
+                                                align-items: center;
+                                            "
+                                        >
+                                            <div>
+                                                <button
+                                                    type="button"
+                                                    class="btnDisableMedium"
+                                                >
+                                                    #복싱
+                                                </button>
+                                                <button
+                                                    type="button"
+                                                    class="btnDisableMedium"
+                                                >
+                                                    #러닝
+                                                </button>
+                                                <button
+                                                    type="button"
+                                                    class="btnSelectedMedium"
+                                                >
+                                                    #헬스
+                                                </button>
+                                                <button
+                                                    type="button"
+                                                    class="btnDisableMedium"
+                                                >
+                                                    #홈트
+                                                </button>
+                                                <button
+                                                    type="button"
+                                                    class="btnDisableMedium"
+                                                >
+                                                    #요가
+                                                </button>
+                                                <button
+                                                    type="button"
+                                                    class="btnDisableMedium"
+                                                >
+                                                    #수영
+                                                </button>
+                                            </div>
+                                            <p class="textColorBlue font10">
+                                                추가
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div
+                                        style="
+                                            display: flex;
+                                            justify-content: space-between;
+                                        "
+                                    >
+                                        <p class="font14">운동한 시간</p>
+                                        <div style="display: flex; gap: 4px">
+                                            <input
+                                                type="number"
+                                                class="workoutTime"
+                                                placeholder="0"
+                                            />
+                                            <p>:</p>
+                                            <input
+                                                type="number"
+                                                class="workoutTime"
+                                                placeholder="0"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p class="font14">내용</p>
+                                        <textarea
+                                            name=""
+                                            id=""
+                                            style="height: 160px"
+                                            placeholder="운동에 대한 기록을 입력해주세요."
+                                            class="textBox"
+                                        ></textarea>
+                                    </div>
+                                    <div>
+                                        <p class="font14">태그</p>
+                                        <input
+                                            type="text"
+                                            placeholder="#태그"
+                                            class="textBox"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="addLogComponent">
+                                <p class="fontBold" style="margin-bottom: 8px">
+                                    컨디션 체크
+                                </p>
+                                <div
+                                    style="
+                                        display: flex;
+                                        flex-direction: column;
+                                        gap: 16px;
+                                    "
+                                >
+                                    <div class="conditionRange">
+                                        <span class="font14">신체 피로도</span>
+                                        <input
+                                            type="range"
+                                            class="form-range"
+                                            min="0"
+                                            max="5"
+                                            step="0.5"
+                                            id="customRange3"
+                                        />
+                                    </div>
+                                    <div class="conditionRange">
+                                        <span class="font14">운동 만족도</span>
+                                        <input
+                                            type="range"
+                                            class="form-range"
+                                            min="0"
+                                            max="10"
+                                            step="1"
+                                            id="customRange3"
+                                        />
+                                    </div>
+
+                                    <textarea
+                                        name=""
+                                        id=""
+                                        class="textBox"
+                                        placeholder="컨디션에 대한 기록을 입력해주세요."
+                                    ></textarea>
+                                </div>
+                            </div>
+                            <div class="addLogComponent">
+                                <p class="fontBold" style="margin-bottom: 8px">
+                                    업로드 설정
+                                </p>
+                                <div class="uploadSetting">
+                                    <div>
+                                        <p class="font14">피드 업로드</p>
+                                        <i
+                                            class="uploadSettingIcon bi bi-toggle-on font24"
+                                        ></i>
+                                    </div>
+                                    <div>
+                                        <p class="font14">전체 공개</p>
+                                        <i
+                                            class="uploadSettingIcon bi bi-toggle-on font24"
+                                        ></i>
+                                    </div>
+                                    <div>
+                                        <p class="font14">댓글</p>
+                                        <i
+                                            class="uploadSettingIcon bi bi-toggle-on font24"
+                                        ></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </main>
+
+        <!-- 모달 -->
+        <div class="modal">
+            <div class="modalBody">
+                <div class="modalTitle">
+                    <div class="modalTitleDateDay">
+                        <p id="modalTitleDate" class="font20 fontMedium">11</p>
+                        <p id="modalTitleDay">수요일</p>
+                    </div>
+                    <i
+                        class="modalTitleIcon bi bi-x font20 textColorDisableMedium"
+                    ></i>
+                </div>
+                <div class="modalContent">
+                    <div class="scheduleTimeTextBtn">
+                        <div class="schduleTimeText">
+                            <p class="font16 textColor">11:00</p>
+                            <div class="scheduleLine"></div>
+                            <div class="scheduleNameTime">
+                                <p class="font16 textColor">고운필라테스</p>
+                                <p class="font10 textColorDisable">
+                                    오전 11:00 - 오후 12:00
+                                </p>
+                            </div>
+                        </div>
+                        <button type="button" class="btnPurpleMedium">
+                            예약변경
+                        </button>
+                    </div>
+                </div>
+                <div class="inputSchedule">
+                    <div class="setTime">
+                        <button
+                            type="button"
+                            class="btnInputSchedule inputScheduleStyle font12"
+                        >
+                            오전
+                        </button>
+                        <input
+                            type="number"
+                            placeholder="00시"
+                            min="0"
+                            max="12"
+                            step="1"
+                            id="timeInput"
+                            class="font12 inputScheduleStyle"
+                        />
+                        <input
+                            type="number"
+                            placeholder="00분"
+                            min="0"
+                            max="59"
+                            step="1"
+                            id="minuteInput"
+                            class="font12 inputScheduleStyle"
+                        />
+                    </div>
+                    <div class="inputText">
+                        <input
+                            type="text"
+                            placeholder="일정을 입력해주세요."
+                            class="inputScheduleStyle"
+                        />
+                        <i class="bi bi-plus-circle-fill font32"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

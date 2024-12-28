@@ -10,10 +10,13 @@
         />
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-        <script src="./navigation.js" defer></script>
+        <script src="../navigation.js" defer></script>
+
         <link rel="stylesheet" href="calendar.css" />
         <link rel="stylesheet" href="calenar_mobile.css" />
         <script src="./calendar.js" defer></script>
+
+        <link rel="stylesheet" href="./pt_class_reservation.css" />
     </head>
     <body>
         <header>
@@ -71,25 +74,25 @@
             </nav>
 
             <!-- floating button과 modal -->
-            <!-- 모달부분분 -->
+            <!-- 모달부분 -->
             <div class="floatingBtnModal">
                 <div class="floatingBtnModalandBtn">
                     <div class="floatingBtnModalBody">
                         <div class="floatingBtnModalTitle">
-                            <i class="bi bi-chevron-left font20"></i>
+                            <i class="iconPrev bi bi-chevron-left font20"></i>
                             <p class="fontMedium">제목</p>
-                            <i class="bi bi-chevron-right font20"></i>
+                            <i class="iconNext bi bi-chevron-right font20"></i>
                         </div>
                         <div class="floatingBtnModalContent">
-                            <a>
+                            <a href="./pt_class_reservation.html">
                                 <p>PT 수업 예약하기</p>
                                 <i class="bi bi-plus-circle-fill font16"></i>
                             </a>
-                            <a>
+                            <a href="./add_schedule.html">
                                 <p>운동 일정 추가하기</p>
                                 <i class="bi bi-plus-circle-fill font16"></i>
                             </a>
-                            <a>
+                            <a href="./create_log.html">
                                 <p>기록하기</p>
                                 <i class="bi bi-plus-circle-fill font16"></i>
                             </a>
@@ -108,6 +111,7 @@
 
         <!-- 캘린더 페이지 -->
         <main>
+            <nav id="mobileUpperNav"></nav>
             <section>
                 <div class="calendarContent">
                     <!-- title -->
@@ -430,7 +434,10 @@
                                 justify-content: space-between;
                             "
                         >
-                            <i class="bi bi-x font20"></i>
+                            <i
+                                class="bi bi-x font20"
+                                style="cursor: pointer"
+                            ></i>
                             <p class="fontMedium textColorSecondaryDark">
                                 기록하기
                             </p>
@@ -458,7 +465,7 @@
                                 padding: 0px 24px;
                             "
                         >
-                            <p class="addLogToday fontBold">0000년 0월 0일</p>
+                            <p class="addLogToday fontBold"></p>
                             <i class="font16 bi bi-chevron-down"></i>
                         </div>
                         <div class="addLogComponentContainer">

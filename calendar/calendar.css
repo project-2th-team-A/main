@@ -1,4 +1,4 @@
-@import url('./navigation.css');
+@import url('../navigation.css');
 
 /* navigation 메뉴 색 변경 */
 .topList li:nth-child(2) a i,
@@ -7,6 +7,7 @@
 }
 
 /* <main> */
+
 .calendarContent {
     display: flex;
     flex-direction: column;
@@ -28,15 +29,15 @@
     display: flex;
     align-items: center;
     gap: 16px;
+}
+
+.titleIconText i {
     font-size: 24px;
+    cursor: pointer;
 }
 
 .titleIconText span {
     font-size: 24px;
-}
-
-.bi-calendar-plus {
-    cursor: pointer;
 }
 
 .ptMode {
@@ -47,16 +48,23 @@
 
 .ptMode i {
     font-size: 40px;
+    height: 40px;
     color: #c66efe;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .monthYear {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .monthYear i {
     font-size: 20px;
+    cursor: pointer;
 }
 
 .day {
@@ -73,24 +81,29 @@
     text-align: center;
 }
 
-/* 테이블 설정 */
+/* 날짜 테이블 설정 */
 table {
     display: flex;
     flex-direction: column;
 }
+
 .oneWeek {
     display: flex;
     justify-content: space-between;
 }
+
 .cell {
     width: 100px;
     height: 120px;
+
     display: flex;
-    justify-content: center;
-    cursor: pointer; /* 커서 바꾸기 */
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+    cursor: pointer;
 }
 
-.cell p {
+.cell p:first-child {
     width: 45px;
     height: 45px;
     display: flex;
@@ -122,28 +135,20 @@ table {
 }
 
 /* 캘린더에 일정 넣기 */
-table .cell {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-table .cell .regularSchedule {
+.cell p.regularSchedule {
     width: 100%;
     height: 20px;
     border-radius: 2px;
-    font-size: 12px;
+    font-size: 14px;
     background-color: #d1dcfe;
     text-align: center;
 }
 
-table .cell .PTmodeSchedule {
+.cell p.PTmodeSchedule {
     width: 100%;
     height: 20px;
     border-radius: 2px;
-    font-size: 12px;
+    font-size: 14px;
     background-color: #f0d9fd;
     text-align: center;
 }
@@ -156,18 +161,17 @@ table .cell .PTmodeSchedule {
     position: absolute;
     top: 88px;
     left: 1346px;
+
     display: flex;
     flex-direction: column;
+    gap: 16px;
+
     width: 390px;
     height: 100vh;
     background-color: white;
     border-top: 2px solid #f5f5f5;
-    gap: 16px;
-    display: none;
-}
 
-.addLog {
-    display: flex;
+    display: none;
 }
 
 .todaysContentComponent {
@@ -241,6 +245,7 @@ table .cell .PTmodeSchedule {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    cursor: pointer;
 }
 
 .addLog .addImage p {
@@ -364,6 +369,10 @@ table .cell .PTmodeSchedule {
     border-bottom: 2px solid #f5f5f5;
 }
 
+.modalTitle i.bi-x {
+    cursor: pointer;
+}
+
 .modalTitleDateDay {
     display: flex;
     gap: 8px;
@@ -426,4 +435,9 @@ table .cell .PTmodeSchedule {
 .inputText input {
     width: 216px;
     padding: 10px 8px;
+}
+
+.inputText i.bi-plus-circle-fill {
+    color: #4779ff;
+    cursor: pointer;
 }
