@@ -109,3 +109,36 @@ function setRandomNicknames() {
 
 // 페이지 로드 후 바로 호출
 setRandomNicknames();
+
+// 4. 아이콘 클릭 시 변경
+// 모든 heart 클래스를 가진 <i> 요소 선택
+const heartIcons = document.querySelectorAll(".bi-heart");
+
+// 각 heart 아이콘에 클릭 이벤트 리스너 추가
+heartIcons.forEach((heartIcon) => {
+  heartIcon.addEventListener("click", function () {
+    if (heartIcon.classList.contains("bi-heart")) {
+      heartIcon.classList.remove("bi-heart");
+      heartIcon.classList.add("bi-heart-fill");
+    } else {
+      heartIcon.classList.remove("bi-heart-fill");
+      heartIcon.classList.add("bi-heart");
+    }
+  });
+});
+
+// 모든 bookmarks 클래스를 가진 <i> 요소 선택
+const bookmarksIcons = document.querySelectorAll(".bi-bookmarks");
+
+// 각 heart 아이콘에 클릭 이벤트 리스너 추가
+bookmarksIcons.forEach((bookmarksIcon) => {
+  bookmarksIcon.addEventListener("click", function () {
+    if (bookmarksIcon.classList.contains("bi-bookmarks")) {
+      bookmarksIcon.classList.remove("bi-bookmarks");
+      bookmarksIcon.classList.add("bi-bookmarks-fill");
+    } else {
+      bookmarksIcon.classList.remove("bi-bookmarks-fill");
+      bookmarksIcon.classList.add("bi-bookmarks");
+    }
+  });
+});

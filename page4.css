@@ -428,8 +428,13 @@ article.feed-gallery {
 .feed-single {
   display: flex;
   flex-direction: column;
-  padding: 40px 118px 0 118px;
+  padding: 24px 118px 24px 118px;
   gap: 24px;
+  border-bottom: 2px solid #f5f5f5;
+}
+
+.feed-single:first-child {
+  padding: 40px 118px 24px 118px;
 }
 
 .feed-single-profile {
@@ -437,10 +442,11 @@ article.feed-gallery {
   height: 88px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .user-feed-single-info {
-  width: 476px;
+  width: 540px;
   height: 88px;
   display: flex;
   flex-direction: column;
@@ -516,6 +522,7 @@ article.feed-gallery {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  overflow-x: scroll;
 }
 
 .rcmd-scroll {
@@ -795,6 +802,7 @@ article.feed-gallery {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    overflow-x: scroll;
   }
 
   .rcmd-scroll {
@@ -858,14 +866,19 @@ article.feed-gallery {
   .content-title {
     font-size: 12px;
     line-height: 18px;
+    height: 18px;
+    overflow: hidden;
   }
   /* page4.0 */
   .feed-single {
     width: 390px;
     display: flex;
     flex-direction: column;
-    padding: 34px 0 0 0;
+    padding: 16px 0 16px 0;
     gap: 16px;
+  }
+  .feed-single:first-child {
+    padding: 34px 0 16px 0;
   }
 
   .feed-single-profile {
