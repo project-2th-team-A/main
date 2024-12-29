@@ -186,7 +186,7 @@
     list-style: none;
   }
 
-  /* 네비게이션_메뉴 */
+  /* 네비게이션 메뉴 */
   .navbar .topList a {
     display: flex;
     flex-direction: column;
