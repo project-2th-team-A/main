@@ -1,13 +1,14 @@
 const todayTitle = document.querySelector('.todayTitle');
 const calendarTable = document.querySelector('table');
 const monthYear = document.querySelector('.monthYear p');
-const prevMonthBtn = monthYear.querySelector('#prevMonth');
-const nextMonthBtn = monthYear.querySelector('#nextMonth');
+const prevMonthBtn = document.querySelector('#prevMonth');
+const nextMonthBtn = document.querySelector('#nextMonth');
 const ptModeIcon = document.querySelector('.ptMode i');
 
 // 달력 만들기
 let currentDate = new Date();
 let selectedDate = null; // 현재 선택된 날짜를 저장
+
 function makingCalendar(date) {
     const year = date.getFullYear();
     const month = date.getMonth();
@@ -36,7 +37,7 @@ function makingCalendar(date) {
     ];
     monthYear.innerText = `${monthNames[month]} ${year}`;
     monthYear.classList.add('textColor', 'font24', 'fontBold');
-    // monthYear.style.fontSize = '24px';
+
     // 현재 월과 이전/다음 월 정보
     const firstDay = new Date(year, month, 1).getDay(); // 이번 달 첫째 날의 요일
     const daysInMonth = new Date(year, month + 1, 0).getDate(); // 이번 달의 마지막 날짜
@@ -109,6 +110,11 @@ function makingCalendar(date) {
     }
 }
 
+function updateTodayTitle(year, month, day) {
+    todayTitle.innerText = `${year}년 ${month + 1}월 ${day}일`;
+    todayTitle.classList.add('font24', 'fontMedium', 'textColorSecondaryDark');
+}
+
 function createCell(content, textColor, clickHandler) {
     const cell = document.createElement('div');
     cell.innerHTML = `<p>${content}</p>`;
@@ -119,11 +125,6 @@ function createCell(content, textColor, clickHandler) {
     }
 
     return cell;
-}
-
-function updateTodayTitle(year, month, day) {
-    todayTitle.innerText = `${year}년 ${month + 1}월 ${day}일`;
-    todayTitle.classList.add('font24', 'fontMedium', 'textColorSecondaryDark');
 }
 
 // Event listeners
@@ -169,7 +170,6 @@ ptModeIcon.addEventListener('click', () => {
     toggleScheduleVisibility(isPTMode);
 });
 
-// PT 모드에 따라 스케줄 표시/숨기기 함수
 function toggleScheduleVisibility(isPTMode) {
     const regularSchedules = document.querySelectorAll('.regularSchedule');
     const ptSchedules = document.querySelectorAll('.PTmodeSchedule');
@@ -188,3 +188,8 @@ function toggleScheduleVisibility(isPTMode) {
         ptSchedules.forEach((schedule) => (schedule.style.display = 'block'));
     }
 }
+
+// 캘린더 누르면 캘린더 페이지로 이동
+calendarTable.addEventListener('click', () => {
+    window.location.href = '../calendar/calendar.html';
+});
