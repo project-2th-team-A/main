@@ -1,0 +1,323 @@
+@import url(../navigation.css);
+
+/* navigation 메뉴 색 변경 */
+.topList li:nth-child(1) a i,
+.topList li:nth-child(1) a p {
+    color: #001652;
+}
+
+main {
+    position: absolute;
+    top: 88px;
+    left: 384px;
+
+    display: flex;
+    gap: 24px;
+}
+
+main nav {
+    display: none;
+}
+
+section > p {
+    margin-bottom: 8px;
+}
+
+/* section 태그의 캘린더 */
+.calendarContent {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 724px;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titleIconText {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.titleIconText i {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.titleIconText span {
+    font-size: 24px;
+}
+
+.ptMode {
+    gap: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.ptMode i {
+    font-size: 40px;
+    height: 40px;
+    color: #c66efe;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 캘린더 */
+.calendar {
+    background-color: white;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+    padding: 16px;
+}
+
+.monthYear {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+}
+
+.monthYear i {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.day {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 102px;
+}
+
+.day p {
+    width: 100px;
+    font-size: 20px;
+    font-weight: medium;
+    text-align: center;
+}
+
+/* 날짜 테이블 설정 */
+table {
+    display: flex;
+    flex-direction: column;
+}
+
+.oneWeek {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cell {
+    width: 90px;
+    height: 97px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.cell p:first-child {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cell.textColorRed p {
+    color: #d80b0b !important; /* !important를 사용하여 우선순위 강제 적용 */
+}
+
+.cell.textColorBlue p {
+    color: #1415eb !important;
+}
+
+/* 오늘인 날짜 스타일 바꾸기 */
+.today p {
+    border-radius: 50%;
+    border: 4px solid #828eec;
+}
+
+/* 캘린더에 일정 넣기 */
+.cell p.regularSchedule {
+    width: 100%;
+    height: 20px;
+    border-radius: 2px;
+    font-size: 14px;
+    background-color: #d1dcfe;
+    text-align: center;
+}
+
+.cell p.PTmodeSchedule {
+    width: 100%;
+    height: 20px;
+    border-radius: 2px;
+    font-size: 14px;
+    background-color: #f0d9fd;
+    text-align: center;
+}
+
+/* aside */
+aside {
+    width: 412px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 52px;
+}
+
+.asideContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title p {
+    font-size: 20px;
+}
+
+.more-btn {
+    cursor: pointer;
+}
+
+.contentStyle {
+    background-color: white;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+}
+
+/* 그래프 */
+.contentStatistics {
+    padding: 16px 24px;
+}
+
+.barSection {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    width: 100%;
+    height: 200px;
+}
+
+.bar {
+    flex: 1;
+    background-color: #ebd0fd;
+    border-radius: 9px;
+}
+.monthSection {
+    display: flex;
+    justify-content: space-between;
+}
+.monthSection span {
+    font-size: 10px;
+    width: 24px;
+    text-align: center;
+}
+
+/* 챌린지 */
+
+.challenge {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contentChallenge {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+}
+
+.circular-progress1 {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+
+    background: conic-gradient(#ebd0fd 0% 82%, #f5f5f5 82% 100%);
+}
+
+.circular-progress2 {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+
+    background: conic-gradient(#ebd0fd 0% 47%, #f5f5f5 47% 100%);
+}
+
+.progress-info {
+    width: 248px;
+}
+
+.progress-info p {
+    color: #001652;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.progress-info span {
+    color: #b09fff;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.contentChallenge i.ongoing {
+    font-size: 28px;
+    color: #909090;
+}
+
+.contentChallenge i.completed {
+    font-size: 28px;
+    color: #b09fff;
+}
+
+.suggestion {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.contentSuggestion {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    padding: 16px;
+    width: 198px;
+}
+
+.contentSuggestion > p {
+    font-size: 32px;
+}
+
+.suggestion-info > p {
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.suggestion-info > span {
+    font-size: 12px;
+}
