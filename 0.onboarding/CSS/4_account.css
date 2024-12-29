@@ -211,8 +211,12 @@ button:focus {
     margin-left: 0px;
     margin-top: 0px;
   }
-  footer > p {
+  footer {
+    position: fixed;
     left: 0;
+    padding-top: 17px;
+  }
+  footer > p {
     padding-top: 17px;
   }
   .gender {
