@@ -1,4 +1,4 @@
-@import url(../navigation.css);
+@import url(./navigation.css);
 
 /* navigation 메뉴 색 변경 */
 .topList li:nth-child(1) a i,

@@ -1,265 +1,309 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>feed-community</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css"
-    />
-    <link rel="stylesheet" href="./page4.css" />
-    <script src="feed-community.js" defer></script>
-  </head>
-  <body>
-    <header class="main-nav">
-      <nav class="navbar">
-        <div class="topList">
-          <div class="logo"><span>튼튼</span></div>
-          <ul>
-            <li>
-              <a href="">
-                <i class="bi bi-house-door-fill"></i>
-                <p>홈</p></a
-              >
-            </li>
-            <li>
-              <a href=""
-                ><i class="bi bi-calendar3"></i>
-                <p>캘린더</p></a
-              >
-            </li>
-            <li>
-              <a href=""
-                ><i class="bi bi-stickies-fill"></i>
-                <p class="menu-selected">피드</p></a
-              >
-            </li>
-            <li>
-              <a href=""
-                ><i class="bi bi-person-fill"></i>
-                <p>마이페이지</p></a
-              >
-            </li>
-          </ul>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>feed-community</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css"
+        />
+        <link rel="stylesheet" href="./page4.css" />
+        <script src="./feed-community.js" defer></script>
+    </head>
+    <body>
+        <header class="main-nav">
+            <nav class="navbar">
+                <div class="topList">
+                    <div class="logo"><span>튼튼</span></div>
+                    <ul>
+                        <li>
+                            <a href="../index.html">
+                                <i class="bi bi-house-door-fill"></i>
+                                <p>홈</p></a
+                            >
+                        </li>
+                        <li>
+                            <a href="../2.calendar/calendar.html"
+                                ><i class="bi bi-calendar3"></i>
+                                <p>캘린더</p></a
+                            >
+                        </li>
+                        <li>
+                            <a href="../3.feed/feed-personal.html"
+                                ><i class="bi bi-stickies-fill"></i>
+                                <p class="menu-selected">피드</p></a
+                            >
+                        </li>
+                        <li>
+                            <a href="../4.mypage/mypage.html"
+                                ><i class="bi bi-person-fill"></i>
+                                <p>마이페이지</p></a
+                            >
+                        </li>
+                    </ul>
+                </div>
+                <ul class="bottomList">
+                    <li>
+                        <a href=""
+                            ><i class="bi bi-search"></i>
+                            <p>검색</p></a
+                        >
+                    </li>
+                    <li>
+                        <a href=""
+                            ><i class="bi bi-bell"></i>
+                            <p>알림</p></a
+                        >
+                    </li>
+                    <li>
+                        <a href=""
+                            ><i class="bi bi-gear"></i>
+                            <p>설정</p></a
+                        >
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <nav class="sub-nav">
+            <ul class="sub-nav-menu">
+                <li class="text-align-center">
+                    <a href="feed-personal.html">내 피드</a>
+                </li>
+                <li class="text-align-center">
+                    <a href="feed-grid.html">전체</a>
+                </li>
+                <li class="text-align-center">
+                    <a href="feed-recommend.html">추천</a>
+                </li>
+                <li class="text-align-center bold">
+                    <a href="feed-community.html" class="bold">커뮤니티</a>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <section class="rcmd">
+                <article>
+                    <div class="rcmd-swipe">
+                        <div class="category text-align-center">
+                            <span class="rcmd-title">내 커뮤니티</span
+                            ><button class="btn-more">더보기</button>
+                        </div>
+                        <div class="cmnt-cards">
+                            <div class="cmnt-card text-align-center">
+                                <div class="photo-circle pilates"></div>
+                                <div class="cmnt-info">
+                                    <div class="cmnt-info-1st-row">
+                                        <button
+                                            class="btn-l btn-primary"
+                                            type="button"
+                                        >
+                                            센터
+                                        </button>
+                                        <div class="semi-bold">
+                                            고운필라테스
+                                        </div>
+                                    </div>
+                                    <div class="cmnt-content">
+                                        자세교정으로 내 '진짜' 키를 찾아보세요.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cmnt-card text-align-center">
+                                <div class="photo-circle club1"></div>
+                                <div class="cmnt-info">
+                                    <div class="cmnt-info-1st-row">
+                                        <button
+                                            class="btn-l btn-secondary"
+                                            type="button"
+                                        >
+                                            클럽
+                                        </button>
+                                        <div class="semi-bold">잠깐의 여유</div>
+                                    </div>
+                                    <div class="cmnt-content">
+                                        한적한 공원에서 즐기는 요가, 바쁜 삶
+                                        속에서 잠깐의 여유를 즐겨봐요 :)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div class="rcmd-swipe">
+                        <div class="category text-align-center">
+                            <span class="rcmd-title">추천 센터</span
+                            ><button class="btn-more btn-l">더보기</button>
+                        </div>
+                        <div class="cmnt-cards app">
+                            <div class="cmnt-card text-align-center">
+                                <div class="photo-circle center"></div>
+                                <div class="cmnt-info">
+                                    <div class="cmnt-info-1st-row">
+                                        <button
+                                            class="btn-l btn-primary"
+                                            type="button"
+                                        >
+                                            센터
+                                        </button>
+                                        <div class="semi-bold">
+                                            No.1 피트니스 센터
+                                        </div>
+                                    </div>
+                                    <div class="cmnt-content">
+                                        헬스, 스피닝, 핫요가까지! 당신이 찾는
+                                        모든 운동이 여기 있습니다.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cmnt-card text-align-center">
+                                <div class="photo-circle center"></div>
+                                <div class="cmnt-info">
+                                    <div class="cmnt-info-1st-row">
+                                        <button
+                                            class="btn-l btn-primary"
+                                            type="button"
+                                        >
+                                            센터
+                                        </button>
+                                        <div class="semi-bold">
+                                            마린스포츠센터
+                                        </div>
+                                    </div>
+                                    <div class="cmnt-content">
+                                        강동구 최대 규모 수영장! <br />
+                                        (저녁 성인반 인원 모집 중)
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cmnt-card text-align-center">
+                                <div class="photo-circle center"></div>
+                                <div class="cmnt-info">
+                                    <div class="cmnt-info-1st-row">
+                                        <button
+                                            class="btn-l btn-primary"
+                                            type="button"
+                                        >
+                                            센터
+                                        </button>
+                                        <div class="semi-bold">
+                                            아쉬탕가 요가
+                                        </div>
+                                    </div>
+                                    <div class="cmnt-content">
+                                        몸과 마음을 함께 수련하는 공간.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cmnt-card text-align-center">
+                                <div class="photo-circle club3"></div>
+                                <div class="cmnt-info">
+                                    <div class="cmnt-info-1st-row">
+                                        <button
+                                            class="btn-l btn-primary"
+                                            type="button"
+                                        >
+                                            센터
+                                        </button>
+                                        <div class="semi-bold">
+                                            크로스핏 Tiger
+                                        </div>
+                                    </div>
+                                    <div class="cmnt-content">
+                                        '나'의 한계에 도전하라! 10가지
+                                        육체능력을 끌어올려 더 건강한 '나'로!
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div class="rcmd-swipe">
+                        <div class="category text-align-center">
+                            <span class="rcmd-title">추천 클럽</span
+                            ><button class="btn-more btn-l">더보기</button>
+                        </div>
+                        <div class="cmnt-cards app">
+                            <div class="cmnt-card text-align-center">
+                                <div class="photo-circle club2"></div>
+                                <div class="cmnt-info">
+                                    <div class="cmnt-info-1st-row">
+                                        <button
+                                            class="btn-l btn-secondary"
+                                            type="button"
+                                        >
+                                            클럽
+                                        </button>
+                                        <div class="semi-bold">토요등산회</div>
+                                    </div>
+                                    <div class="cmnt-content">
+                                        매주 토요일, 등산으로 맞이하는 주말은
+                                        꽤나 상쾌하답니다 :)
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cmnt-card text-align-center">
+                                <div class="photo-circle club3"></div>
+                                <div class="cmnt-info">
+                                    <div class="cmnt-info-1st-row">
+                                        <button
+                                            class="btn-l btn-secondary"
+                                            type="button"
+                                        >
+                                            클럽
+                                        </button>
+                                        <div class="semi-bold">짐러버스</div>
+                                    </div>
+                                    <div class="cmnt-content">
+                                        루틴, 식단 등 운동 노하우 공유해요.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cmnt-card text-align-center">
+                                <div class="photo-circle club4"></div>
+                                <div class="cmnt-info">
+                                    <div class="cmnt-info-1st-row">
+                                        <button
+                                            class="btn-l btn-secondary"
+                                            type="button"
+                                        >
+                                            클럽
+                                        </button>
+                                        <div class="semi-bold">테치사</div>
+                                    </div>
+                                    <div class="cmnt-content">
+                                        직장인 테니스 모임으로 시작했지만 누구나
+                                        환영! *연 1회 테니스 대회 개최*
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cmnt-card text-align-center">
+                                <div class="photo-circle club2"></div>
+                                <div class="cmnt-info">
+                                    <div class="cmnt-info-1st-row">
+                                        <button
+                                            class="btn-l btn-secondary"
+                                            type="button"
+                                        >
+                                            클럽
+                                        </button>
+                                        <div class="semi-bold">러닝앤캠핑</div>
+                                    </div>
+                                    <div class="cmnt-content">
+                                        러닝과 캠핑을 함께! 복잡한 도시에서
+                                        벗어나 건강한 일탈을!
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </main>
+        <div id="floatingBtn" class="floatingBtn">
+            <i class="bi bi-plus-circle-fill"></i>
         </div>
-        <ul class="bottomList">
-          <li>
-            <a href=""
-              ><i class="bi bi-search"></i>
-              <p>검색</p></a
-            >
-          </li>
-          <li>
-            <a href=""
-              ><i class="bi bi-bell"></i>
-              <p>알림</p></a
-            >
-          </li>
-          <li>
-            <a href=""
-              ><i class="bi bi-gear"></i>
-              <p>설정</p></a
-            >
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <nav class="sub-nav">
-      <ul class="sub-nav-menu">
-        <li class="text-align-center">
-          <a href="feed-personal.html">내 피드</a>
-        </li>
-        <li class="text-align-center"><a href="feed-grid.html">전체</a></li>
-        <li class="text-align-center">
-          <a href="feed-recommend.html">추천</a>
-        </li>
-        <li class="text-align-center bold">
-          <a href="feed-community.html" class="bold">커뮤니티</a>
-        </li>
-      </ul>
-    </nav>
-    <main>
-      <section class="rcmd">
-        <article>
-          <div class="rcmd-swipe">
-            <div class="category text-align-center">
-              <span class="rcmd-title">내 커뮤니티</span
-              ><button class="btn-more">더보기</button>
-            </div>
-            <div class="cmnt-cards">
-              <div class="cmnt-card text-align-center">
-                <div class="photo-circle pilates"></div>
-                <div class="cmnt-info">
-                  <div class="cmnt-info-1st-row">
-                    <button class="btn-l btn-primary" type="button">
-                      센터
-                    </button>
-                    <div class="semi-bold">고운필라테스</div>
-                  </div>
-                  <div class="cmnt-content">
-                    자세교정으로 내 '진짜' 키를 찾아보세요.
-                  </div>
-                </div>
-              </div>
-              <div class="cmnt-card text-align-center">
-                <div class="photo-circle club1"></div>
-                <div class="cmnt-info">
-                  <div class="cmnt-info-1st-row">
-                    <button class="btn-l btn-secondary" type="button">
-                      클럽
-                    </button>
-                    <div class="semi-bold">잠깐의 여유</div>
-                  </div>
-                  <div class="cmnt-content">
-                    한적한 공원에서 즐기는 요가, 바쁜 삶 속에서 잠깐의 여유를
-                    즐겨봐요 :)
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-        <article>
-          <div class="rcmd-swipe">
-            <div class="category text-align-center">
-              <span class="rcmd-title">추천 센터</span
-              ><button class="btn-more btn-l">더보기</button>
-            </div>
-            <div class="cmnt-cards app">
-              <div class="cmnt-card text-align-center">
-                <div class="photo-circle center"></div>
-                <div class="cmnt-info">
-                  <div class="cmnt-info-1st-row">
-                    <button class="btn-l btn-primary" type="button">
-                      센터
-                    </button>
-                    <div class="semi-bold">No.1 피트니스 센터</div>
-                  </div>
-                  <div class="cmnt-content">
-                    헬스, 스피닝, 핫요가까지! 당신이 찾는 모든 운동이 여기
-                    있습니다.
-                  </div>
-                </div>
-              </div>
-              <div class="cmnt-card text-align-center">
-                <div class="photo-circle center"></div>
-                <div class="cmnt-info">
-                  <div class="cmnt-info-1st-row">
-                    <button class="btn-l btn-primary" type="button">
-                      센터
-                    </button>
-                    <div class="semi-bold">마린스포츠센터</div>
-                  </div>
-                  <div class="cmnt-content">
-                    강동구 최대 규모 수영장! <br />
-                    (저녁 성인반 인원 모집 중)
-                  </div>
-                </div>
-              </div>
-              <div class="cmnt-card text-align-center">
-                <div class="photo-circle center"></div>
-                <div class="cmnt-info">
-                  <div class="cmnt-info-1st-row">
-                    <button class="btn-l btn-primary" type="button">
-                      센터
-                    </button>
-                    <div class="semi-bold">아쉬탕가 요가</div>
-                  </div>
-                  <div class="cmnt-content">
-                    몸과 마음을 함께 수련하는 공간.
-                  </div>
-                </div>
-              </div>
-              <div class="cmnt-card text-align-center">
-                <div class="photo-circle club3"></div>
-                <div class="cmnt-info">
-                  <div class="cmnt-info-1st-row">
-                    <button class="btn-l btn-primary" type="button">
-                      센터
-                    </button>
-                    <div class="semi-bold">크로스핏 Tiger</div>
-                  </div>
-                  <div class="cmnt-content">
-                    '나'의 한계에 도전하라! 10가지 육체능력을 끌어올려 더 건강한
-                    '나'로!
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-        <article>
-          <div class="rcmd-swipe">
-            <div class="category text-align-center">
-              <span class="rcmd-title">추천 클럽</span
-              ><button class="btn-more btn-l">더보기</button>
-            </div>
-            <div class="cmnt-cards app">
-              <div class="cmnt-card text-align-center">
-                <div class="photo-circle club2"></div>
-                <div class="cmnt-info">
-                  <div class="cmnt-info-1st-row">
-                    <button class="btn-l btn-secondary" type="button">
-                      클럽
-                    </button>
-                    <div class="semi-bold">토요등산회</div>
-                  </div>
-                  <div class="cmnt-content">
-                    매주 토요일, 등산으로 맞이하는 주말은 꽤나 상쾌하답니다 :)
-                  </div>
-                </div>
-              </div>
-              <div class="cmnt-card text-align-center">
-                <div class="photo-circle club3"></div>
-                <div class="cmnt-info">
-                  <div class="cmnt-info-1st-row">
-                    <button class="btn-l btn-secondary" type="button">
-                      클럽
-                    </button>
-                    <div class="semi-bold">짐러버스</div>
-                  </div>
-                  <div class="cmnt-content">
-                    루틴, 식단 등 운동 노하우 공유해요.
-                  </div>
-                </div>
-              </div>
-              <div class="cmnt-card text-align-center">
-                <div class="photo-circle club4"></div>
-                <div class="cmnt-info">
-                  <div class="cmnt-info-1st-row">
-                    <button class="btn-l btn-secondary" type="button">
-                      클럽
-                    </button>
-                    <div class="semi-bold">테치사</div>
-                  </div>
-                  <div class="cmnt-content">
-                    직장인 테니스 모임으로 시작했지만 누구나 환영! *연 1회
-                    테니스 대회 개최*
-                  </div>
-                </div>
-              </div>
-              <div class="cmnt-card text-align-center">
-                <div class="photo-circle club2"></div>
-                <div class="cmnt-info">
-                  <div class="cmnt-info-1st-row">
-                    <button class="btn-l btn-secondary" type="button">
-                      클럽
-                    </button>
-                    <div class="semi-bold">러닝앤캠핑</div>
-                  </div>
-                  <div class="cmnt-content">
-                    러닝과 캠핑을 함께! 복잡한 도시에서 벗어나 건강한 일탈을!
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-      </section>
-    </main>
-    <div id="floatingBtn" class="floatingBtn">
-      <i class="bi bi-plus-circle-fill"></i>
-    </div>
-  </body>
+    </body>
 </html>
