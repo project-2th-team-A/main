@@ -1,0 +1,71 @@
+/*** 온보딩 폰트  medium 500으로 일단 함 ***/
+.font-onBoard-27px {
+  font-size: 27px;
+  font-weight: 800;
+  /* line-height: ?px; */
+}
+
+.font-onBoard-20px {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.font-onBoard-19px {
+  font-size: 19px;
+  font-weight: 800;
+  /* line-height: ?px; */
+}
+
+.font-onBoard-17px {
+  font-size: 17px;
+  /* 온보딩 폰트   .medium 500으로 일단 함 */
+  font-weight: 500;
+  /* line-height: ?px; */
+}
+
+.font-onBoard-12px {
+  font-size: 12px;
+  /* 온보딩 폰트   .medium 500으로 일단 함 */
+  font-weight: 500;
+  /* line-height: ?px; */
+}
+
+.font-onBoard-20px {
+  font-size: 20px;
+  /* 온보딩 폰트   .medium 500으로 일단 함 */
+  font-weight: 500;
+  /* line-height: ?px; */
+}
+
+.font-onBoard-27px {
+  font-size: 27px;
+  font-weight: 800;
+}
+
+/* 시작 */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.logo {
+  font-family: CWDangamAsac-Bold;
+  font-size: 48px;
+  color: #b33ffc;
+  position: absolute;
+}
+
+.bar {
+  width: 402px;
+  height: 8px;
+  margin-top: 120px;
+}
+
+/* input:focus {
+    outline: none;
+  } */
