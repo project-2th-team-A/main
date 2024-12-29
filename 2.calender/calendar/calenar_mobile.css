@@ -1,0 +1,99 @@
+/* 모바일버전 미디어쿼리*/
+
+@media (max-width: 600px) {
+    /* <main> */
+    main {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+
+        width: 100%;
+        padding: 0px 24px;
+    }
+
+    #mobileUpperNav {
+        width: 100%;
+        height: 32px;
+    }
+
+    .calendarContent {
+        gap: 8px;
+        width: 342px;
+        position: static;
+    }
+
+    .title {
+        padding: 0 0 0 16px;
+    }
+
+    .titleIconText {
+        gap: 12px;
+    }
+
+    .titleIconText i,
+    .titleIconText span {
+        font-size: 16px;
+    }
+
+    .ptMode span {
+        font-size: 12px;
+    }
+
+    .ptMode i {
+        font-size: 24px;
+        height: 24px;
+    }
+
+    .monthYear {
+        height: 60px;
+        padding: 0 16px;
+    }
+
+    .monthYear i {
+        font-size: 16px;
+    }
+
+    .monthYear p {
+        font-size: 16px;
+    }
+
+    .day {
+        height: 53px;
+    }
+
+    .day p {
+        width: 45px;
+        font-size: 14px;
+    }
+
+    /* 테이블 설정 */
+
+    .cell {
+        width: 45px;
+        height: 100px;
+    }
+
+    .cell p {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+
+    /* 캘린더에 일정 넣기 */
+    table .cell .regularSchedule,
+    table .cell .PTmodeSchedule {
+        height: 16px;
+        font-size: 12px;
+    }
+
+    /* <aside> 오늘의 컨텐츠 */
+    .todaysContent,
+    .todaysContent_PTmode,
+    .makingReservation,
+    .addLog {
+        position: static;
+        height: auto;
+        margin-bottom: 88px;
+    }
+}
