@@ -148,7 +148,7 @@ table {
 
 /* 캘린더에 일정 넣기 */
 .cell p.regularSchedule {
-    width: 100%;
+    width: 90px;
     height: 20px;
     border-radius: 2px;
     font-size: 14px;
@@ -157,7 +157,7 @@ table {
 }
 
 .cell p.PTmodeSchedule {
-    width: 100%;
+    width: 90px;
     height: 20px;
     border-radius: 2px;
     font-size: 14px;

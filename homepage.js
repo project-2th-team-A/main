@@ -197,5 +197,5 @@ function toggleScheduleVisibility(isPTMode) {
 
 // 캘린더 누르면 캘린더 페이지로 이동
 calendarTable.addEventListener('click', () => {
-    window.location.href = '../calendar/calendar.html';
+    window.location.href = './2.calendar/calendar.html';
 });
