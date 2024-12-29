@@ -1,751 +1,816 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>feed-single</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css"
-    />
-    <link rel="stylesheet" href="./page4.css" />
-    <script src="feed-single.js" defer></script>
-  </head>
-  <body>
-    <header class="main-nav">
-      <nav class="navbar">
-        <div class="topList">
-          <div class="logo"><span>튼튼</span></div>
-          <ul>
-            <li>
-              <a href="/index.html">
-                <i class="bi bi-house-door-fill"></i>
-                <p>홈</p></a
-              >
-            </li>
-            <li>
-              <a href="/2.calendar/calendar.html"
-                ><i class="bi bi-calendar3"></i>
-                <p>캘린더</p></a
-              >
-            </li>
-            <li>
-              <a href="./feed-grid.html"
-                ><i class="bi bi-stickies-fill"></i>
-                <p class="menu-selected">피드</p></a
-              >
-            </li>
-            <li>
-              <a href="/4.mypage/mypage.html"
-                ><i class="bi bi-person-fill"></i>
-                <p>마이페이지</p></a
-              >
-            </li>
-          </ul>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>feed-single</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css"
+        />
+        <link rel="stylesheet" href="./page4.css" />
+        <script src="feed-single.js" defer></script>
+    </head>
+    <body>
+        <header class="main-nav">
+            <nav class="navbar">
+                <div class="topList">
+                    <div class="logo"><span>튼튼</span></div>
+                    <ul>
+                        <li>
+                            <a href="/index.html">
+                                <i class="bi bi-house-door-fill"></i>
+                                <p>홈</p></a
+                            >
+                        </li>
+                        <li>
+                            <a href="/2.calendar/calendar.html"
+                                ><i class="bi bi-calendar3"></i>
+                                <p>캘린더</p></a
+                            >
+                        </li>
+                        <li>
+                            <a href="./feed-grid.html"
+                                ><i class="bi bi-stickies-fill"></i>
+                                <p class="menu-selected">피드</p></a
+                            >
+                        </li>
+                        <li>
+                            <a href="/4.mypage/mypage.html"
+                                ><i class="bi bi-person-fill"></i>
+                                <p>마이페이지</p></a
+                            >
+                        </li>
+                    </ul>
+                </div>
+                <ul class="bottomList">
+                    <li>
+                        <a href=""
+                            ><i class="bi bi-search"></i>
+                            <p>검색</p></a
+                        >
+                    </li>
+                    <li>
+                        <a href=""
+                            ><i class="bi bi-bell"></i>
+                            <p>알림</p></a
+                        >
+                    </li>
+                    <li>
+                        <a href=""
+                            ><i class="bi bi-gear"></i>
+                            <p>설정</p></a
+                        >
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <nav class="sub-nav">
+            <ul class="sub-nav-menu">
+                <li class="web text-align-center">
+                    <a href="feed-personal.html">내 피드</a>
+                </li>
+                <li class="web text-align-center">
+                    <a href="feed-grid.html" class="bold">전체</a>
+                </li>
+                <li class="web text-align-center">
+                    <a href="feed-recommend.html">추천</a>
+                </li>
+                <li class="web text-align-center">
+                    <a href="feed-community.html">커뮤니티</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="mobileUpperTitleIcons">
+            <i class="font20 bi-t bi-search"></i>
+            <i class="font20 bi-t bi-bell"></i>
         </div>
-        <ul class="bottomList">
-          <li>
-            <a href=""
-              ><i class="bi bi-search"></i>
-              <p>검색</p></a
-            >
-          </li>
-          <li>
-            <a href=""
-              ><i class="bi bi-bell"></i>
-              <p>알림</p></a
-            >
-          </li>
-          <li>
-            <a href=""
-              ><i class="bi bi-gear"></i>
-              <p>설정</p></a
-            >
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <nav class="sub-nav">
-      <ul class="sub-nav-menu">
-        <li class="web text-align-center">
-          <a href="feed-personal.html">내 피드</a>
-        </li>
-        <li class="web text-align-center">
-          <a href="feed-grid.html" class="bold">전체</a>
-        </li>
-        <li class="web text-align-center">
-          <a href="feed-recommend.html">추천</a>
-        </li>
-        <li class="web text-align-center">
-          <a href="feed-community.html">커뮤니티</a>
-        </li>
-      </ul>
-    </nav>
-    <div id="mobileUpperTitleIcons">
-      <i class="font20 bi-t bi-search"></i>
-      <i class="font20 bi-t bi-bell"></i>
-    </div>
-    <main>
-      <section class="hashtag-container">
-        <div class="hashtag">
-          <button class="btn-l btn-clicked" type="button"># 모든 주제</button>
-          <button class="btn-l btn-disable" type="button"># 운동</button>
-          <button class="btn-l btn-disable" type="button"># 식단</button>
-          <button class="btn-l btn-disable" type="button"># 크로스핏</button>
-          <button class="btn-l btn-disable" type="button"># 러닝</button>
-          <button class="btn-l btn-disable" type="button"># 레시피</button>
+        <main>
+            <section class="hashtag-container">
+                <div class="hashtag">
+                    <button class="btn-l btn-clicked" type="button">
+                        # 모든 주제
+                    </button>
+                    <button class="btn-l btn-disable" type="button">
+                        # 운동
+                    </button>
+                    <button class="btn-l btn-disable" type="button">
+                        # 식단
+                    </button>
+                    <button class="btn-l btn-disable" type="button">
+                        # 크로스핏
+                    </button>
+                    <button class="btn-l btn-disable" type="button">
+                        # 러닝
+                    </button>
+                    <button class="btn-l btn-disable" type="button">
+                        # 레시피
+                    </button>
+                </div>
+            </section>
+            <section>
+                <article class="feed-single">
+                    <div class="feed-single-profile">
+                        <div class="photo-circle-s"></div>
+                        <div>
+                            <div class="user-feed-single-info">
+                                <div class="user-name semi-bold">닉네임</div>
+                                <div class="user-feed-single-detail">
+                                    <div
+                                        class="user-feed-single-detail feed-num"
+                                    >
+                                        <span>47</span>
+                                        <span>피드</span>
+                                    </div>
+                                    <span>·</span>
+                                    <div
+                                        class="user-feed-single-detail flw-num"
+                                    >
+                                        <span>108</span>
+                                        <span>팔로워</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <i class="bi-m bi-three-dots-vertical"></i>
+                    </div>
+                    <div id="photos" class="photo-xl exercise"></div>
+                    <div class="feed-single-1st-row">
+                        <div class="feed-reaction">
+                            <i class="bi bi-heart"></i>
+                            <i class="bi bi-chat"></i>
+                            <i class="bi bi-bookmarks"></i>
+                        </div>
+                        <span class="btn-more">2일 전</span>
+                    </div>
+                    <div class="feed-single-2nd-row">
+                        <div class="hashtag">
+                            <button class="btn-l btn-disable" type="button">
+                                <span># 요가</span>
+                            </button>
+                            <button class="btn-l btn-disable" type="button">
+                                <span># 마음수련</span>
+                            </button>
+                            <button class="btn-l btn-disable" type="button">
+                                <span># 일상</span>
+                            </button>
+                        </div>
+                        <div class="cmnt-content">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit. Commodi sit porro libero optio maiores
+                            inventore ab odit eum dolor rerum, eius fugiat qui
+                            reiciendis molestias iure dolore repellendus
+                            voluptas architecto.
+                        </div>
+                        <div class="more border-bottom-disable">
+                            <button class="btn-more">더보기</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="feed-single">
+                    <div class="feed-single-profile">
+                        <div class="photo-circle-s"></div>
+                        <div>
+                            <div class="user-feed-single-info">
+                                <div class="user-name semi-bold">닉네임</div>
+                                <div class="user-feed-single-detail">
+                                    <div
+                                        class="user-feed-single-detai feed-num"
+                                    >
+                                        <span>4</span>
+                                        <span>피드</span>
+                                    </div>
+                                    <span>·</span>
+                                    <div
+                                        class="user-feed-single-detail flw-num"
+                                    >
+                                        <span>108</span>
+                                        <span>팔로워</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <i class="bi-m bi-three-dots-vertical"></i>
+                    </div>
+                    <div id="photos" class="photo-xl diet"></div>
+                    <div class="feed-single-1st-row">
+                        <div class="feed-reaction">
+                            <i class="bi bi-heart"></i>
+                            <i class="bi bi-chat"></i>
+                            <i class="bi bi-bookmarks"></i>
+                        </div>
+                        <span class="btn-more">2일 전</span>
+                    </div>
+                    <div class="feed-single-2nd-row">
+                        <div class="hashtag">
+                            <button class="btn-l btn-disable" type="button">
+                                <span># 레시피</span>
+                            </button>
+                            <button class="btn-l btn-disable" type="button">
+                                <span># 치팅데이</span>
+                            </button>
+                        </div>
+                        <div class="cmnt-content">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit. Aspernatur tenetur laborum velit omnis itaque
+                            delectus! Vero mollitia corrupti tempore eos
+                            accusantium minus vel consectetur excepturi, tenetur
+                            provident quisquam temporibus facilis!
+                        </div>
+                        <div class="more border-bottom-disable">
+                            <button class="btn-more">더보기</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="feed-single">
+                    <div class="feed-single-profile">
+                        <div class="photo-circle-s"></div>
+                        <div>
+                            <div class="user-feed-single-info">
+                                <div class="user-name semi-bold">닉네임</div>
+                                <div class="user-feed-single-detail">
+                                    <div
+                                        class="user-feed-single-detail feed-num"
+                                    >
+                                        <span>47</span>
+                                        <span>피드</span>
+                                    </div>
+                                    <span>·</span>
+                                    <div
+                                        class="user-feed-single-detail flw-num"
+                                    >
+                                        <span>108</span>
+                                        <span>팔로워</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <i class="bi-m bi-three-dots-vertical"></i>
+                    </div>
+                    <div id="photos" class="photo-xl exercise"></div>
+                    <div class="feed-single-1st-row">
+                        <div class="feed-reaction">
+                            <i class="bi bi-heart"></i>
+                            <i class="bi bi-chat"></i>
+                            <i class="bi bi-bookmarks"></i>
+                        </div>
+                        <span class="btn-more">2일 전</span>
+                    </div>
+                    <div class="feed-single-2nd-row">
+                        <div class="hashtag">
+                            <button class="btn-l btn-disable" type="button">
+                                <span># 일상</span>
+                            </button>
+                            <button class="btn-l btn-disable" type="button">
+                                <span># 스피닝</span>
+                            </button>
+                            <button class="btn-l btn-disable" type="button">
+                                <span># 운동</span>
+                            </button>
+                            <button class="btn-l btn-disable" type="button">
+                                <span># 스트레칭</span>
+                            </button>
+                        </div>
+                        <div class="cmnt-content">
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Ipsa, ducimus! Quos commodi maxime velit eius
+                            iusto! Repellendus vel ipsum aperiam earum, natus
+                            sit temporibus accusantium repudiandae tenetur aut
+                            odio illo.
+                        </div>
+                        <div class="more border-bottom-disable">
+                            <button class="btn-more">더보기</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="feed-single">
+                    <div class="feed-single-profile">
+                        <div class="photo-circle-s"></div>
+                        <div>
+                            <div class="user-feed-single-info">
+                                <div class="user-name semi-bold">닉네임</div>
+                                <div class="user-feed-single-detail">
+                                    <div
+                                        class="user-feed-single-detail feed-num"
+                                    >
+                                        <span>47</span>
+                                        <span>피드</span>
+                                    </div>
+                                    <span>·</span>
+                                    <div
+                                        class="user-feed-single-detail flw-num"
+                                    >
+                                        <span>108</span>
+                                        <span>팔로워</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <i class="bi-m bi-three-dots-vertical"></i>
+                    </div>
+                    <div id="photos" class="photo-xl diet"></div>
+                    <div class="feed-single-1st-row">
+                        <div class="feed-reaction">
+                            <i class="bi bi-heart"></i>
+                            <i class="bi bi-chat"></i>
+                            <i class="bi bi-bookmarks"></i>
+                        </div>
+                        <span class="btn-more">2일 전</span>
+                    </div>
+                    <div class="feed-single-2nd-row">
+                        <div class="hashtag">
+                            <button class="btn-l btn-disable" type="button">
+                                <span># 레시피</span>
+                            </button>
+                            <button class="btn-l btn-disable" type="button">
+                                <span># 일상</span>
+                            </button>
+                            <button class="btn-l btn-disable" type="button">
+                                <span># 채식</span>
+                            </button>
+                        </div>
+                        <div class="cmnt-content">
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Laborum cumque necessitatibus omnis
+                            consequatur fugiat nesciunt laudantium error
+                            corporis, eos aliquam quisquam dolor, nostrum
+                            accusantium eaque fuga vel provident. Laudantium,
+                            mollitia.
+                        </div>
+                        <div class="more border-bottom-disable">
+                            <button class="btn-more">더보기</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="feed-single">
+                    <div class="feed-single-profile">
+                        <div class="photo-circle-s"></div>
+                        <div>
+                            <div class="user-feed-single-info">
+                                <div class="user-name semi-bold">닉네임</div>
+                                <div class="user-feed-single-detail">
+                                    <div
+                                        class="user-feed-single-detail feed-num"
+                                    >
+                                        <span>47</span>
+                                        <span>피드</span>
+                                    </div>
+                                    <span>·</span>
+                                    <div
+                                        class="user-feed-single-detail flw-num"
+                                    >
+                                        <span>108</span>
+                                        <span>팔로워</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <i class="bi-m bi-three-dots-vertical"></i>
+                    </div>
+                    <div id="photos" class="photo-xl crossfit"></div>
+                    <div class="feed-single-1st-row">
+                        <div class="feed-reaction">
+                            <i class="bi bi-heart"></i>
+                            <i class="bi bi-chat"></i>
+                            <i class="bi bi-bookmarks"></i>
+                        </div>
+                        <span class="btn-more">2일 전</span>
+                    </div>
+                    <div class="feed-single-2nd-row">
+                        <div class="hashtag">
+                            <button class="btn-l btn-disable" type="button">
+                                <span># 크로스핏</span>
+                            </button>
+                            <button class="btn-l btn-disable" type="button">
+                                <span># 운동</span>
+                            </button>
+                            <button class="btn-l btn-disable" type="button">
+                                <span># 대회준비</span>
+                            </button>
+                        </div>
+                        <div class="cmnt-content">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing
+                            elit. Cumque illo itaque sunt modi dolor expedita?
+                            Optio deleniti reprehenderit nulla, laudantium
+                            dolores nisi modi corrupti facere amet, a blanditiis
+                            dolore error.
+                        </div>
+                        <div class="more border-bottom-disable">
+                            <button class="btn-more">더보기</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="feed-single">
+                    <div class="feed-single-profile">
+                        <div class="photo-circle-s"></div>
+                        <div>
+                            <div class="user-feed-single-info">
+                                <div class="user-name semi-bold">닉네임</div>
+                                <div class="user-feed-single-detail">
+                                    <div
+                                        class="user-feed-single-detail feed-num"
+                                    >
+                                        <span>47</span>
+                                        <span>피드</span>
+                                    </div>
+                                    <span>·</span>
+                                    <div
+                                        class="user-feed-single-detail flw-num"
+                                    >
+                                        <span>108</span>
+                                        <span>팔로워</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <i class="bi-m bi-three-dots-vertical"></i>
+                    </div>
+                    <div id="photos" class="photo-xl diet"></div>
+                    <div class="feed-single-1st-row">
+                        <div class="feed-reaction">
+                            <i class="bi bi-heart"></i>
+                            <i class="bi bi-chat"></i>
+                            <i class="bi bi-bookmarks"></i>
+                        </div>
+                        <span class="btn-more">2일 전</span>
+                    </div>
+                    <div class="feed-single-2nd-row">
+                        <div class="hashtag">
+                            <button class="btn-l btn-disable" type="button">
+                                <span># 일상</span>
+                            </button>
+                            <button class="btn-l btn-disable" type="button">
+                                <span># 건강식</span>
+                            </button>
+                            <button class="btn-l btn-disable" type="button">
+                                <span># 식단</span>
+                            </button>
+                            <button class="btn-l btn-disable" type="button">
+                                <span># 연말</span>
+                            </button>
+                        </div>
+                        <div class="cmnt-content">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit. Rerum itaque, odit iure tenetur molestiae
+                            dolores recusandae quam at inventore repudiandae
+                            reiciendis. Expedita hic commodi illo saepe sed
+                            accusamus, alias nam?
+                        </div>
+                        <div class="more border-bottom-disable">
+                            <button class="btn-more">더보기</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="feed-single">
+                    <div class="feed-single-profile">
+                        <div class="photo-circle-s"></div>
+                        <div>
+                            <div class="user-feed-single-info">
+                                <div class="user-name semi-bold">닉네임</div>
+                                <div class="user-feed-single-detail">
+                                    <div
+                                        class="user-feed-single-detail feed-num"
+                                    >
+                                        <span>47</span>
+                                        <span>피드</span>
+                                    </div>
+                                    <span>·</span>
+                                    <div
+                                        class="user-feed-single-detail flw-num"
+                                    >
+                                        <span>108</span>
+                                        <span>팔로워</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <i class="bi-m bi-three-dots-vertical"></i>
+                    </div>
+                    <div id="photos" class="photo-xl exercise"></div>
+                    <div class="feed-single-1st-row">
+                        <div class="feed-reaction">
+                            <i class="bi bi-heart"></i>
+                            <i class="bi bi-chat"></i>
+                            <i class="bi bi-bookmarks"></i>
+                        </div>
+                        <span class="btn-more">2일 전</span>
+                    </div>
+                    <div class="feed-single-2nd-row">
+                        <div class="hashtag">
+                            <button class="btn-l btn-disable" type="button">
+                                <span># 마라톤</span>
+                            </button>
+                            <button class="btn-l btn-disable" type="button">
+                                <span># 러닝</span>
+                            </button>
+                            <button class="btn-l btn-disable" type="button">
+                                <span># 운동</span>
+                            </button>
+                        </div>
+                        <div class="cmnt-content">
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Laudantium minima ad officiis quo obcaecati,
+                            dolore quas vel maxime, tempora reiciendis explicabo
+                            vitae eos tempore aliquid voluptatum molestias illo
+                            architecto expedita!
+                        </div>
+                        <div class="more border-bottom-disable">
+                            <button class="btn-more">더보기</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="feed-single">
+                    <div class="feed-single-profile">
+                        <div class="photo-circle-s"></div>
+                        <div>
+                            <div class="user-feed-single-info">
+                                <div class="user-name semi-bold">닉네임</div>
+                                <div class="user-feed-single-detail">
+                                    <div
+                                        class="user-feed-single-detail feed-num"
+                                    >
+                                        <span>47</span>
+                                        <span>피드</span>
+                                    </div>
+                                    <span>·</span>
+                                    <div
+                                        class="user-feed-single-detail flw-num"
+                                    >
+                                        <span>108</span>
+                                        <span>팔로워</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <i class="bi-m bi-three-dots-vertical"></i>
+                    </div>
+                    <div id="photos" class="photo-xl exercise"></div>
+                    <div class="feed-single-1st-row">
+                        <div class="feed-reaction">
+                            <i class="bi bi-heart"></i>
+                            <i class="bi bi-chat"></i>
+                            <i class="bi bi-bookmarks"></i>
+                        </div>
+                        <span class="btn-more">2일 전</span>
+                    </div>
+                    <div class="feed-single-2nd-row">
+                        <div class="hashtag">
+                            <button class="btn-l btn-disable" type="button">
+                                <span># 러닝</span>
+                            </button>
+                            <button class="btn-l btn-disable" type="button">
+                                <span># 마라톤</span>
+                            </button>
+                            <button class="btn-l btn-disable" type="button">
+                                <span># 헬스</span>
+                            </button>
+                            <button class="btn-l btn-disable" type="button">
+                                <span># 운동</span>
+                            </button>
+                        </div>
+                        <div class="cmnt-content">
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Odit cumque, iure inventore impedit esse rerum
+                            ipsam explicabo rem perspiciatis dolorem dignissimos
+                            aut sed nobis accusantium quidem nostrum et minima
+                            enim!
+                        </div>
+                        <div class="more border-bottom-disable">
+                            <button class="btn-more">더보기</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="feed-single">
+                    <div class="feed-single-profile">
+                        <div class="photo-circle-s"></div>
+                        <div>
+                            <div class="user-feed-single-info">
+                                <div class="user-name semi-bold">닉네임</div>
+                                <div class="user-feed-single-detail">
+                                    <div
+                                        class="user-feed-single-detail feed-num"
+                                    >
+                                        <span>47</span>
+                                        <span>피드</span>
+                                    </div>
+                                    <span>·</span>
+                                    <div
+                                        class="user-feed-single-detail flw-num"
+                                    >
+                                        <span>108</span>
+                                        <span>팔로워</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <i class="bi-m bi-three-dots-vertical"></i>
+                    </div>
+                    <div id="photos" class="photo-xl yoga"></div>
+                    <div class="feed-single-1st-row">
+                        <div class="feed-reaction">
+                            <i class="bi bi-heart"></i>
+                            <i class="bi bi-chat"></i>
+                            <i class="bi bi-bookmarks"></i>
+                        </div>
+                        <span class="btn-more">2일 전</span>
+                    </div>
+                    <div class="feed-single-2nd-row">
+                        <div class="hashtag">
+                            <button class="btn-l btn-disable" type="button">
+                                <span># 요가</span>
+                            </button>
+                            <button class="btn-l btn-disable" type="button">
+                                <span># 마음수련</span>
+                            </button>
+                            <button class="btn-l btn-disable" type="button">
+                                <span># 운동</span>
+                            </button>
+                        </div>
+                        <div class="cmnt-content">
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Magnam earum minima adipisci quaerat explicabo
+                            fugit debitis, provident dolorum tenetur ducimus!
+                            Quasi, veniam eum. Incidunt, quisquam? Dolorum porro
+                            provident iste quas.
+                        </div>
+                        <div class="more border-bottom-disable">
+                            <button class="btn-more">더보기</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="feed-single">
+                    <div class="feed-single-profile">
+                        <div class="photo-circle-s"></div>
+                        <div>
+                            <div class="user-feed-single-info">
+                                <div class="user-name semi-bold">닉네임</div>
+                                <div class="user-feed-single-detail">
+                                    <div class="user-feed-single-detail">
+                                        <span>47</span>
+                                        <span>피드</span>
+                                    </div>
+                                    <span>·</span>
+                                    <div class="user-feed-single-detail">
+                                        <span>108</span>
+                                        <span>팔로워</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <i class="bi-m bi-three-dots-vertical"></i>
+                    </div>
+                    <div id="photos" class="photo-xl yoga"></div>
+                    <div class="feed-single-1st-row">
+                        <div class="feed-reaction">
+                            <i class="bi bi-heart"></i>
+                            <i class="bi bi-chat"></i>
+                            <i class="bi bi-bookmarks"></i>
+                        </div>
+                        <span class="btn-more">2일 전</span>
+                    </div>
+                    <div class="feed-single-2nd-row">
+                        <div class="hashtag">
+                            <button class="btn-l btn-disable" type="button">
+                                <span># 야외운동</span>
+                            </button>
+                            <button class="btn-l btn-disable" type="button">
+                                <span># 일상</span>
+                            </button>
+                            <button class="btn-l btn-disable" type="button">
+                                <span># 러닝</span>
+                            </button>
+                        </div>
+                        <div class="cmnt-content">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit. Quisquam autem illo quia minus voluptates
+                            deleniti harum quam accusantium? Aspernatur rerum
+                            obcaecati explicabo adipisci modi quisquam assumenda
+                            voluptate beatae ab est.
+                        </div>
+                        <div class="more border-bottom-disable">
+                            <button class="btn-more">더보기</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="feed-single">
+                    <div class="feed-single-profile">
+                        <div class="photo-circle-s"></div>
+                        <div>
+                            <div class="user-feed-single-info">
+                                <div class="user-name semi-bold">닉네임</div>
+                                <div class="user-feed-single-detail">
+                                    <div class="user-feed-single-detail">
+                                        <span>47</span>
+                                        <span>피드</span>
+                                    </div>
+                                    <span>·</span>
+                                    <div class="user-feed-single-detail">
+                                        <span>108</span>
+                                        <span>팔로워</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <i class="bi-m bi-three-dots-vertical"></i>
+                    </div>
+                    <div id="photos" class="photo-xl exercise"></div>
+                    <div class="feed-single-1st-row">
+                        <div class="feed-reaction">
+                            <i class="bi bi-heart"></i>
+                            <i class="bi bi-chat"></i>
+                            <i class="bi bi-bookmarks"></i>
+                        </div>
+                        <span class="btn-more">2일 전</span>
+                    </div>
+                    <div class="feed-single-2nd-row">
+                        <div class="hashtag">
+                            <button class="btn-l btn-disable" type="button">
+                                <span># 서핑</span>
+                            </button>
+                            <button class="btn-l btn-disable" type="button">
+                                <span># 요가</span>
+                            </button>
+                            <button class="btn-l btn-disable" type="button">
+                                <span># 마음수련</span>
+                            </button>
+                            <button class="btn-l btn-disable" type="button">
+                                <span># 일상</span>
+                            </button>
+                        </div>
+                        <div class="cmnt-content">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit. Placeat consequuntur quos laudantium
+                            laboriosam, debitis modi cumque adipisci ducimus rem
+                            sunt voluptates et nam nemo doloribus numquam
+                            provident temporibus eius delectus?
+                        </div>
+                        <div class="more border-bottom-disable">
+                            <button class="btn-more">더보기</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="feed-single">
+                    <div class="feed-single-profile">
+                        <div class="photo-circle-s"></div>
+                        <div>
+                            <div class="user-feed-single-info">
+                                <div class="user-name semi-bold">닉네임</div>
+                                <div class="user-feed-single-detail">
+                                    <div
+                                        class="user-feed-single-detail feed-num"
+                                    >
+                                        <span>47</span>
+                                        <span>피드</span>
+                                    </div>
+                                    <span>·</span>
+                                    <div
+                                        class="user-feed-single-detail flw-num"
+                                    >
+                                        <span>108</span>
+                                        <span>팔로워</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <i class="bi-m bi-three-dots-vertical"></i>
+                    </div>
+                    <div id="photos" class="photo-xl exercise"></div>
+                    <div class="feed-single-1st-row">
+                        <div class="feed-reaction">
+                            <i class="bi bi-heart"></i>
+                            <i class="bi bi-chat"></i>
+                            <i class="bi bi-bookmarks"></i>
+                        </div>
+                        <span class="btn-more">2일 전</span>
+                    </div>
+                    <div class="feed-single-2nd-row">
+                        <div class="hashtag">
+                            <button class="btn-l btn-disable" type="button">
+                                <span># 헬스</span>
+                            </button>
+                            <button class="btn-l btn-disable" type="button">
+                                <span># 웨이트</span>
+                            </button>
+                            <button class="btn-l btn-disable" type="button">
+                                <span># 운동</span>
+                            </button>
+                        </div>
+                        <div class="cmnt-content">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit. Qui quam earum fugiat, tenetur perferendis
+                            eaque nesciunt ut quisquam repellat corporis sint
+                            laboriosam? Ab non molestiae ipsam dolore dolorum
+                            incidunt veritatis.
+                        </div>
+                        <div class="more border-bottom-disable">
+                            <button class="btn-more">더보기</button>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </main>
+        <div id="floatingBtn" class="floatingBtn">
+            <i class="bi bi-plus-circle-fill"></i>
         </div>
-      </section>
-      <section>
-        <article class="feed-single">
-          <div class="feed-single-profile">
-            <div class="photo-circle-s"></div>
-            <div>
-              <div class="user-feed-single-info">
-                <div class="user-name semi-bold">닉네임</div>
-                <div class="user-feed-single-detail">
-                  <div class="user-feed-single-detail feed-num">
-                    <span>47</span>
-                    <span>피드</span>
-                  </div>
-                  <span>·</span>
-                  <div class="user-feed-single-detail flw-num">
-                    <span>108</span>
-                    <span>팔로워</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <i class="bi-m bi-three-dots-vertical"></i>
-          </div>
-          <div id="photos" class="photo-xl exercise"></div>
-          <div class="feed-single-1st-row">
-            <div class="feed-reaction">
-              <i class="bi bi-heart"></i>
-              <i class="bi bi-chat"></i>
-              <i class="bi bi-bookmarks"></i>
-            </div>
-            <span class="btn-more">2일 전</span>
-          </div>
-          <div class="feed-single-2nd-row">
-            <div class="hashtag">
-              <button class="btn-l btn-disable" type="button">
-                <span># 요가</span>
-              </button>
-              <button class="btn-l btn-disable" type="button">
-                <span># 마음수련</span>
-              </button>
-              <button class="btn-l btn-disable" type="button">
-                <span># 일상</span>
-              </button>
-            </div>
-            <div class="cmnt-content">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi
-              sit porro libero optio maiores inventore ab odit eum dolor rerum,
-              eius fugiat qui reiciendis molestias iure dolore repellendus
-              voluptas architecto.
-            </div>
-            <div class="more border-bottom-disable">
-              <button class="btn-more">더보기</button>
-            </div>
-          </div>
-        </article>
-        <article class="feed-single">
-          <div class="feed-single-profile">
-            <div class="photo-circle-s"></div>
-            <div>
-              <div class="user-feed-single-info">
-                <div class="user-name semi-bold">닉네임</div>
-                <div class="user-feed-single-detail">
-                  <div class="user-feed-single-detai feed-num">
-                    <span>47</span>
-                    <span>피드</span>
-                  </div>
-                  <span>·</span>
-                  <div class="user-feed-single-detail flw-num">
-                    <span>108</span>
-                    <span>팔로워</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <i class="bi-m bi-three-dots-vertical"></i>
-          </div>
-          <div id="photos" class="photo-xl diet"></div>
-          <div class="feed-single-1st-row">
-            <div class="feed-reaction">
-              <i class="bi bi-heart"></i>
-              <i class="bi bi-chat"></i>
-              <i class="bi bi-bookmarks"></i>
-            </div>
-            <span class="btn-more">2일 전</span>
-          </div>
-          <div class="feed-single-2nd-row">
-            <div class="hashtag">
-              <button class="btn-l btn-disable" type="button">
-                <span># 레시피</span>
-              </button>
-              <button class="btn-l btn-disable" type="button">
-                <span># 치팅데이</span>
-              </button>
-            </div>
-            <div class="cmnt-content">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Aspernatur tenetur laborum velit omnis itaque delectus! Vero
-              mollitia corrupti tempore eos accusantium minus vel consectetur
-              excepturi, tenetur provident quisquam temporibus facilis!
-            </div>
-            <div class="more border-bottom-disable">
-              <button class="btn-more">더보기</button>
-            </div>
-          </div>
-        </article>
-        <article class="feed-single">
-          <div class="feed-single-profile">
-            <div class="photo-circle-s"></div>
-            <div>
-              <div class="user-feed-single-info">
-                <div class="user-name semi-bold">닉네임</div>
-                <div class="user-feed-single-detail">
-                  <div class="user-feed-single-detail feed-num">
-                    <span>47</span>
-                    <span>피드</span>
-                  </div>
-                  <span>·</span>
-                  <div class="user-feed-single-detail flw-num">
-                    <span>108</span>
-                    <span>팔로워</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <i class="bi-m bi-three-dots-vertical"></i>
-          </div>
-          <div id="photos" class="photo-xl exercise"></div>
-          <div class="feed-single-1st-row">
-            <div class="feed-reaction">
-              <i class="bi bi-heart"></i>
-              <i class="bi bi-chat"></i>
-              <i class="bi bi-bookmarks"></i>
-            </div>
-            <span class="btn-more">2일 전</span>
-          </div>
-          <div class="feed-single-2nd-row">
-            <div class="hashtag">
-              <button class="btn-l btn-disable" type="button">
-                <span># 일상</span>
-              </button>
-              <button class="btn-l btn-disable" type="button">
-                <span># 스피닝</span>
-              </button>
-              <button class="btn-l btn-disable" type="button">
-                <span># 운동</span>
-              </button>
-              <button class="btn-l btn-disable" type="button">
-                <span># 스트레칭</span>
-              </button>
-            </div>
-            <div class="cmnt-content">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
-              ducimus! Quos commodi maxime velit eius iusto! Repellendus vel
-              ipsum aperiam earum, natus sit temporibus accusantium repudiandae
-              tenetur aut odio illo.
-            </div>
-            <div class="more border-bottom-disable">
-              <button class="btn-more">더보기</button>
-            </div>
-          </div>
-        </article>
-        <article class="feed-single">
-          <div class="feed-single-profile">
-            <div class="photo-circle-s"></div>
-            <div>
-              <div class="user-feed-single-info">
-                <div class="user-name semi-bold">닉네임</div>
-                <div class="user-feed-single-detail">
-                  <div class="user-feed-single-detail feed-num">
-                    <span>47</span>
-                    <span>피드</span>
-                  </div>
-                  <span>·</span>
-                  <div class="user-feed-single-detail flw-num">
-                    <span>108</span>
-                    <span>팔로워</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <i class="bi-m bi-three-dots-vertical"></i>
-          </div>
-          <div id="photos" class="photo-xl diet"></div>
-          <div class="feed-single-1st-row">
-            <div class="feed-reaction">
-              <i class="bi bi-heart"></i>
-              <i class="bi bi-chat"></i>
-              <i class="bi bi-bookmarks"></i>
-            </div>
-            <span class="btn-more">2일 전</span>
-          </div>
-          <div class="feed-single-2nd-row">
-            <div class="hashtag">
-              <button class="btn-l btn-disable" type="button">
-                <span># 레시피</span>
-              </button>
-              <button class="btn-l btn-disable" type="button">
-                <span># 일상</span>
-              </button>
-              <button class="btn-l btn-disable" type="button">
-                <span># 채식</span>
-              </button>
-            </div>
-            <div class="cmnt-content">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
-              cumque necessitatibus omnis consequatur fugiat nesciunt laudantium
-              error corporis, eos aliquam quisquam dolor, nostrum accusantium
-              eaque fuga vel provident. Laudantium, mollitia.
-            </div>
-            <div class="more border-bottom-disable">
-              <button class="btn-more">더보기</button>
-            </div>
-          </div>
-        </article>
-        <article class="feed-single">
-          <div class="feed-single-profile">
-            <div class="photo-circle-s"></div>
-            <div>
-              <div class="user-feed-single-info">
-                <div class="user-name semi-bold">닉네임</div>
-                <div class="user-feed-single-detail">
-                  <div class="user-feed-single-detail feed-num">
-                    <span>47</span>
-                    <span>피드</span>
-                  </div>
-                  <span>·</span>
-                  <div class="user-feed-single-detail flw-num">
-                    <span>108</span>
-                    <span>팔로워</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <i class="bi-m bi-three-dots-vertical"></i>
-          </div>
-          <div id="photos" class="photo-xl crossfit"></div>
-          <div class="feed-single-1st-row">
-            <div class="feed-reaction">
-              <i class="bi bi-heart"></i>
-              <i class="bi bi-chat"></i>
-              <i class="bi bi-bookmarks"></i>
-            </div>
-            <span class="btn-more">2일 전</span>
-          </div>
-          <div class="feed-single-2nd-row">
-            <div class="hashtag">
-              <button class="btn-l btn-disable" type="button">
-                <span># 크로스핏</span>
-              </button>
-              <button class="btn-l btn-disable" type="button">
-                <span># 운동</span>
-              </button>
-              <button class="btn-l btn-disable" type="button">
-                <span># 대회준비</span>
-              </button>
-            </div>
-            <div class="cmnt-content">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque
-              illo itaque sunt modi dolor expedita? Optio deleniti reprehenderit
-              nulla, laudantium dolores nisi modi corrupti facere amet, a
-              blanditiis dolore error.
-            </div>
-            <div class="more border-bottom-disable">
-              <button class="btn-more">더보기</button>
-            </div>
-          </div>
-        </article>
-        <article class="feed-single">
-          <div class="feed-single-profile">
-            <div class="photo-circle-s"></div>
-            <div>
-              <div class="user-feed-single-info">
-                <div class="user-name semi-bold">닉네임</div>
-                <div class="user-feed-single-detail">
-                  <div class="user-feed-single-detail feed-num">
-                    <span>47</span>
-                    <span>피드</span>
-                  </div>
-                  <span>·</span>
-                  <div class="user-feed-single-detail flw-num">
-                    <span>108</span>
-                    <span>팔로워</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <i class="bi-m bi-three-dots-vertical"></i>
-          </div>
-          <div id="photos" class="photo-xl diet"></div>
-          <div class="feed-single-1st-row">
-            <div class="feed-reaction">
-              <i class="bi bi-heart"></i>
-              <i class="bi bi-chat"></i>
-              <i class="bi bi-bookmarks"></i>
-            </div>
-            <span class="btn-more">2일 전</span>
-          </div>
-          <div class="feed-single-2nd-row">
-            <div class="hashtag">
-              <button class="btn-l btn-disable" type="button">
-                <span># 일상</span>
-              </button>
-              <button class="btn-l btn-disable" type="button">
-                <span># 건강식</span>
-              </button>
-              <button class="btn-l btn-disable" type="button">
-                <span># 식단</span>
-              </button>
-              <button class="btn-l btn-disable" type="button">
-                <span># 연말</span>
-              </button>
-            </div>
-            <div class="cmnt-content">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum
-              itaque, odit iure tenetur molestiae dolores recusandae quam at
-              inventore repudiandae reiciendis. Expedita hic commodi illo saepe
-              sed accusamus, alias nam?
-            </div>
-            <div class="more border-bottom-disable">
-              <button class="btn-more">더보기</button>
-            </div>
-          </div>
-        </article>
-        <article class="feed-single">
-          <div class="feed-single-profile">
-            <div class="photo-circle-s"></div>
-            <div>
-              <div class="user-feed-single-info">
-                <div class="user-name semi-bold">닉네임</div>
-                <div class="user-feed-single-detail">
-                  <div class="user-feed-single-detail feed-num">
-                    <span>47</span>
-                    <span>피드</span>
-                  </div>
-                  <span>·</span>
-                  <div class="user-feed-single-detail flw-num">
-                    <span>108</span>
-                    <span>팔로워</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <i class="bi-m bi-three-dots-vertical"></i>
-          </div>
-          <div id="photos" class="photo-xl exercise"></div>
-          <div class="feed-single-1st-row">
-            <div class="feed-reaction">
-              <i class="bi bi-heart"></i>
-              <i class="bi bi-chat"></i>
-              <i class="bi bi-bookmarks"></i>
-            </div>
-            <span class="btn-more">2일 전</span>
-          </div>
-          <div class="feed-single-2nd-row">
-            <div class="hashtag">
-              <button class="btn-l btn-disable" type="button">
-                <span># 마라톤</span>
-              </button>
-              <button class="btn-l btn-disable" type="button">
-                <span># 러닝</span>
-              </button>
-              <button class="btn-l btn-disable" type="button">
-                <span># 운동</span>
-              </button>
-            </div>
-            <div class="cmnt-content">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Laudantium minima ad officiis quo obcaecati, dolore quas vel
-              maxime, tempora reiciendis explicabo vitae eos tempore aliquid
-              voluptatum molestias illo architecto expedita!
-            </div>
-            <div class="more border-bottom-disable">
-              <button class="btn-more">더보기</button>
-            </div>
-          </div>
-        </article>
-        <article class="feed-single">
-          <div class="feed-single-profile">
-            <div class="photo-circle-s"></div>
-            <div>
-              <div class="user-feed-single-info">
-                <div class="user-name semi-bold">닉네임</div>
-                <div class="user-feed-single-detail">
-                  <div class="user-feed-single-detail feed-num">
-                    <span>47</span>
-                    <span>피드</span>
-                  </div>
-                  <span>·</span>
-                  <div class="user-feed-single-detail flw-num">
-                    <span>108</span>
-                    <span>팔로워</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <i class="bi-m bi-three-dots-vertical"></i>
-          </div>
-          <div id="photos" class="photo-xl exercise"></div>
-          <div class="feed-single-1st-row">
-            <div class="feed-reaction">
-              <i class="bi bi-heart"></i>
-              <i class="bi bi-chat"></i>
-              <i class="bi bi-bookmarks"></i>
-            </div>
-            <span class="btn-more">2일 전</span>
-          </div>
-          <div class="feed-single-2nd-row">
-            <div class="hashtag">
-              <button class="btn-l btn-disable" type="button">
-                <span># 러닝</span>
-              </button>
-              <button class="btn-l btn-disable" type="button">
-                <span># 마라톤</span>
-              </button>
-              <button class="btn-l btn-disable" type="button">
-                <span># 헬스</span>
-              </button>
-              <button class="btn-l btn-disable" type="button">
-                <span># 운동</span>
-              </button>
-            </div>
-            <div class="cmnt-content">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
-              cumque, iure inventore impedit esse rerum ipsam explicabo rem
-              perspiciatis dolorem dignissimos aut sed nobis accusantium quidem
-              nostrum et minima enim!
-            </div>
-            <div class="more border-bottom-disable">
-              <button class="btn-more">더보기</button>
-            </div>
-          </div>
-        </article>
-        <article class="feed-single">
-          <div class="feed-single-profile">
-            <div class="photo-circle-s"></div>
-            <div>
-              <div class="user-feed-single-info">
-                <div class="user-name semi-bold">닉네임</div>
-                <div class="user-feed-single-detail">
-                  <div class="user-feed-single-detail feed-num">
-                    <span>47</span>
-                    <span>피드</span>
-                  </div>
-                  <span>·</span>
-                  <div class="user-feed-single-detail flw-num">
-                    <span>108</span>
-                    <span>팔로워</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <i class="bi-m bi-three-dots-vertical"></i>
-          </div>
-          <div id="photos" class="photo-xl yoga"></div>
-          <div class="feed-single-1st-row">
-            <div class="feed-reaction">
-              <i class="bi bi-heart"></i>
-              <i class="bi bi-chat"></i>
-              <i class="bi bi-bookmarks"></i>
-            </div>
-            <span class="btn-more">2일 전</span>
-          </div>
-          <div class="feed-single-2nd-row">
-            <div class="hashtag">
-              <button class="btn-l btn-disable" type="button">
-                <span># 요가</span>
-              </button>
-              <button class="btn-l btn-disable" type="button">
-                <span># 마음수련</span>
-              </button>
-              <button class="btn-l btn-disable" type="button">
-                <span># 운동</span>
-              </button>
-            </div>
-            <div class="cmnt-content">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
-              earum minima adipisci quaerat explicabo fugit debitis, provident
-              dolorum tenetur ducimus! Quasi, veniam eum. Incidunt, quisquam?
-              Dolorum porro provident iste quas.
-            </div>
-            <div class="more border-bottom-disable">
-              <button class="btn-more">더보기</button>
-            </div>
-          </div>
-        </article>
-        <article class="feed-single">
-          <div class="feed-single-profile">
-            <div class="photo-circle-s"></div>
-            <div>
-              <div class="user-feed-single-info">
-                <div class="user-name semi-bold">닉네임</div>
-                <div class="user-feed-single-detail">
-                  <div class="user-feed-single-detail">
-                    <span>47</span>
-                    <span>피드</span>
-                  </div>
-                  <span>·</span>
-                  <div class="user-feed-single-detail">
-                    <span>108</span>
-                    <span>팔로워</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <i class="bi-m bi-three-dots-vertical"></i>
-          </div>
-          <div id="photos" class="photo-xl yoga"></div>
-          <div class="feed-single-1st-row">
-            <div class="feed-reaction">
-              <i class="bi bi-heart"></i>
-              <i class="bi bi-chat"></i>
-              <i class="bi bi-bookmarks"></i>
-            </div>
-            <span class="btn-more">2일 전</span>
-          </div>
-          <div class="feed-single-2nd-row">
-            <div class="hashtag">
-              <button class="btn-l btn-disable" type="button">
-                <span># 야외운동</span>
-              </button>
-              <button class="btn-l btn-disable" type="button">
-                <span># 일상</span>
-              </button>
-              <button class="btn-l btn-disable" type="button">
-                <span># 러닝</span>
-              </button>
-            </div>
-            <div class="cmnt-content">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
-              autem illo quia minus voluptates deleniti harum quam accusantium?
-              Aspernatur rerum obcaecati explicabo adipisci modi quisquam
-              assumenda voluptate beatae ab est.
-            </div>
-            <div class="more border-bottom-disable">
-              <button class="btn-more">더보기</button>
-            </div>
-          </div>
-        </article>
-        <article class="feed-single">
-          <div class="feed-single-profile">
-            <div class="photo-circle-s"></div>
-            <div>
-              <div class="user-feed-single-info">
-                <div class="user-name semi-bold">닉네임</div>
-                <div class="user-feed-single-detail">
-                  <div class="user-feed-single-detail">
-                    <span>47</span>
-                    <span>피드</span>
-                  </div>
-                  <span>·</span>
-                  <div class="user-feed-single-detail">
-                    <span>108</span>
-                    <span>팔로워</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <i class="bi-m bi-three-dots-vertical"></i>
-          </div>
-          <div id="photos" class="photo-xl exercise"></div>
-          <div class="feed-single-1st-row">
-            <div class="feed-reaction">
-              <i class="bi bi-heart"></i>
-              <i class="bi bi-chat"></i>
-              <i class="bi bi-bookmarks"></i>
-            </div>
-            <span class="btn-more">2일 전</span>
-          </div>
-          <div class="feed-single-2nd-row">
-            <div class="hashtag">
-              <button class="btn-l btn-disable" type="button">
-                <span># 서핑</span>
-              </button>
-              <button class="btn-l btn-disable" type="button">
-                <span># 요가</span>
-              </button>
-              <button class="btn-l btn-disable" type="button">
-                <span># 마음수련</span>
-              </button>
-              <button class="btn-l btn-disable" type="button">
-                <span># 일상</span>
-              </button>
-            </div>
-            <div class="cmnt-content">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat
-              consequuntur quos laudantium laboriosam, debitis modi cumque
-              adipisci ducimus rem sunt voluptates et nam nemo doloribus numquam
-              provident temporibus eius delectus?
-            </div>
-            <div class="more border-bottom-disable">
-              <button class="btn-more">더보기</button>
-            </div>
-          </div>
-        </article>
-        <article class="feed-single">
-          <div class="feed-single-profile">
-            <div class="photo-circle-s"></div>
-            <div>
-              <div class="user-feed-single-info">
-                <div class="user-name semi-bold">닉네임</div>
-                <div class="user-feed-single-detail">
-                  <div class="user-feed-single-detail feed-num">
-                    <span>47</span>
-                    <span>피드</span>
-                  </div>
-                  <span>·</span>
-                  <div class="user-feed-single-detail flw-num">
-                    <span>108</span>
-                    <span>팔로워</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <i class="bi-m bi-three-dots-vertical"></i>
-          </div>
-          <div id="photos" class="photo-xl exercise"></div>
-          <div class="feed-single-1st-row">
-            <div class="feed-reaction">
-              <i class="bi bi-heart"></i>
-              <i class="bi bi-chat"></i>
-              <i class="bi bi-bookmarks"></i>
-            </div>
-            <span class="btn-more">2일 전</span>
-          </div>
-          <div class="feed-single-2nd-row">
-            <div class="hashtag">
-              <button class="btn-l btn-disable" type="button">
-                <span># 헬스</span>
-              </button>
-              <button class="btn-l btn-disable" type="button">
-                <span># 웨이트</span>
-              </button>
-              <button class="btn-l btn-disable" type="button">
-                <span># 운동</span>
-              </button>
-            </div>
-            <div class="cmnt-content">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui quam
-              earum fugiat, tenetur perferendis eaque nesciunt ut quisquam
-              repellat corporis sint laboriosam? Ab non molestiae ipsam dolore
-              dolorum incidunt veritatis.
-            </div>
-            <div class="more border-bottom-disable">
-              <button class="btn-more">더보기</button>
-            </div>
-          </div>
-        </article>
-      </section>
-    </main>
-    <div id="floatingBtn" class="floatingBtn">
-      <i class="bi bi-plus-circle-fill"></i>
-    </div>
-  </body>
+    </body>
 </html>

@@ -1,130 +1,133 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>feed-personal</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css"
-    />
-    <link rel="stylesheet" href="./page4.css" />
-    <script src="feed-personal.js" defer></script>
-  </head>
-  <body>
-    <header class="main-nav">
-      <nav class="navbar">
-        <div class="topList">
-          <div class="logo"><span>튼튼</span></div>
-          <ul>
-            <li>
-              <a href="/index.html">
-                <i class="bi bi-house-door-fill"></i>
-                <p>홈</p></a
-              >
-            </li>
-            <li>
-              <a href="/2.calendar/calendar.html"
-                ><i class="bi bi-calendar3"></i>
-                <p>캘린더</p></a
-              >
-            </li>
-            <li>
-              <a href="./feed-grid.html"
-                ><i class="bi bi-stickies-fill"></i>
-                <p class="menu-selected">피드</p></a
-              >
-            </li>
-            <li>
-              <a href="/4.mypage/mypage.html"
-                ><i class="bi bi-person-fill"></i>
-                <p>마이페이지</p></a
-              >
-            </li>
-          </ul>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>feed-personal</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css"
+        />
+        <link rel="stylesheet" href="./page4.css" />
+        <script src="feed-personal.js" defer></script>
+    </head>
+    <body>
+        <header class="main-nav">
+            <nav class="navbar">
+                <div class="topList">
+                    <div class="logo"><span>튼튼</span></div>
+                    <ul>
+                        <li>
+                            <a href="/index.html">
+                                <i class="bi bi-house-door-fill"></i>
+                                <p>홈</p></a
+                            >
+                        </li>
+                        <li>
+                            <a href="/2.calendar/calendar.html"
+                                ><i class="bi bi-calendar3"></i>
+                                <p>캘린더</p></a
+                            >
+                        </li>
+                        <li>
+                            <a href="./feed-grid.html"
+                                ><i class="bi bi-stickies-fill"></i>
+                                <p class="menu-selected">피드</p></a
+                            >
+                        </li>
+                        <li>
+                            <a href="/4.mypage/mypage.html"
+                                ><i class="bi bi-person-fill"></i>
+                                <p>마이페이지</p></a
+                            >
+                        </li>
+                    </ul>
+                </div>
+                <ul class="bottomList">
+                    <li>
+                        <a href=""
+                            ><i class="bi bi-search"></i>
+                            <p>검색</p></a
+                        >
+                    </li>
+                    <li>
+                        <a href=""
+                            ><i class="bi bi-bell"></i>
+                            <p>알림</p></a
+                        >
+                    </li>
+                    <li>
+                        <a href=""
+                            ><i class="bi bi-gear"></i>
+                            <p>설정</p></a
+                        >
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <nav class="sub-nav">
+            <ul class="sub-nav-menu">
+                <li class="web text-align-center">
+                    <a href="feed-personal.html" class="bold">내 피드</a>
+                </li>
+                <li class="web text-align-center">
+                    <a href="feed-grid.html">전체</a>
+                </li>
+                <li class="web text-align-center">
+                    <a href="feed-recommend.html">추천</a>
+                </li>
+                <li class="web text-align-center">
+                    <a href="feed-community.html">커뮤니티</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="mobileUpperTitleIcons">
+            <i class="font20 bi-t bi-search"></i>
+            <i class="font20 bi-t bi-bell"></i>
         </div>
-        <ul class="bottomList">
-          <li>
-            <a href=""
-              ><i class="bi bi-search"></i>
-              <p>검색</p></a
-            >
-          </li>
-          <li>
-            <a href=""
-              ><i class="bi bi-bell"></i>
-              <p>알림</p></a
-            >
-          </li>
-          <li>
-            <a href=""
-              ><i class="bi bi-gear"></i>
-              <p>설정</p></a
-            >
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <nav class="sub-nav">
-      <ul class="sub-nav-menu">
-        <li class="web text-align-center">
-          <a href="feed-personal.html" class="bold">내 피드</a>
-        </li>
-        <li class="web text-align-center"><a href="feed-grid.html">전체</a></li>
-        <li class="web text-align-center">
-          <a href="feed-recommend.html">추천</a>
-        </li>
-        <li class="web text-align-center">
-          <a href="feed-community.html">커뮤니티</a>
-        </li>
-      </ul>
-    </nav>
-    <div id="mobileUpperTitleIcons">
-      <i class="font20 bi-t bi-search"></i>
-      <i class="font20 bi-t bi-bell"></i>
-    </div>
-    <main>
-      <section class="feed-personal">
-        <article class="feed-profile">
-          <div class="photo-circle">
-            <img src="./image/proflie.jpg" alt="" />
-          </div>
-          <div class="user-info">
-            <div class="user-feed-info">
-              <span class="user-name semi-bold">subin.jeong</span>
-              <i class="bi-m bi-three-dots-vertical"></i>
-            </div>
-            <div class="user-details">
-              <div class="user-detail text-align-center">
-                <span>18</span>
-                <span>피드</span>
-              </div>
-              <div class="user-detail text-align-center">
-                <span>82</span>
-                <span>팔로워</span>
-              </div>
-              <div class="user-detail text-align-center">
-                <span>307</span>
-                <span>팔로잉</span>
-              </div>
-            </div>
-            <div class="user-desc">
-              건강한 생활 습관으로 삶을 더 풍요롭게!<br />#레시피 #헬스 #테니스
-            </div>
-          </div>
-        </article>
-        <article class="feed-gallery">
-          <div class="feed-taps">
-            <div id="all" class="tap-selected">전체</div>
-            <div id="exercise" class="tap">운동</div>
-            <div id="meal" class="tap">식단</div>
-          </div>
-          <div class="feed-photos"></div>
-        </article>
-      </section>
-    </main>
-    <div id="floatingBtn" class="floatingBtn">
-      <i class="bi bi-plus-circle-fill"></i>
-    </div>
-  </body>
+        <main>
+            <section class="feed-personal">
+                <article class="feed-profile">
+                    <div class="photo-circle">
+                        <img src="./image/proflie.jpg" alt="" />
+                    </div>
+                    <div class="user-info">
+                        <div class="user-feed-info">
+                            <span class="user-name semi-bold">subin.jeong</span>
+                            <i class="bi-m bi-three-dots-vertical"></i>
+                        </div>
+                        <div class="user-details">
+                            <div class="user-detail text-align-center">
+                                <span>18</span>
+                                <span>피드</span>
+                            </div>
+                            <div class="user-detail text-align-center">
+                                <span>82</span>
+                                <span>팔로워</span>
+                            </div>
+                            <div class="user-detail text-align-center">
+                                <span>307</span>
+                                <span>팔로잉</span>
+                            </div>
+                        </div>
+                        <div class="user-desc">
+                            건강한 생활 습관으로 내 삶을 더 풍요롭게!<br />#레시피
+                            #헬스 #테니스
+                        </div>
+                    </div>
+                </article>
+                <article class="feed-gallery">
+                    <div class="feed-taps">
+                        <div id="all" class="tap-selected">전체</div>
+                        <div id="exercise" class="tap">운동</div>
+                        <div id="meal" class="tap">식단</div>
+                    </div>
+                    <div class="feed-photos"></div>
+                </article>
+            </section>
+        </main>
+        <div id="floatingBtn" class="floatingBtn">
+            <i class="bi bi-plus-circle-fill"></i>
+        </div>
+    </body>
 </html>
