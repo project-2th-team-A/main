@@ -189,8 +189,35 @@ button {
   line-height: 24px;
 }
 
+.btn-plus-container {
+  width: 48px;
+  height: 48px;
+  position: fixed;
+  right: 64px;
+  bottom: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-plus {
+  font-size: 48px;
+  color: #c66efe;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+}
+
+.btn-plus-bg {
+  width: 36px;
+  height: 36px;
+  border-radius: 100px;
+  background-color: #ffffff;
+  position: absolute;
+}
+
 .btn-point {
-  background-color: #b33ffc;
+  background-color: #212121;
   color: #ffffff;
 }
 .btn-clicked {
@@ -677,6 +704,33 @@ article.feed-gallery {
   .btn-l {
     font-size: 12px;
     line-height: 18px;
+  }
+
+  .btn-plus-container {
+    width: 48px;
+    height: 48px;
+    position: fixed;
+    right: 12px;
+    bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn-plus {
+    font-size: 48px;
+    color: #c66efe;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+  }
+
+  .btn-plus-bg {
+    width: 36px;
+    height: 36px;
+    border-radius: 100px;
+    background-color: #ffffff;
+    position: absolute;
   }
 
   .bi-m {
