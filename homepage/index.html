@@ -1,290 +1,303 @@
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>홈페이지</title>
+    <!doctype html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>홈페이지</title>
 
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css"
-        />
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+            <link
+                rel="stylesheet"
+                href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css"
+            />
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-        <script src="../navigation.js" defer></script>
+            <script src="../navigation.js" defer></script>
 
-        <link rel="stylesheet" href="./homepage.css" />
-        <script src="./homepage.js" defer></script>
-    </head>
-    <body>
-        <header>
-            <!-- 네비게이션 -->
-            <nav class="navbar">
-                <div class="topList">
-                    <div class="logo"><span>튼튼</span></div>
-                    <ul>
+            <link rel="stylesheet" href="./homepage.css" />
+            <link rel="stylesheet" href="./hompage_mobile.css">
+            <script src="./homepage.js" defer></script>
+        </head>
+        <body>
+            <header>
+                <!-- 네비게이션 -->
+                <nav class="navbar">
+                    <div class="topList">
+                        <div class="logo"><span>튼튼</span></div>
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <i class="bi bi-house-door-fill"></i>
+                                    <p>홈</p></a
+                                >
+                            </li>
+                            <li>
+                                <a href=""
+                                    ><i class="bi bi-calendar3"></i>
+                                    <p>캘린더</p></a
+                                >
+                            </li>
+                            <li>
+                                <a href=""
+                                    ><i class="bi bi-stickies-fill"></i>
+                                    <p>피드</p></a
+                                >
+                            </li>
+                            <li>
+                                <a href=""
+                                    ><i class="bi bi-person-fill"></i>
+                                    <p>마이페이지</p></a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="bottomList">
                         <li>
-                            <a href="">
-                                <i class="bi bi-house-door-fill"></i>
-                                <p>홈</p></a
+                            <a href=""
+                                ><i class="bi bi-search"></i>
+                                <p>검색</p></a
                             >
                         </li>
                         <li>
                             <a href=""
-                                ><i class="bi bi-calendar3"></i>
-                                <p>캘린더</p></a
+                                ><i class="bi bi-bell"></i>
+                                <p>알림</p></a
                             >
                         </li>
                         <li>
                             <a href=""
-                                ><i class="bi bi-stickies-fill"></i>
-                                <p>피드</p></a
-                            >
-                        </li>
-                        <li>
-                            <a href=""
-                                ><i class="bi bi-person-fill"></i>
-                                <p>마이페이지</p></a
+                                ><i class="bi bi-gear"></i>
+                                <p>설정</p></a
                             >
                         </li>
                     </ul>
-                </div>
-                <ul class="bottomList">
-                    <li>
-                        <a href=""
-                            ><i class="bi bi-search"></i>
-                            <p>검색</p></a
-                        >
-                    </li>
-                    <li>
-                        <a href=""
-                            ><i class="bi bi-bell"></i>
-                            <p>알림</p></a
-                        >
-                    </li>
-                    <li>
-                        <a href=""
-                            ><i class="bi bi-gear"></i>
-                            <p>설정</p></a
-                        >
-                    </li>
-                </ul>
-            </nav>
+                </nav>
 
-            <!-- floating button과 modal -->
-            <!-- 모달부분 -->
-            <div class="floatingBtnModal">
-                <div class="floatingBtnModalandBtn">
-                    <div class="floatingBtnModalBody">
-                        <div class="floatingBtnModalTitle">
-                            <i class="iconPrev bi bi-chevron-left font20"></i>
-                            <p class="fontMedium">제목</p>
-                            <i class="iconNext bi bi-chevron-right font20"></i>
-                        </div>
-                        <div class="floatingBtnModalContent">
-                            <a href="./calendar/pt_class_reservation.html">
-                                <p>PT 수업 예약하기</p>
-                                <i class="bi bi-plus-circle-fill font16"></i>
-                            </a>
-                            <a href="./calendar/add_schedule.html">
-                                <p>운동 일정 추가하기</p>
-                                <i class="bi bi-plus-circle-fill font16"></i>
-                            </a>
-                            <a href="./calendar/create_log.html">
-                                <p>기록하기</p>
-                                <i class="bi bi-plus-circle-fill font16"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div id="floatingBtnWithModal" class="floatingBtn">
-                        <i class="bi bi-x-circle-fill"></i>
-                    </div>
-                </div>
-            </div>
-            <!-- 버튼부분 -->
-            <div id="floatingBtn" class="floatingBtn">
-                <i class="bi bi-plus-circle-fill"></i>
-            </div>
-        </header>
-
-        <main>
-            <section>
-                <p class="font24 fontBold textColorMain">안녕하세요! 아로님</p>
-                <div class="calendarContent">
-                    <!-- title -->
-                    <div class="title">
-                        <div class="titleIconText">
-                            <i class="bi bi-calendar-plus"></i>
-                            <span class="todayTitle fontMedium"></span>
-                        </div>
-                        <div class="ptMode">
-                            <span>PT 모드</span>
-                            <i class="bi bi-toggle-off"></i>
-                        </div>
-                    </div>
-
-                    <!-- 캘린더 -->
-                    <div class="calendar">
-                        <!-- 월 년 -->
-                        <div class="monthYear">
-                            <i class="bi bi-chevron-left" id="prevMonth"></i>
-                            <p></p>
-                            <i class="bi bi-chevron-right" id="nextMonth"></i>
-                        </div>
-
-                        <!-- 요일  -->
-                        <div class="day">
-                            <p class="textColorRed">Sun</p>
-                            <p>Mon</p>
-                            <p>Tue</p>
-                            <p>Wed</p>
-                            <p>Thu</p>
-                            <p>Fri</p>
-                            <p class="textColorBlue">Sat</p>
-                        </div>
-
-                        <!-- 날짜 -->
-                        <table></table>
-                    </div>
-                </div>
-            </section>
-            <aside>
-                <!-- statistics -->
-                <div class="asideContainer">
-                    <div class="title">
-                        <p class="textColorPrimaryDark font24 fontBold">
-                            나의 통계
-                        </p>
-                        <div class="more-btn">
-                            <span class="textColorDisable">더보기</span>
-                            <i class="textColorDisable bi bi-chevron-right"></i>
-                        </div>
-                    </div>
-
-                    <div class="contentStyle contentStatistics">
-                        <p>골격근량</p>
-                        <div class="bar-chart">
-                            <div class="barSection">
-                                <div class="bar" style="height: 40%;"></div>
-                                <div class="bar" style="height: 40%;"></div>
-                                <div class="bar" style="height: 50%;"></div>
-                                <div class="bar" style="height: 55%;"></div>
-                                <div class="bar" style="height: 61%;"></div>
-                                <div class="bar" style="height: 68%;"></div>
-                                <div class="bar" style="height: 71%;"></div>
-                                <div class="bar" style="height: 74%;"></div>
-                                <div class="bar" style="height: 84%;"></div>
-                                <div class="bar" style="height: 89%;"></div>
-                                <div class="bar" style="height: 92%;"></div>
-                                <div class="bar" style="height: 98%; background-color: #C084FC;"></div>
-                              </div>
+                <!-- floating button과 modal -->
+                <!-- 모달부분 -->
+                <div class="floatingBtnModal">
+                    <div class="floatingBtnModalandBtn">
+                        <div class="floatingBtnModalBody">
+                            <div class="floatingBtnModalTitle">
+                                <i class="iconPrev bi bi-chevron-left font20"></i>
+                                <p class="fontMedium">제목</p>
+                                <i class="iconNext bi bi-chevron-right font20"></i>
                             </div>
-                            <div class="monthSection">
-                                <span>Jan</span>
-                                <span>Feb</span>
-                                <span>Mar</span>
-                                <span>Apr</span>
-                                <span>May</span>
-                                <span>Jun</span>
-                                <span>Jul</span>
-                                <span>Aug</span>
-                                <span>Sep</span>
-                                <span>Oct</span>
-                                <span>Nov</span>
-                                <span>Dec</span>
-                            </div>                            
+                            <div class="floatingBtnModalContent">
+                                <a href="./calendar/pt_class_reservation.html">
+                                    <p>PT 수업 예약하기</p>
+                                    <i class="bi bi-plus-circle-fill font16"></i>
+                                </a>
+                                <a href="./calendar/add_schedule.html">
+                                    <p>운동 일정 추가하기</p>
+                                    <i class="bi bi-plus-circle-fill font16"></i>
+                                </a>
+                                <a href="./calendar/create_log.html">
+                                    <p>기록하기</p>
+                                    <i class="bi bi-plus-circle-fill font16"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div id="floatingBtnWithModal" class="floatingBtn">
+                            <i class="bi bi-x-circle-fill"></i>
                         </div>
                     </div>
                 </div>
-
-                <!-- challenge -->
-                <div class="asideContainer">
-                    <div class="title">
-                        <p class="textColorPrimaryDark fontBold">튼튼 챌린지</p>
-                        <div class="more-btn">
-                            <span class="textColorDisable">더보기</span>
-                            <i class="textColorDisable bi bi-chevron-right"></i>
-                        </div>
-                    </div>
-
-                    <div class="challenge">
-                        <div class="contentStyle contentChallenge">
-                            <div class="circular-progress1">
-                                <span class="progress-value">82%</span>
-                            </div>
-                            <div class="progress-info">
-                                <p>일주일에 3회 이상 10시 운동하기</p>
-                                <span
-                                    >챌린지 성공까지 2일 21시간 남았습니다</span
-                                >
-                            </div>
-                            <i class="ongoing bi bi-check-circle-fill"></i>
-                        </div>
-                        <div class="contentStyle contentChallenge">
-                            <div class="circular-progress2">
-                                <span class="progress-value">47%</span>
-                            </div>
-                            <div class="progress-info">
-                                <p>한 달 동안 하루 한 번 채식하기</p>
-                                <span>잘 하고 있어요!</span>
-                            </div>
-                            <i class="completed bi bi-check-circle-fill"></i>
-                        </div>
-                    </div>
+                <!-- 버튼부분 -->
+                <div id="floatingBtn" class="floatingBtn">
+                    <i class="bi bi-plus-circle-fill"></i>
                 </div>
+            </header>
 
-                <!-- suggestion -->
-                <div class="asideContainer">
-                    <div class="title">
-                        <p class="textColorPrimaryDark font24 fontBold">
-                            튼튼 제안
-                        </p>
-                        <div class="more-btn">
-                            <span class="textColorDisable">더보기</span>
-                            <i class="textColorDisable bi bi-chevron-right"></i>
+            <main>
+                <nav>
+                    <div id="mobileUpperNav"></div>
+                    <div id="mobileUpperTitle">
+                        <span style="color: #C66EFE;">튼튼</span>
+                        <div id="mobileUpperTitleIcons">
+                            <i class="font20 bi bi-search"></i>
+                            <i class="font20 bi bi-bell"></i>
+                        </div>
+                    </div>
+                </nav>
+
+                <section>
+                    <p class="font24 fontBold textColorMain">안녕하세요! 아로님</p>
+                    <div class="calendarContent">
+                        <!-- title -->
+                        <div class="title">
+                            <div class="titleIconText">
+                                <i class="bi bi-calendar-plus"></i>
+                                <span class="todayTitle fontMedium"></span>
+                            </div>
+                            <div class="ptMode">
+                                <span>PT 모드</span>
+                                <i class="bi bi-toggle-off" style="cursor: pointer;"></i>
+                            </div>
+                        </div>
+
+                        <!-- 캘린더 -->
+                        <div class="calendar">
+                            <!-- 월 년 -->
+                            <div class="monthYear">
+                                <i class="bi bi-chevron-left" id="prevMonth"></i>
+                                <p></p>
+                                <i class="bi bi-chevron-right" id="nextMonth"></i>
+                            </div>
+
+                            <!-- 요일  -->
+                            <div class="day">
+                                <p class="textColorRed">Sun</p>
+                                <p>Mon</p>
+                                <p>Tue</p>
+                                <p>Wed</p>
+                                <p>Thu</p>
+                                <p>Fri</p>
+                                <p class="textColorBlue">Sat</p>
+                            </div>
+
+                            <!-- 날짜 -->
+                            <table></table>
+                        </div>
+                    </div>
+                </section>
+                <aside>
+                    <!-- statistics -->
+                    <div class="asideContainer">
+                        <div class="title">
+                            <p class="textColorPrimaryDark font24 fontBold">
+                                나의 통계
+                            </p>
+                            <div class="more-btn">
+                                <span class="textColorDisable">더보기</span>
+                                <i class="textColorDisable bi bi-chevron-right"></i>
+                            </div>
+                        </div>
+
+                        <div class="contentStyle contentStatistics">
+                            <p>골격근량</p>
+                            <div class="bar-chart">
+                                <div class="barSection">
+                                    <div class="bar" style="height: 40%;"></div>
+                                    <div class="bar" style="height: 40%;"></div>
+                                    <div class="bar" style="height: 50%;"></div>
+                                    <div class="bar" style="height: 55%;"></div>
+                                    <div class="bar" style="height: 61%;"></div>
+                                    <div class="bar" style="height: 68%;"></div>
+                                    <div class="bar" style="height: 71%;"></div>
+                                    <div class="bar" style="height: 74%;"></div>
+                                    <div class="bar" style="height: 84%;"></div>
+                                    <div class="bar" style="height: 89%;"></div>
+                                    <div class="bar" style="height: 92%;"></div>
+                                    <div class="bar" style="height: 98%; background-color: #C084FC;"></div>
+                                </div>
+                                </div>
+                                <div class="monthSection">
+                                    <span>Jan</span>
+                                    <span>Feb</span>
+                                    <span>Mar</span>
+                                    <span>Apr</span>
+                                    <span>May</span>
+                                    <span>Jun</span>
+                                    <span>Jul</span>
+                                    <span>Aug</span>
+                                    <span>Sep</span>
+                                    <span>Oct</span>
+                                    <span>Nov</span>
+                                    <span>Dec</span>
+                                </div>                            
+                            </div>
                         </div>
                     </div>
 
-                    <div class="suggestion">
-                        <div class="contentStyle contentSuggestion">
-                            <p class="icon">👟</p>
-                            <div class="suggestion-info">
-                                <p class="fontBold">야외 러닝</p>
-                                <span class="textColorDisable"
-                                    >운동 | 5km | 45분</span
-                                >
+                    <!-- challenge -->
+                    <div class="asideContainer">
+                        <div class="title">
+                            <p class="textColorPrimaryDark fontBold">튼튼 챌린지</p>
+                            <div class="more-btn">
+                                <span class="textColorDisable">더보기</span>
+                                <i class="textColorDisable bi bi-chevron-right"></i>
                             </div>
                         </div>
-                        <div class="contentStyle contentSuggestion">
-                            <p class="icon">🥗</p>
-                            <div class="suggestion-info">
-                                <p class="fontBold">리코타 샐러드</p>
-                                <span class="textColorDisable"
-                                    >2인 | 점심 | 200kcal</span
-                                >
+
+                        <div class="challenge">
+                            <div class="contentStyle contentChallenge">
+                                <div class="circular-progress1">
+                                    <span class="progress-value">82%</span>
+                                </div>
+                                <div class="progress-info">
+                                    <p>일주일에 3회 이상 10시 운동하기</p>
+                                    <span
+                                        >챌린지 성공까지 2일 21시간 남았습니다</span
+                                    >
+                                </div>
+                                <i class="completed  bi bi-check-circle-fill"></i>
                             </div>
-                        </div>
-                        <div class="contentStyle contentSuggestion">
-                            <p class="icon">🏸</p>
-                            <div class="suggestion-info">
-                                <p class="fontBold">배드민턴</p>
-                                <span class="textColorDisable"
-                                    >운동 | 5세트 | 50kg</span
-                                >
-                            </div>
-                        </div>
-                        <div class="contentStyle contentSuggestion">
-                            <p class="icon">🍔</p>
-                            <div class="suggestion-info">
-                                <p class="fontBold">제로번 버거</p>
-                                <span class="textColorDisable"
-                                    >점심 | 1시 | 200kcal</span
-                                >
+                            <div class="contentStyle contentChallenge">
+                                <div class="circular-progress2">
+                                    <span class="progress-value">47%</span>
+                                </div>
+                                <div class="progress-info">
+                                    <p>한 달 동안 하루 한 번 채식하기</p>
+                                    <span>잘 하고 있어요!</span>
+                                </div>
+                                <i class="ongoing bi bi-check-circle-fill"></i>
                             </div>
                         </div>
                     </div>
-                </div>
-            </aside>
-        </main>
-    </body>
-</html>
+
+                    <!-- suggestion -->
+                    <div class="asideContainer">
+                        <div class="title">
+                            <p class="textColorPrimaryDark font24 fontBold">
+                                튼튼 제안
+                            </p>
+                            <div class="more-btn">
+                                <span class="textColorDisable">더보기</span>
+                                <i class="textColorDisable bi bi-chevron-right"></i>
+                            </div>
+                        </div>
+
+                        <div class="suggestion">
+                            <div class="contentStyle contentSuggestion">
+                                <p class="icon">👟</p>
+                                <div class="suggestion-info">
+                                    <p class="fontBold">야외 러닝</p>
+                                    <span class="textColorDisable"
+                                        >운동 | 5km | 45분</span
+                                    >
+                                </div>
+                            </div>
+                            <div class="contentStyle contentSuggestion">
+                                <p class="icon">🥗</p>
+                                <div class="suggestion-info">
+                                    <p class="fontBold">리코타 샐러드</p>
+                                    <span class="textColorDisable"
+                                        >2인 | 점심 | 200kcal</span
+                                    >
+                                </div>
+                            </div>
+                            <div class="contentStyle contentSuggestion">
+                                <p class="icon">🏸</p>
+                                <div class="suggestion-info">
+                                    <p class="fontBold">배드민턴</p>
+                                    <span class="textColorDisable"
+                                        >운동 | 5세트 | 50kg</span
+                                    >
+                                </div>
+                            </div>
+                            <div class="contentStyle contentSuggestion">
+                                <p class="icon">🍔</p>
+                                <div class="suggestion-info">
+                                    <p class="fontBold">제로번 버거</p>
+                                    <span class="textColorDisable"
+                                        >점심 | 1시 | 200kcal</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+
+            </main>
+        </body>
+    </html>

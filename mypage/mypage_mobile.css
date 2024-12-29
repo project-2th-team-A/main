@@ -1,6 +1,4 @@
 @media (max-width: 600px) {
-    @import url(../navigation.css);
-
     main {
         position: static;
         padding: 0px 24px;

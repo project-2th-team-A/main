@@ -148,15 +148,21 @@ const cellArray = document.querySelectorAll('table .cell');
 for (let cell of cellArray) {
     const dayText = cell.querySelector('p').innerText;
     if (dayText === '12' || dayText === '17' || dayText === '31') {
+        const divElement = document.createElement('div');
         const pElement = document.createElement('p');
         pElement.classList.add('regularSchedule');
+        divElement.classList.add('regularSchedule');
         pElement.textContent = '수영';
-        cell.appendChild(pElement);
+        cell.appendChild(divElement);
+        divElement.appendChild(pElement);
     } else if (dayText === '25' || dayText === '11' || dayText === '18') {
+        const divElement = document.createElement('div');
         const pElement = document.createElement('p');
         pElement.classList.add('PTmodeSchedule');
+        divElement.classList.add('PTmodeSchedule');
         pElement.textContent = 'PT';
-        cell.appendChild(pElement);
+        cell.appendChild(divElement);
+        divElement.appendChild(pElement);
     }
 }
 
@@ -171,8 +177,8 @@ ptModeIcon.addEventListener('click', () => {
 });
 
 function toggleScheduleVisibility(isPTMode) {
-    const regularSchedules = document.querySelectorAll('.regularSchedule');
-    const ptSchedules = document.querySelectorAll('.PTmodeSchedule');
+    const regularSchedules = document.querySelectorAll('div.regularSchedule');
+    const ptSchedules = document.querySelectorAll('div.PTmodeSchedule');
 
     if (isPTMode) {
         // PT 모드: PT 스케줄만 표시

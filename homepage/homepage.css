@@ -15,6 +15,10 @@ main {
     gap: 24px;
 }
 
+main nav {
+    display: none;
+}
+
 section > p {
     margin-bottom: 8px;
 }
@@ -288,7 +292,7 @@ aside {
 
 .contentChallenge i.completed {
     font-size: 28px;
-    color: #909090;
+    color: #b09fff;
 }
 
 .suggestion {
