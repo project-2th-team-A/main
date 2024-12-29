@@ -13,45 +13,57 @@
   </head>
   <body>
     <header class="main-nav">
-      <div class="logo">튼튼</div>
-      <div class="main-nav-vertical">
-        <nav class="main-nav-menu">
+      <nav class="navbar">
+        <div class="topList">
+          <div class="logo"><span>튼튼</span></div>
           <ul>
             <li>
-              <i class="bi bi-house-door-fill"></i>
-              <span class="font-14px">홈</span>
+              <a href="/index.html">
+                <i class="bi bi-house-door-fill"></i>
+                <p>홈</p></a
+              >
             </li>
             <li>
-              <i class="bi bi-calendar3"></i>
-              <span class="font-14px">캘린더</span>
+              <a href="/2.calendar/calendar.html"
+                ><i class="bi bi-calendar3"></i>
+                <p>캘린더</p></a
+              >
             </li>
             <li>
-              <i class="bi bi-stickies-fill menu-selected"></i>
-              <span class="font-14px menu-selected"> 피드</span>
+              <a href="./feed-grid.html"
+                ><i class="bi bi-stickies-fill"></i>
+                <p class="menu-selected">피드</p></a
+              >
             </li>
             <li>
-              <i class="bi bi-person-fill"></i>
-              <span class="font-14px">마이페이지</span>
+              <a href="/4.mypage/mypage.html"
+                ><i class="bi bi-person-fill"></i>
+                <p>마이페이지</p></a
+              >
             </li>
           </ul>
-        </nav>
-        <nav class="main-nav-setting">
-          <ul>
-            <li>
-              <i class="bi bi-search"></i>
-              <span class="font-14px">검색</span>
-            </li>
-            <li>
-              <i class="bi bi-bell"></i>
-              <span class="font-14px">알림</span>
-            </li>
-            <li>
-              <i class="bi bi-gear"></i>
-              <span class="font-14px">설정</span>
-            </li>
-          </ul>
-        </nav>
-      </div>
+        </div>
+        <ul class="bottomList">
+          <li>
+            <a href=""
+              ><i class="bi bi-search"></i>
+              <p>검색</p></a
+            >
+          </li>
+          <li>
+            <a href=""
+              ><i class="bi bi-bell"></i>
+              <p>알림</p></a
+            >
+          </li>
+          <li>
+            <a href=""
+              ><i class="bi bi-gear"></i>
+              <p>설정</p></a
+            >
+          </li>
+        </ul>
+      </nav>
     </header>
     <nav class="sub-nav">
       <ul class="sub-nav-menu">
@@ -67,6 +79,10 @@
         </li>
       </ul>
     </nav>
+    <div id="mobileUpperTitleIcons">
+      <i class="font20 bi-t bi-search"></i>
+      <i class="font20 bi-t bi-bell"></i>
+    </div>
     <main>
       <section class="feed-personal">
         <article class="feed-profile">
@@ -107,9 +123,8 @@
         </article>
       </section>
     </main>
-    <div class="btn-plus-container">
-      <i class="bi bi-plus-circle-fill btn-plus"></i>
-      <div class="btn-plus-bg"></div>
+    <div id="floatingBtn" class="floatingBtn">
+      <i class="bi bi-plus-circle-fill"></i>
     </div>
   </body>
 </html>
