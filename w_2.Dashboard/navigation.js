@@ -2,12 +2,12 @@
 const floatingBtn = document.querySelector("#floatingBtn");
 const floatingBtnIcon = document.querySelector("#floatingBtn i");
 const floatingBtnWithModal = document.querySelector(
-  ".floatingBtnModal #floatingBtnWithModal"
+    ".floatingBtnModal #floatingBtnWithModal"
 );
 const floatingBtnModal = document.querySelector(".floatingBtnModal");
 
 // 버튼 클릭 시 모달 열기/닫기 토글
-floatingBtn.addEventListener("click", toggleFloatingBtnModal);
+floatingBtn.addEventListener("click", toggleFloatingB)
 
 // 내부 버튼 클릭 시 닫기
 floatingBtnWithModal.addEventListener("click", () => {

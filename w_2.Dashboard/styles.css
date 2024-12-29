@@ -1,356 +1,255 @@
 @import url(./navigation.css);
 
 :root {
-  --nav-width: 380px;
-  --calendar-width: 700px;
-  --sidebar-width: 412px;
-  --primary-color: #5f3dc4;
-  --border-radius-lg: 9px;
-  --border-radius-md: 8px;
+    --nav-width: 380px;
+    --calendar-width: 700px;
+    --sidebar-width: 412px;
+    --primary-color: #5f3dc4;
+    --border-radius-lg: 9px;
+    --border-radius-md: 8px;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
-  background-color: #f8f9fa;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, sans-serif;
+    background-color: #f8f9fa;
 }
 
 .container {
-  display: flex;
-  min-height: 100vh;
+    display: flex;
+    min-height: 100vh;
 }
 
 /* Main Content Styles */
 .main-content {
-  margin-left: var(--nav-width);
-  padding: 24px;
-  display: flex;
-  gap: 24px;
+    margin-left: var(--nav-width);
+    padding: 24px;
+    display: flex;
+    gap: 24px;
+}.main-content {
+    margin-left: var(--nav-width);
+    padding: 24px;
+    display: flex;
+    gap: 24px;
 }
 
 /* Calendar Styles */
 .calendar-section {
-  width: var(--calendar-width);
-  background-color: white;
-  border-radius: var(--border-radius-lg);
-  padding: 24px;
+    width: var(--calendar-width);
+    background-color: white;
+    border-radius: var(--border-radius-lg);
+    padding: 24px;
 }
 
 .calendar-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+   
 }
 
 .calendar-grid {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .weekdays {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 4px;
-  margin-bottom: 8px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+    margin-bottom: 8px;
 }
 
 .weekday {
-  text-align: center;
-  padding: 8px;
-  font-weight: 500;
+    text-align: center;
+    padding: 8px;
+    font-weight: 500;
 }
 
 .weekday.sun {
-  color: #e03131;
+    color: #e03131;
 }
+
 .weekday.sat {
-  color: #1c7ed6;
+    color: #1c7ed6;
 }
 
 .days {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 4px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
 }
 
 .day {
-  aspect-ratio: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 4px;
-  cursor: pointer;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 .day:hover {
-  background-color: #f8f9fa;
+    background-color: #f8f9fa;
 }
 
 /* Right Sidebar Styles */
 .right-sidebar {
-  width: var(--sidebar-width);
+    width: var(--sidebar-width);
 }
 
 .graph-title {
-  margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #5932AD;
+    font-size: large;
+}
+
+.graph-title span:first-child {
+    color: #5932AD;
+    font-weight: bold;
 }
 
 .statistics {
-  background-color: white;
-  border-radius: var(--border-radius-md);
-  padding: 20px;
-  margin-bottom: 24px;
-  height: 222px;
-}
-
-.chart {
-  height: 120px;
-  margin: 16px 0;
+    background-color: white;
+    border-radius: var(--border-radius-md);
+    padding: 20px;
+    margin-bottom: 24px;
+    height: 222px;
 }
 
 .graph-container {
-  background: var(--card-background);
-  border-radius: 15px;
-  padding: 20px;
-  height: 200px;
-}
-
-/* Progress Section */
-.progress-section {
-  padding: 20px;
-}
-
-.progress-card {
-  background: var(--card-background);
-  background-color: #ffffff;
-  border-radius: 15px;
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  font-weight: bold;
-  gap: 20px;
-}
-
-.challenges > .progress-card:nth-of-type(2) {
-  margin-bottom: 10px;
-}
-
-.btn-skeleton {
-  width: 100%;
-  padding: 8px;
-  background-color: #f8f9fa;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+    width: 100%;
+    height: 180px;
+    position: relative;
 }
 
 /* Challenges Styles */
 .challenges {
-  margin-bottom: 24px;
-}
-
-.challenges h3 {
-  font-size: 16px;
+    margin-bottom: 24px;
 }
 
 .challenges-card {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
 }
 
-.challenge-item {
-  background-color: white;
-  border-radius: var(--border-radius-md);
-  padding: 16px;
-  margin-top: 16px;
-  height: 103px;
+.challenges h3 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #5932AD;
+    font-size: large;
 }
 
-.progress {
-  margin-top: 8px;
-  height: 8px;
-  background-color: #e9ecef;
-  border-radius: 4px;
-  position: relative;
-}
-
-.progress-bar {
-  height: 100%;
-  background-color: var(--primary-color);
-  border-radius: 4px;
-  transition: width 0.3s ease;
-}
-
-/* Progress Section */
-.progress-section {
-  padding: 20px;
+.progress-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 10px;
 }
 
 .progress-circle {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background: #e8fff8;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--secondary-color);
-  font-weight: bold;
-  font-size: 16px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #e8fff8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress-text {
+    color: #54D7D7;
+    font-weight: 700;
 }
 
 .progress-info h3 {
-  font-size: 14px;
-  margin-bottom: 5px;
-  color: var(--text-primary);
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #001652;
 }
 
 .progress-info p {
-  font-size: 12px;
-  color: var(--text-secondary);
-}
-/* Stats Section */
-.stats-section {
-  padding: 20px;
-  margin-top: 20px;
-}
-
-.section-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 15px;
-}
-
-.more-btn {
-  color: var(--text-secondary);
-  font-size: 14px;
-}
-
-.graph-container {
-  background: var(--card-background);
-  border-radius: 15px;
-  padding: 20px;
-  height: 200px;
+    font-size: 12px;
+    color: #B09FFF;
+    
 }
 
 /* Medicine Section */
 .medicine-section {
-  /* padding: 20px; */
+    margin-top: 20px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.section-header span:first-child {
+    color: #5932AD;
+    font-weight: 700;
+    font-size: medium;
+}
+
+.more-btn {
+    color: #909090;
+    font-size: 14px;
+    text-decoration: none;
 }
 
 .medicine-cards {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
 }
 
 .medicine-card {
-  background: var(--card-background);
-  border-radius: 15px;
-  padding: 15px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .medicine-info h3 {
-  font-size: 14px;
-  margin-bottom: 5px;
-  color: var(--text-primary);
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #292929;
 }
 
 .medicine-info p {
-  font-size: 12px;
-  color: var(--text-secondary);
+    font-size: 12px;
+    color: #909090;
 }
 
 .add-btn {
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  background: var(--primary-color);
-  color: white;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: auto;
-}
-
-.medicine-cards {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
-}
-
-.medicine-card {
-  background: var(--card-background);
-  background-color: white;
-  border-radius: 15px;
-  padding: 15px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.add-btn {
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  background: var(--primary-color);
-  color: white;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Suggestions Styles */
-.suggestions-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-  margin-top: 16px;
-}
-
-.suggestion-item {
-  background-color: white;
-  border-radius: var(--border-radius-md);
-  padding: 16px;
-  height: 103px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.suggestion-item i {
-  font-size: 24px;
-  color: var(--primary-color);
-  margin-bottom: 8px;
-}
-
-.suggestion-item h4 {
-  font-size: 14px;
-  margin-bottom: 4px;
-}
-
-.suggestion-item p {
-  font-size: 12px;
-  color: #868e96;
-}
-
-@media (max-width: 600px) {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #b33ffc;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
 }

@@ -11,8 +11,8 @@
             --secondary-color: #5EE6D0;
             --background-color: #F8F9FA;
             --card-background: #FFFFFF;
-            --text-primary: #333333;
-            --text-secondary: #666666;
+            --text-primary: #001652;
+            --text-secondary: #b09fff;
             --border-color: #EEEEEE;
         }
 
@@ -24,7 +24,7 @@
         }
 
         body {
-            background-color: var(--background-color);
+            background-color: #f8f8fc ;
         }
 
         .mobile-container {
@@ -37,14 +37,7 @@
         }
 
         /* Header Styles */
-        .app-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-            background: var(--card-background);
-            border-bottom: 1px solid var(--border-color);
-        }
+        
 
         .title {
             font-size: 18px;
@@ -107,6 +100,8 @@
         .section-header h2 {
             font-size: 16px;
             font-weight: 600;
+            color: #5932ad;
+            font-weight:bold;
         }
 
         .more-btn {
@@ -197,7 +192,7 @@
             width: 24px;
             height: 24px;
             border-radius: 50%;
-            background: var(--primary-color);
+            background: #b33ffc;
             color: white;
             border: none;
             cursor: pointer;
@@ -207,46 +202,15 @@
             margin-left: auto;
         }
 
-        /* Bottom Navigation */
-        .bottom-nav {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            max-width: 480px;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            background: var(--card-background);
-            padding: 10px 0;
-            border-top: 1px solid var(--border-color);
-        }
+        
 
-        .nav-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-decoration: none;
-            color: var(--text-secondary);
-            font-size: 12px;
-            gap: 5px;
-        }
-
-        .nav-item.active {
-            color: var(--primary-color);
-        }
-
-        .nav-icon {
-            font-size: 20px;
-        }
+        
     </style>
 </head>
 <body>
+    
     <div class="mobile-container">
-        <!-- Header -->
-        <header class="app-header">
-            <div class="time">12:00</div>
-            <div class="title">튼튼</div>
-            <div class="notification-icon">🔔</div>
-        </header>
+        
 
         <!-- Calendar Section -->
         <div class="calendar-section">
@@ -312,10 +276,10 @@
             </div>
             <div class="medicine-cards">
                 <div class="medicine-card">
-                    <div class="medicine-icon">💊</div>
+                    <div class="medicine-icon">👟</div>
                     <div class="medicine-info">
-                        <h3>체중 인슐린젠</h3>
-                        <p>2정 | 1회당 | 20분전</p>
+                        <h3>야외 러닝</h3>
+                        <p>운동 | 5km | 45분</p>
                     </div>
                     <button class="add-btn">+</button>
                 </div>
@@ -323,32 +287,35 @@
                     <div class="medicine-icon">🥗</div>
                     <div class="medicine-info">
                         <h3>리코타 샐러드</h3>
-                        <p>2인분 | 점심 | 20분전</p>
+                        <p>점심 | 12시 | 200kcal</p>
+                    </div>
+                    <button class="add-btn">+</button>
+                </div>
+            </div>
+        </section>
+        <section class="medicine-section">
+            
+            <div class="medicine-cards">
+                <div class="medicine-card">
+                    <div class="medicine-icon">🏸</div>
+                    <div class="medicine-info">
+                        <h3>배드민턴</h3>
+                        <p>운동 | 5세트 | 50kg</p>
+                    </div>
+                    <button class="add-btn">+</button>
+                </div>
+                <div class="medicine-card">
+                    <div class="medicine-icon">🍔</div>
+                    <div class="medicine-info">
+                        <h3>제로번 버거</h3>
+                        <p>점심 | 3시 | kcal</p>
                     </div>
                     <button class="add-btn">+</button>
                 </div>
             </div>
         </section>
 
-        <!-- Navigation Bar -->
-        <nav class="bottom-nav">
-            <a href="#" class="nav-item active">
-                <span class="nav-icon">🏠</span>
-                <span class="nav-text">홈</span>
-            </a>
-            <a href="#" class="nav-item">
-                <span class="nav-icon">📅</span>
-                <span class="nav-text">캘린더</span>
-            </a>
-            <a href="#" class="nav-item">
-                <span class="nav-icon">📝</span>
-                <span class="nav-text">피드</span>
-            </a>
-            <a href="#" class="nav-item">
-                <span class="nav-icon">👤</span>
-                <span class="nav-text">마이페이지</span>
-            </a>
-        </nav>
+        
     </div>
 
     <script>
