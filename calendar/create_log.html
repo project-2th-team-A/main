@@ -15,8 +15,6 @@
         <link rel="stylesheet" href="calendar.css" />
         <link rel="stylesheet" href="calenar_mobile.css" />
         <script src="./calendar.js" defer></script>
-
-        <link rel="stylesheet" href="./create_log.css" />
     </head>
     <body>
         <header>
@@ -178,13 +176,81 @@
                             </button>
                         </div>
                     </div>
-                    <div class="todaysContentComponent">
+                    <div id="feedTodaysContent">
                         <p
                             class="todaysContentTitle font18 fontMedium textColor"
+                            style="padding: 0 24px"
                         >
                             오늘의 기록
                         </p>
-                        <div>내용</div>
+                        <article class="feed-single">
+                            <div class="feed-single-profile">
+                                <div class="photo-circle-s"></div>
+                                <div>
+                                    <div class="user-feed-single-info">
+                                        <div class="user-name semi-bold">
+                                            닉네임
+                                        </div>
+                                        <div class="user-feed-single-detail">
+                                            <div
+                                                class="user-feed-single-detail"
+                                            >
+                                                <span>47</span>
+                                                <span>피드</span>
+                                            </div>
+                                            <span>·</span>
+                                            <div
+                                                class="user-feed-single-detail"
+                                            >
+                                                <span>108</span>
+                                                <span>팔로워</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <i class="bi-m bi-three-dots-vertical"></i>
+                            </div>
+                            <div class="photo-xl"></div>
+                            <div class="feed-single-1st-row">
+                                <div class="feed-reaction">
+                                    <i class="bi bi-heart"></i>
+                                    <i class="bi bi-chat"></i>
+                                    <i class="bi bi-bookmarks"></i>
+                                </div>
+                                <span class="btn-more font12 textColorDisable"
+                                    >2일 전</span
+                                >
+                            </div>
+                            <div class="feed-single-2nd-row">
+                                <div class="hashtag">
+                                    <button class="hashtagBtn" type="button">
+                                        # 레시피
+                                    </button>
+                                    <button class="hashtagBtn" type="button">
+                                        # 식단
+                                    </button>
+                                    <button class="hashtagBtn" type="button">
+                                        # 채식
+                                    </button>
+                                </div>
+                                <div class="cmnt-content">
+                                    게시글 내용 최대 두줄. 게시글 내용 최대
+                                    두줄. 게시글 내용 최대 두줄. 게시글 내용
+                                    최대 두줄. 게시글 내용 최대 두줄. 게시글
+                                    내용 최대 두줄. 게시글 내용 최대 두줄.
+                                    게시글 내용 최대 두줄. 게시글 내용 최대
+                                    두줄. 게시글 내용 최대 두줄.게시글 내용 최대
+                                    두줄. 게시글 내용 최대 두줄. 게시글 내용
+                                    최대 두줄. 게시글 내용 최대 두줄. 게시글
+                                    내용 최대 두줄.
+                                </div>
+                                <div class="more border-bottom-disable">
+                                    <button class="textColorDisable font12">
+                                        더보기
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
                     </div>
                 </div>
             </aside>
@@ -288,13 +354,81 @@
                             </p>
                         </div>
                     </div>
-                    <div class="todaysContentComponent">
+                    <div id="feedTodaysContent">
                         <p
                             class="todaysContentTitle font18 fontMedium textColor"
+                            style="padding: 0 24px"
                         >
                             오늘의 기록
                         </p>
-                        <div>내용</div>
+                        <article class="feed-single">
+                            <div class="feed-single-profile">
+                                <div class="photo-circle-s"></div>
+                                <div>
+                                    <div class="user-feed-single-info">
+                                        <div class="user-name semi-bold">
+                                            닉네임
+                                        </div>
+                                        <div class="user-feed-single-detail">
+                                            <div
+                                                class="user-feed-single-detail"
+                                            >
+                                                <span>47</span>
+                                                <span>피드</span>
+                                            </div>
+                                            <span>·</span>
+                                            <div
+                                                class="user-feed-single-detail"
+                                            >
+                                                <span>108</span>
+                                                <span>팔로워</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <i class="bi-m bi-three-dots-vertical"></i>
+                            </div>
+                            <div class="photo-xl"></div>
+                            <div class="feed-single-1st-row">
+                                <div class="feed-reaction">
+                                    <i class="bi bi-heart"></i>
+                                    <i class="bi bi-chat"></i>
+                                    <i class="bi bi-bookmarks"></i>
+                                </div>
+                                <span class="btn-more font12 textColorDisable"
+                                    >2일 전</span
+                                >
+                            </div>
+                            <div class="feed-single-2nd-row">
+                                <div class="hashtag">
+                                    <button class="hashtagBtn" type="button">
+                                        # 레시피
+                                    </button>
+                                    <button class="hashtagBtn" type="button">
+                                        # 식단
+                                    </button>
+                                    <button class="hashtagBtn" type="button">
+                                        # 채식
+                                    </button>
+                                </div>
+                                <div class="cmnt-content">
+                                    게시글 내용 최대 두줄. 게시글 내용 최대
+                                    두줄. 게시글 내용 최대 두줄. 게시글 내용
+                                    최대 두줄. 게시글 내용 최대 두줄. 게시글
+                                    내용 최대 두줄. 게시글 내용 최대 두줄.
+                                    게시글 내용 최대 두줄. 게시글 내용 최대
+                                    두줄. 게시글 내용 최대 두줄.게시글 내용 최대
+                                    두줄. 게시글 내용 최대 두줄. 게시글 내용
+                                    최대 두줄. 게시글 내용 최대 두줄. 게시글
+                                    내용 최대 두줄.
+                                </div>
+                                <div class="more border-bottom-disable">
+                                    <button class="textColorDisable font12">
+                                        더보기
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
                     </div>
                 </div>
             </aside>
