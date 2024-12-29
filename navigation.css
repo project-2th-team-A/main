@@ -243,6 +243,13 @@
     color: #b1b1b1;
 }
 
+.textColorMain {
+    color: #b33ffc;
+}
+
+.textColorPrimaryDark {
+    color: #5932ad;
+}
 /* 폰트크기 굵기 */
 .font8 {
     font-size: 8px;
