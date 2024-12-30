@@ -159,9 +159,7 @@ function handleDateClick(year, month, day, cell) {
         selectedDate.day === day
     ) {
         clearPreviousSelection();
-        if (addLog.style.display === 'none') {
-            hideAside();
-        }
+        hideAside();
         selectedDate = null; // 선택된 날짜 해제
         return;
     }
