@@ -124,12 +124,12 @@ table {
 }
 
 /* 오늘인 날짜 스타일 바꾸기 */
-.today p {
+.today p:first-child {
     border-radius: 50%;
     border: 4px solid #828eec;
 }
 
-.selected P {
+.selected P:first-child {
     border-radius: 50%;
     background-color: #828eec;
 }
